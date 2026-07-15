@@ -25,3 +25,100 @@ subscriptions:
     stage: A
     diff_threshold_pct: 15
   keyword_recall_mode: or
+  intent_profiles:
+    - tag: tta-vlm
+      description: 基于预训练VLM、MLLM或者世界模型的test time adaptation论文检索
+      enabled: true
+      paper_sources:
+        - arxiv
+      keywords:
+        - keyword: test-time scaling
+          keyword_cn: 测试时扩展
+          query: t
+        - keyword: test-time adaptation
+          keyword_cn: 测试时自适应
+          query: test time adaptation for vision language models
+        - keyword: vision language model adaptation
+          keyword_cn: 视觉语言模型自适应
+          query: adaptation of pretrained vision language models at test time
+        - keyword: multimodal large language model
+          keyword_cn: 多模态大语言模型
+          query: multimodal large language model test time adaptation
+        - keyword: world model
+          keyword_cn: 世界模型
+          query: world model test time adaptation
+      intent_queries:
+        - query: Find papers on test time adaptation methods for pretrained vision language models
+          query_cn: 查找预训练视觉语言模型的测试时自适应方法的相关论文
+          enabled: true
+          source: manual
+          note: ''
+        - query: Search for techniques that adapt multimodal large language models during inference without fine tuning
+          query_cn: 搜索无需微调即可在推理时自适应多模态大语言模型的技术
+          enabled: true
+          source: manual
+          note: ''
+        - query: Retrieve articles about online adaptation of VLM and MLLM at test time
+          query_cn: 获取关于视觉语言模型和多模态大语言模型在线测试时自适应的文章
+          enabled: true
+          source: manual
+          note: ''
+        - query: World model based test time adaptation
+          query_cn: 基于世界模型的测试时适应
+          enabled: true
+          source: generated
+          note: ''
+      updated_at: '2026-07-15T14:50:48.456Z'
+    - tag: emb-wm-gen
+      description: 结合具身智能或世界模型的泛化相关工作
+      enabled: true
+      paper_sources:
+        - arxiv
+      keywords:
+        - keyword: embodied intelligence
+          keyword_cn: 具身智能
+          query: embodied intelligence generalization
+        - keyword: world model
+          keyword_cn: 世界模型
+          query: world model generalization
+        - keyword: generalization
+          keyword_cn: 泛化
+          query: generalization in embodied AI
+        - keyword: robotic generalization
+          keyword_cn: 机器人泛化
+          query: robotic generalization with world models
+        - keyword: sim-to-real transfer
+          keyword_cn: 仿真到真实迁移
+          query: sim-to-real transfer generalization
+      intent_queries:
+        - query: methods for generalization in embodied AI using learned world models
+          query_cn: 使用学习的世界模型进行具身AI泛化的方法
+          enabled: true
+          source: manual
+          note: ''
+        - query: How can world models improve generalization in embodied agents?
+          query_cn: 世界模型如何提升具身智能体的泛化能力？
+          enabled: true
+          source: manual
+          note: ''
+        - query: Methods for sim to real transfer in robotics
+          query_cn: 机器人中的仿真到真实迁移方法
+          enabled: true
+          source: manual
+          note: ''
+      updated_at: '2026-07-15T14:49:50.975Z'
+source_backends:
+  arxiv:
+    papers_table: arxiv_papers
+    use_vector_rpc: true
+    vector_rpc: match_arxiv_papers
+    vector_rpc_exact: match_arxiv_papers_exact
+    use_bm25_rpc: true
+    bm25_rpc: match_arxiv_papers_bm25
+    sync_table: arxiv_sync_status
+    sync_success_value: success
+    schema: public
+    kind: supabase
+    enabled: true
+    url: https://lyucdwgefyfbmaiopjbk.supabase.co
+    anon_key: sb_publishable_lX-oi64Uxyd7SIVv3_w2Uw_MTOojeKq
