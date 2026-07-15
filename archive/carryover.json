@@ -1,6 +1,543 @@
 {
-  "generated_at": "2026-03-06T19:11:18.471356+00:00",
-  "updated_date": "20260306",
+  "generated_at": "2026-07-15T15:08:55.389150+00:00",
+  "updated_date": "20260616-20260715",
   "carryover_days": 9,
-  "items": []
+  "tag_states": {
+    "tta-vlm": {
+      "updated_date": "20260616-20260715",
+      "carryover_days": 9,
+      "items": [
+        {
+          "id": "2606.29357v1",
+          "source": "arxiv",
+          "title": "Dynamic Parsing and Updating Natural Language Specification using VLMs for Robust Vision-Language Tracking",
+          "abstract": "Vision-language tracking guided by natural language specifications leverages high-level semantic cues of target objects to substantially boost tracking accuracy and robustness. Existing studies have verified that adaptively optimizing textual descriptions throughout the tracking process can effectively mitigate the semantic-visual mismatch induced by dynamic variations in target appearance, position, and other inherent attributes. Nevertheless, mainstream methods that directly generate textual information via sequence models or large language models inevitably suffer from inherent defects, including erroneous target updating, excessive background distraction, and pervasive hallucination artifacts. To address the aforementioned limitations, this paper proposes a novel language dependency parsing mechanism to precisely distill core tracking principal components, encompassing target objects, semantic concepts, and background contextual information. On this basis, we perform component-aware adaptive textual description updates by exploiting the powerful cross-modal understanding capability of the pre-trained vision-language model Qwen-VL. By integrating the proposed elaborately designed modules into the baseline framework, our method achieves consistent and superior tracking performance on multiple large-scale vision-language tracking benchmarks, including TNL2K, LaSOT, TNLLT, and OTB-LANG. The source code and pre-trained models will be released at https://github.com/Event-AHU/Open_VLTrack.",
+          "authors": [
+            "Xiao Wang",
+            "Liye Jin",
+            "Dan Xu",
+            "Yuehang Li",
+            "Lan Chen",
+            "Yaowei Wang",
+            "Yonghong Tian",
+            "Jin Tang"
+          ],
+          "primary_category": "cs.CV",
+          "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+          ],
+          "published": "2026-06-28T12:12:18+00:00",
+          "link": "https://arxiv.org/pdf/2606.29357v1",
+          "tags": [
+            "keyword:tta-vlm",
+            "query:tta-vlm"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "dynamic VLM adaptation during tracking",
+          "llm_evidence_cn": "跟踪过程中动态适应VLM",
+          "llm_evidence": "跟踪过程中动态适应VLM",
+          "canonical_evidence": "跟踪过程中动态适应VLM",
+          "llm_tldr_en": "Proposes dynamic parsing and updating of natural language specifications using VLMs during tracking to adapt to target appearance changes, mitigating semantic-visual mismatch.",
+          "llm_tldr_cn": "视觉语言跟踪中目标外观动态变化导致语义-视觉失配。本文利用VLM动态解析和更新自然语言规格，自适应优化跟踪过程中的文本描述，以修正目标更新错误和背景干扰，提升跟踪鲁棒性。",
+          "llm_tldr": "视觉语言跟踪中目标外观动态变化导致语义-视觉失配。本文利用VLM动态解析和更新自然语言规格，自适应优化跟踪过程中的文本描述，以修正目标更新错误和背景干扰，提升跟踪鲁棒性。",
+          "llm_tags": [
+            "query:tta-vlm"
+          ],
+          "matched_query_tag": "query:tta-vlm",
+          "matched_query_text": "Retrieve articles about online adaptation of VLM and MLLM at test time",
+          "matched_requirement_id": "req-8",
+          "selection_source": "carryover_cache",
+          "paper_id": "2606.29357v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2606.22351v1",
+          "source": "arxiv",
+          "title": "Reliability-Guided Adaptive Ensembling for Robust Test-Time Adaptation",
+          "abstract": "Test-time adaptation (TTA) can mitigate domain shift without source data, but it is highly brittle under adversarially contaminated test streams, where corrupted inputs also destabilize online updates. We study robust test-time adaptation (RTTA) in the adversarial-stream setting, which remains comparatively underexplored relative to standard TTA, and propose SAFER (Stochastic Augmentation Framework for Enhanced Robustness), a training-free reliability-guided augmentation wrapper for RTTA. SAFER preserves the wrapped TTA objective while replacing brittle single-view predictions with a reliability-guided pooled predictor. For each test sample, SAFER generates stochastic augmentations and aggregates their predictions through correlation-weighted pooling with outlier detection. We further study an adaptive-mixing extension that improves clean-performance retention by adjusting original-versus-augmentation weighting using feature disagreement signals. We evaluate on PACS, VLCS, and OfficeHome under PGD attacks at various attack rates. Across benchmarks, SAFER improves resilience of TTA methods to adversarial attacks while maintaining competitive clean performance.",
+          "authors": [
+            "Adam Koziak",
+            "Yuhong Guo"
+          ],
+          "primary_category": "cs.LG",
+          "categories": [
+            "cs.LG",
+            "cs.AI",
+            "cs.CV"
+          ],
+          "published": "2026-06-21T06:20:22+00:00",
+          "link": "https://arxiv.org/pdf/2606.22351v1",
+          "tags": [
+            "keyword:tta-vlm",
+            "query:tta-vlm"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "robust test-time adaptation against adversarial streams",
+          "llm_evidence_cn": "鲁棒的测试时适应，抵御对抗性流",
+          "llm_evidence": "鲁棒的测试时适应，抵御对抗性流",
+          "canonical_evidence": "鲁棒的测试时适应，抵御对抗性流",
+          "llm_tldr_en": "SAFER provides a training-free reliability-guided augmentation wrapper for robust test-time adaptation, using correlation-weighted pooling to handle adversarial streams.",
+          "llm_tldr_cn": "测试时适应在对抗性污染流下极易失效。本文提出SAFER，一种无需训练的可信导向增强包装器，通过随机增强和相关性加权池化替代单视图预测，提升了在对抗数据流中的鲁棒性，同时保持原有适应目标。",
+          "llm_tldr": "测试时适应在对抗性污染流下极易失效。本文提出SAFER，一种无需训练的可信导向增强包装器，通过随机增强和相关性加权池化替代单视图预测，提升了在对抗数据流中的鲁棒性，同时保持原有适应目标。",
+          "llm_tags": [
+            "query:tta-vlm"
+          ],
+          "matched_query_tag": "query:tta-vlm",
+          "matched_query_text": "test time adaptation for vision language models",
+          "matched_requirement_id": "req-2",
+          "selection_source": "carryover_cache",
+          "paper_id": "2606.22351v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2607.07395v1",
+          "source": "arxiv",
+          "title": "When Prompts Ignore Structure: Graph-Based Attribute Reasoning for Calibrated VLMs",
+          "abstract": "Reliable confidence estimation remains a key limitation of test-time adaptation in vision-language models (VLMs), where prompt tuning improves zero-shot accuracy but often degrades calibration due to entropy-driven overconfidence. Prior approaches mitigate this using LLM-derived class attributes and contrastive regularization, yet treat attributes independently, ignoring their relational structure. We propose ARGTCA, which represents (class, attribute) pairs as nodes in a Symbolic Attribute Graph and trains a Graph Attention Network (GAT) using contrastive objectives to produce structurally informed embeddings that capture inter-attribute dependencies. We introduce two attribute selection strategies: ARGTCA-DIV for intra-class diversity and ARGTCA-DISC for inter-class discrimination. Experiments across nine benchmarks show that ARGTCA-DIV reduces average Expected Calibration Error (ECE) by approximately ~37% over baselines, while ARGTCA-DISC consistently performs as the second-best variant, reducing average ECE by approximately ~17% over baselines. These results suggest that modeling symbolic attribute interactions provides a principled approach for reliable test-time adaptation in VLMs.",
+          "authors": [
+            "Tanay Sodha",
+            "Aditya Sharma",
+            "Ramya Hebbalaguppe",
+            "Vinti Agarwal",
+            "Pranav Murthy Yeluripaty"
+          ],
+          "primary_category": "cs.CV",
+          "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+          ],
+          "published": "2026-07-08T13:31:17+00:00",
+          "link": "https://arxiv.org/pdf/2607.07395v1",
+          "tags": [
+            "keyword:emb-wm-gen",
+            "keyword:tta-vlm",
+            "query:tta-vlm"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "graph-based reasoning for calibrated VLMs at test time",
+          "llm_evidence_cn": "基于图的属性推理用于测试时适配的视觉语言模型校准",
+          "llm_evidence": "基于图的属性推理用于测试时适配的视觉语言模型校准",
+          "canonical_evidence": "基于图的属性推理用于测试时适配的视觉语言模型校准",
+          "llm_tldr_en": "Proposes ARGTCA, a graph-based method for test-time adaptation of VLMs that captures attribute dependencies to improve calibration without fine-tuning.",
+          "llm_tldr_cn": "针对视觉语言模型在测试时适配中校准性能下降的问题，本文提出ARGTCA方法，通过构建符号属性图并利用图注意力网络捕获属性间依赖关系，实现无需微调的测试时适配。实验表明该方法在提升准确率的同时显著改善了校准性能。",
+          "llm_tldr": "针对视觉语言模型在测试时适配中校准性能下降的问题，本文提出ARGTCA方法，通过构建符号属性图并利用图注意力网络捕获属性间依赖关系，实现无需微调的测试时适配。实验表明该方法在提升准确率的同时显著改善了校准性能。",
+          "llm_tags": [
+            "query:tta-vlm"
+          ],
+          "matched_query_tag": "query:tta-vlm",
+          "matched_query_text": "adaptation of pretrained vision language models at test time",
+          "matched_requirement_id": "req-3",
+          "selection_source": "carryover_cache",
+          "paper_id": "2607.07395v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2607.02010v1",
+          "source": "arxiv",
+          "title": "InduceKV: Fixed-Footprint Continual Adaptation of Multimodal LLMs via Inducing KV Memories",
+          "abstract": "Multimodal large language models must adapt to evolving tasks and domains, yet continual improvement under bounded deployment footprint remains difficult because repeated parameter updates or growing replay stores can accumulate adaptation state over time. We study fixed-footprint continual adaptation: the deployed adaptation state is kept under a fixed memory budget, while the backbone model is left unchanged and task-specific updates are externalized. We propose InduceKV, a retrieval-based method that stores each selected training prefix as an attention-ready memory entry, consisting of a frozen retrieval key and compact layerwise key--value (KV) payloads that can be appended to the model's self-attention cache. Under a strict memory budget, InduceKV constructs a compact inducing set through bilevel selection: a lightweight calibration is fit for retrieval, while the selected memory balances current-task likelihood, anchor-based retention, and coverage in the frozen retrieval space. Across task-incremental instruction tuning, continual VQA, domain-incremental adaptation, and lifelong multimodal instruction tuning, InduceKV consistently improves over PEFT, MoE, replay, and prompt-retrieval baselines under matched memory budgets. We further report backbone-matched, stage-1 CoIN, compute-matched, and scalability diagnostics, showing that the gains are not due to a stronger backbone, replay alone, or an unbounded candidate pool.",
+          "authors": [
+            "Qianyu Chen",
+            "Ziteng Feng",
+            "Canran Xiao",
+            "Runxuan Tang"
+          ],
+          "primary_category": "cs.AI",
+          "categories": [
+            "cs.AI"
+          ],
+          "published": "2026-07-02T10:45:28+00:00",
+          "link": "https://arxiv.org/pdf/2607.02010v1",
+          "tags": [
+            "keyword:emb-wm-gen",
+            "keyword:tta-vlm",
+            "query:tta-vlm"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "continual adaptation of multimodal LLMs at test time with fixed memory",
+          "llm_evidence_cn": "固定存储下的多模态大语言模型测试时持续适配",
+          "llm_evidence": "固定存储下的多模态大语言模型测试时持续适配",
+          "canonical_evidence": "固定存储下的多模态大语言模型测试时持续适配",
+          "llm_tldr_en": "Proposes InduceKV, a retrieval-based method for fixed-footprint continual adaptation of MLLMs by storing KV memories, enabling test-time adaptation without parameter updates.",
+          "llm_tldr_cn": "针对多模态大语言模型在持续适应中存储开销大的问题，本文提出InduceKV方法，通过检索式KV记忆存储实现固定存储下的持续适应，无需更新模型参数。在严格记忆预算下，该方法在多个任务上媲美全微调性能，为测试时适配提供了高效解决方案。",
+          "llm_tldr": "针对多模态大语言模型在持续适应中存储开销大的问题，本文提出InduceKV方法，通过检索式KV记忆存储实现固定存储下的持续适应，无需更新模型参数。在严格记忆预算下，该方法在多个任务上媲美全微调性能，为测试时适配提供了高效解决方案。",
+          "llm_tags": [
+            "query:tta-vlm"
+          ],
+          "matched_query_tag": "query:tta-vlm",
+          "matched_query_text": "multimodal large language model test time adaptation",
+          "matched_requirement_id": "req-4",
+          "selection_source": "carryover_cache",
+          "paper_id": "2607.02010v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2607.01938v1",
+          "source": "arxiv",
+          "title": "PhysMani: Physics-principled 3D World Model for Dynamic Object Manipulation",
+          "abstract": "Manipulating fast and dynamically moving targets in unstructured 3D environments remains challenging for embodied AI. Existing visual-language-action models and world models struggle with accurate 3D geometry and physically meaningful forecasting. We propose PhysMani, a framework that couples a physics-principled 3D Gaussian world model with a future-aware action policy model. The world model learns a divergence-free Gaussian velocity field via online optimization for fast and physically grounded future dynamics prediction. The policy model integrates the predicted 3D scene future dynamics through a learnable token based cross-attention module. We introduce PhysMani-Bench, a dynamic manipulation benchmark with 16 tasks, and demonstrate a superior success rate over strong baselines in both simulation and real-world robot experiments.",
+          "authors": [
+            "Peng Yun",
+            "Shouwang Huang",
+            "Hao Li",
+            "Jinxi Li",
+            "Jianan Wang",
+            "Bo Yang"
+          ],
+          "primary_category": "cs.RO",
+          "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CL",
+            "cs.CV",
+            "cs.LG"
+          ],
+          "published": "2026-07-02T09:32:39+00:00",
+          "link": "https://arxiv.org/pdf/2607.01938v1",
+          "tags": [
+            "keyword:emb-wm-gen",
+            "keyword:tta-vlm",
+            "query:emb-wm-gen"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "world model test time online optimization for dynamic manipulation",
+          "llm_evidence_cn": "世界模型测试时在线优化用于动态操控",
+          "llm_evidence": "世界模型测试时在线优化用于动态操控",
+          "canonical_evidence": "世界模型测试时在线优化用于动态操控",
+          "llm_tldr_en": "PhysMani uses a physics-principled 3D Gaussian world model with online optimization for fast future dynamics prediction, enabling test-time adaptation for manipulation.",
+          "llm_tldr_cn": "动态目标操控需要物理准确的未来预测。现有世界模型在3D几何和物理一致性上不足。本文提出PhysMani，结合基于物理的3D高斯世界模型与未来感知动作策略，世界模型通过在线优化学习无散度速度场，实现快速且物理合理的未来预测。在动态操控基准上，该方法显著优于现有方法，展示了世界模型测试时适应的潜力。",
+          "llm_tldr": "动态目标操控需要物理准确的未来预测。现有世界模型在3D几何和物理一致性上不足。本文提出PhysMani，结合基于物理的3D高斯世界模型与未来感知动作策略，世界模型通过在线优化学习无散度速度场，实现快速且物理合理的未来预测。在动态操控基准上，该方法显著优于现有方法，展示了世界模型测试时适应的潜力。",
+          "llm_tags": [
+            "query:tta-vlm"
+          ],
+          "matched_query_tag": "query:tta-vlm",
+          "matched_query_text": "World model based test time adaptation",
+          "matched_requirement_id": "req-9",
+          "selection_source": "carryover_cache",
+          "paper_id": "2607.01938v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2607.00457v1",
+          "source": "arxiv",
+          "title": "Multi-scale Mixture of World Models for Embodied Agents in Evolving Environments",
+          "abstract": "Embodied agents operating in the real world require multi-scale reasoning and knowledge adaptation as conditions change. We identify two challenges in applying Mixture of Experts (MoE) to this setting: routing lacks an explicit notion of scale, preventing targeted updates at specific scales, and a uniform update policy cannot accommodate the different rates at which knowledge at each scale becomes outdated. We present MuSix, a framework that addresses both challenges through scale-aware world model mixture and evolution. A two-stage routing mechanism grounds scale selection in experiential distance, a measure of situational novelty inspired by Construal Level Theory: a meta-router first maps this quantity to a weight over continuous scale space, then per-scale base routers select world models within the identified scale. For adaptation, scale-dependent forgetting rates allow low-scale knowledge to refresh rapidly while high-scale abstractions persist, and gated inter-scale transfer maintains coherence across the hierarchy. Experiments on EmbodiedBench and HAZARD show that MuSix improves over state-of-the-art baselines on multi-scale reasoning and dynamic adaptation.",
+          "authors": [
+            "Jinwoo Jang",
+            "Daniel J. Rho",
+            "Sihyung Yoon",
+            "Hyunsuk Cho",
+            "Honguk Woo"
+          ],
+          "primary_category": "cs.AI",
+          "categories": [
+            "cs.AI"
+          ],
+          "published": "2026-07-01T05:23:56+00:00",
+          "link": "https://arxiv.org/pdf/2607.00457v1",
+          "tags": [
+            "keyword:emb-wm-gen",
+            "keyword:tta-vlm",
+            "query:emb-wm-gen",
+            "query:tta-vlm"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "world model adaptation at test time via scale-aware mixture",
+          "llm_evidence_cn": "通过尺度感知混合实现世界模型的测试时适应",
+          "llm_evidence": "通过尺度感知混合实现世界模型的测试时适应",
+          "canonical_evidence": "通过尺度感知混合实现世界模型的测试时适应",
+          "llm_tldr_en": "MuSix introduces scale-aware mixture of world models for embodied agents, with a two-stage routing mechanism based on experiential distance to enable targeted updates at different scales.",
+          "llm_tldr_cn": "具身智能体在变化环境中需多尺度推理与知识适应。现有MoE缺乏尺度感知且更新策略单一。MuSix提出尺度感知的世界模型混合与进化框架：通过两阶段路由机制将尺度选择与经验距离关联，实现不同尺度世界模型的局部更新。在演化环境任务中展示了更强的适应能力。",
+          "llm_tldr": "具身智能体在变化环境中需多尺度推理与知识适应。现有MoE缺乏尺度感知且更新策略单一。MuSix提出尺度感知的世界模型混合与进化框架：通过两阶段路由机制将尺度选择与经验距离关联，实现不同尺度世界模型的局部更新。在演化环境任务中展示了更强的适应能力。",
+          "llm_tags": [
+            "query:tta-vlm"
+          ],
+          "matched_query_tag": "query:tta-vlm",
+          "matched_query_text": "world model test time adaptation",
+          "matched_requirement_id": "req-5",
+          "selection_source": "carryover_cache",
+          "paper_id": "2607.00457v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2607.09438v1",
+          "source": "arxiv",
+          "title": "Test-Time Scaling for Small VLMs on Multilingual Visual MCQ",
+          "abstract": "Test-time scaling (TTS) reliably improves reasoning in large language models, but whether it transfers to small open vision-language models remains unclear. We examine this on EXAMS-V, a multilingual visual multiple-choice benchmark, comparing self-consistency, describe-then-reason with PRM-guided beam search, and two post-hoc selectors across Qwen2.5-VL-7B-Instruct and Qwen3.5-4B. What matters is the conditions under which TTS runs, not the search or verification machinery. The largest factor is parseability: an early prompt format left many chains reasoning correctly yet never committing to an answer letter, which a standard answer cue and a guided repair step largely remove. A larger decoding budget removes the rest: raising the per-chain token limit from 1k to 2k recovers 3.7 pp, whereas sampling more chains (8 to 16) adds only 0.15 pp. Once chains have room to finish, elaborate methods contribute little: PRM-guided beam search trails plain self-consistency by 0.39 pp at over eight times the cost, and neither a training-free generative critic nor a trained multimodal PRM beats majority vote across both policies. The largest gain comes instead from the policy model itself (+11.4 pp). Our best configuration reaches 84.1% on the held-out ImageCLEF 2026 test split, ranking first on the Visual MCQ leaderboard.",
+          "authors": [
+            "Spiros Baxevanakis",
+            "Peng-Jian Yang"
+          ],
+          "primary_category": "cs.CL",
+          "categories": [
+            "cs.CL",
+            "cs.AI",
+            "cs.LG"
+          ],
+          "published": "2026-07-10T14:09:04+00:00",
+          "link": "https://arxiv.org/pdf/2607.09438v1",
+          "tags": [
+            "keyword:tta-vlm",
+            "query:tta-vlm"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "test-time scaling for small vision-language models",
+          "llm_evidence_cn": "小型视觉语言模型的测试时扩展",
+          "llm_evidence": "小型视觉语言模型的测试时扩展",
+          "canonical_evidence": "小型视觉语言模型的测试时扩展",
+          "llm_tldr_en": "Examines test-time scaling for small open VLMs on multilingual visual MCQ, finding parseability and decoding budget are key factors.",
+          "llm_tldr_cn": "本文研究了测试时扩展（TTS）在小型开源视觉语言模型上的表现，以多语言视觉多选题为任务。实验发现，影响性能的关键因素并非搜索或验证机制，而是解析能力和解码预算。通过改进提示格式和增加令牌限制，可显著提升效果。该工作为小模型的TTS应用提供了实用指导。",
+          "llm_tldr": "本文研究了测试时扩展（TTS）在小型开源视觉语言模型上的表现，以多语言视觉多选题为任务。实验发现，影响性能的关键因素并非搜索或验证机制，而是解析能力和解码预算。通过改进提示格式和增加令牌限制，可显著提升效果。该工作为小模型的TTS应用提供了实用指导。",
+          "llm_tags": [
+            "query:tta-vlm"
+          ],
+          "matched_query_tag": "query:tta-vlm",
+          "matched_query_text": "test time adaptation for vision language models",
+          "matched_requirement_id": "req-2",
+          "selection_source": "carryover_cache",
+          "paper_id": "2607.09438v1",
+          "carry_days": 1
+        }
+      ]
+    },
+    "emb-wm-gen": {
+      "updated_date": "20260616-20260715",
+      "carryover_days": 9,
+      "items": [
+        {
+          "id": "2607.03461v1",
+          "source": "arxiv",
+          "title": "WorldBagel: Uncovering the Power of Unified Multimodal Models for Vision-Language-Action-World Modeling",
+          "abstract": "World models aim to capture environment dynamics in ways that support perception, reasoning, and action, and have recently become a central direction in Vision-Language-Action-World (VLAW) modeling. Meanwhile, unified vision-language models have demonstrated strong multimodal generation capabilities, yet their potential as world models remains underexplored. In this work, we introduce \\texttt{WorldBagel}, a unified VLAW framework built on BAGEL, a modern multimodal unified model, and use it to systematically investigate the role of unification in world modeling. Across multi-task robotic manipulation and cross-domain experiments, \\texttt{WorldBagel} consistently outperforms task-specific alternatives and learns action representations that are more structured and semantically aligned with visual and linguistic context. Experiments on LIBERO, Language Table, and Franka show that unification is not only an architectural convenience, but also a key factor in learning effective VLAW models, leading to consistent empirical gains and deeper insights into multimodal world modeling. Code and model checkpoints will be released upon acceptance.",
+          "authors": [
+            "Zelin Zhao",
+            "Min Shi",
+            "Bo Yuan",
+            "Haotian Xue",
+            "Jialuo Li",
+            "Lama Moukheiber",
+            "Humphrey Shi",
+            "Yongxin Chen"
+          ],
+          "primary_category": "cs.CV",
+          "categories": [
+            "cs.CV",
+            "cs.LG"
+          ],
+          "published": "2026-07-03T16:18:20+00:00",
+          "link": "https://arxiv.org/pdf/2607.03461v1",
+          "tags": [
+            "keyword:emb-wm-gen",
+            "keyword:tta-vlm",
+            "query:emb-wm-gen",
+            "query:tta-vlm"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "world model for VLAW learning",
+          "llm_evidence_cn": "世界模型用于视觉语言动作世界建模",
+          "llm_evidence": "世界模型用于视觉语言动作世界建模",
+          "canonical_evidence": "世界模型用于视觉语言动作世界建模",
+          "llm_tldr_en": "Proposes WorldBagel, a unified VLAW framework that treats vision-language-action-world modeling with a multimodal model, achieving superior performance across robotic tasks.",
+          "llm_tldr_cn": "该工作提出WorldBagel，一个统一的视觉-语言-动作-世界（VLAW）框架，基于BAGEL多模态模型。系统研究了统一建模在世界模型中的作用，在多任务机器人操作和跨域实验中，一致优于任务专用方法，并学到了可迁移的动作表示。",
+          "llm_tldr": "该工作提出WorldBagel，一个统一的视觉-语言-动作-世界（VLAW）框架，基于BAGEL多模态模型。系统研究了统一建模在世界模型中的作用，在多任务机器人操作和跨域实验中，一致优于任务专用方法，并学到了可迁移的动作表示。",
+          "llm_tags": [
+            "query:emb-wm-gen"
+          ],
+          "matched_query_tag": "query:emb-wm-gen",
+          "matched_query_text": "world model generalization",
+          "matched_requirement_id": "req-11",
+          "selection_source": "carryover_cache",
+          "paper_id": "2607.03461v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2607.03964v1",
+          "source": "arxiv",
+          "title": "Worldscape-MoE: A Unified Mixture-of-Experts World Model for Scalable Heterogeneous Action Control",
+          "abstract": "World models are rapidly becoming a core infrastructure for embodied intelligence and interactive agents: they provide controllable simulators in which agents can perceive, act, forecast, and acquire scalable experience. Yet current video generation world models are still organized around isolated control interfaces, such as camera trajectories, robot actions, or hand-joint signals. This fragmentation is increasingly a scaling bottleneck. The central challenge is not the absence of controllable generators, but the lack of a unified and extensible learning framework that can absorb heterogeneous action supervision while preserving a shared model of world dynamics. In this work, we introduce Worldscape-MoE, a Mixture-of-Experts world model built on Diffusion Transformers for scalable heterogeneous action control. Our key observation is that different controls specify different interfaces to the same underlying world: although their representations differ, they constrain shared physical regularities, scene dynamics, and interaction semantics. Worldscape-MoE operationalizes this observation through modality-aware control injection, shared and control-specific experts, and a progressive MoE tuning strategy that supports continual extension to new action modalities. Experiments across locomotion, robotic manipulation, and egocentric hand control show that heterogeneous supervision improves rather than interferes with individual control capabilities. Worldscape-MoE achieves strong results on WorldArena, improves locomotion and hand-control metrics, exhibits robust out-of-distribution generalization, and demonstrates scaling behavior as additional control data and experts are integrated.",
+          "authors": [
+            "Jianjie Fang",
+            "Yongyan Xu",
+            "Ziyou Wang",
+            "Chen Gao",
+            "Yuchao Huang",
+            "Zhaolu Wang",
+            "Rongze Tang",
+            "Mingyuan Jia",
+            "Baining Zhao",
+            "Weichen Zhang",
+            "Xin Zhang",
+            "Haisheng Su",
+            "Yu Shang",
+            "Wei Wu",
+            "Xinlei Chen",
+            "Yong Li"
+          ],
+          "primary_category": "cs.RO",
+          "categories": [
+            "cs.RO",
+            "cs.AI"
+          ],
+          "published": "2026-07-04T17:45:38+00:00",
+          "link": "https://arxiv.org/pdf/2607.03964v1",
+          "tags": [
+            "keyword:emb-wm-gen",
+            "keyword:tta-vlm",
+            "query:emb-wm-gen"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "unified mixture-of-experts world model for scalable heterogeneous action control",
+          "llm_evidence_cn": "统一混合专家世界模型实现可扩展异构动作控制",
+          "llm_evidence": "统一混合专家世界模型实现可扩展异构动作控制",
+          "canonical_evidence": "统一混合专家世界模型实现可扩展异构动作控制",
+          "llm_tldr_en": "Worldscape-MoE introduces a unified mixture-of-experts world model that handles heterogeneous action controls while preserving shared world dynamics.",
+          "llm_tldr_cn": "当前视频生成世界模型针对不同控制接口分裂，缺乏统一框架。Worldscape-MoE使用混合专家架构，在不同动作类型（如相机轨迹、机器人动作）间共享世界动力学，同时保持每个接口的专用专家。该模型在多个仿真环境中验证了可扩展性和异构动作的零样本迁移，为构建通用世界模型奠定了重要基础。",
+          "llm_tldr": "当前视频生成世界模型针对不同控制接口分裂，缺乏统一框架。Worldscape-MoE使用混合专家架构，在不同动作类型（如相机轨迹、机器人动作）间共享世界动力学，同时保持每个接口的专用专家。该模型在多个仿真环境中验证了可扩展性和异构动作的零样本迁移，为构建通用世界模型奠定了重要基础。",
+          "llm_tags": [
+            "query:emb-wm-gen"
+          ],
+          "matched_query_tag": "query:emb-wm-gen",
+          "matched_query_text": "world model generalization",
+          "matched_requirement_id": "req-11",
+          "selection_source": "carryover_cache",
+          "paper_id": "2607.03964v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2606.27014v1",
+          "source": "arxiv",
+          "title": "A Generalization Theory for JEPA-Based World Models",
+          "abstract": "Joint Embedding Predictive Architectures (JEPAs) have recently emerged as a promising paradigm for world modeling by learning predictive dynamics in a latent space rather than generating future observations at the input level. Despite their empirical success, the theoretical understanding of JEPA-based world models remains limited. In this paper, we develop the first generalization theory for JEPA-based world models. We formulate JEPA pretraining as a conditional spectral graph learning problem and show that the JEPA objective is equivalent to a low-rank factorization of an action-conditioned co-occurrence matrix. Building on this characterization, we establish a connection between JEPA pretraining error and downstream planning regret, leading to a finite-sample generalization bound for JEPA-based world models. Our analysis reveals an inherent trade-off between approximation and sample errors with respect to the latent dimension, providing theoretical insights into the advantages and limitations of latent predictive models compared with input-level predictive approaches.",
+          "authors": [
+            "Jingyi Cui",
+            "Qi Zhang",
+            "Hongwei Wen",
+            "Yisen Wang"
+          ],
+          "primary_category": "cs.LG",
+          "categories": [
+            "cs.LG"
+          ],
+          "published": "2026-06-25T13:29:20+00:00",
+          "link": "https://arxiv.org/pdf/2606.27014v1",
+          "tags": [
+            "keyword:emb-wm-gen",
+            "keyword:tta-vlm",
+            "query:emb-wm-gen",
+            "query:tta-vlm"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "generalization theory for JEPA-based world models",
+          "llm_evidence_cn": "JEPA世界模型的泛化理论",
+          "llm_evidence": "JEPA世界模型的泛化理论",
+          "canonical_evidence": "JEPA世界模型的泛化理论",
+          "llm_tldr_en": "First generalization theory for JEPA world models, showing equivalence to low-rank factorization of action-conditioned co-occurrence and connecting pretraining error to planning regret.",
+          "llm_tldr_cn": "JEPA世界模型虽经验成功，但缺乏理论理解。本文建立了首个JEPA泛化理论：将预训练形式化为条件谱图学习，等价于对动作条件共现矩阵的低秩分解，并证明了预训练误差与下游规划遗憾之间的关联，给出了有限样本泛化界。",
+          "llm_tldr": "JEPA世界模型虽经验成功，但缺乏理论理解。本文建立了首个JEPA泛化理论：将预训练形式化为条件谱图学习，等价于对动作条件共现矩阵的低秩分解，并证明了预训练误差与下游规划遗憾之间的关联，给出了有限样本泛化界。",
+          "llm_tags": [
+            "query:emb-wm-gen"
+          ],
+          "matched_query_tag": "query:emb-wm-gen",
+          "matched_query_text": "world model generalization",
+          "matched_requirement_id": "req-11",
+          "selection_source": "carryover_cache",
+          "paper_id": "2606.27014v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2607.11270v1",
+          "source": "arxiv",
+          "title": "Towards Predictive, Aligned, and Scalable Robot Learning",
+          "abstract": "Learning, at its core, extends beyond memorization to the ability to reason and solve novel problems by navigating a space of possibilities. We introduce Lumo-2, a latent world-action model that generates actions by reasoning over world dynamics in latent space. The learned latent world dynamics capture physically grounded visual transitions, naturally encoding future possibilities and providing a unified substrate for cross-modal alignment. This formulation enables predictive reasoning akin to world modelling while remaining lightweight and focused on physical dynamics relevant to control. Central to our approach is the hypothesis that action generation quality is governed by the geometry of the latent space. We observe that standard reconstruction-based action tokenization objectives induce representations biased toward low-level signal fidelity, leading to misalignment between reconstruction quality and downstream control performance. To address this limitation, we propose a multi-stage modality pre-alignment strategy in which action representations are progressively aligned with latent world dynamics, vision, and language. This process enforces cross-modal consistency, promotes abstraction, and induces a structured latent space for predictive reasoning. We provide a systematic empirical study of latent world modelling and modality alignment, analyzing their roles in scaling laws and out-of-distribution generalization. Results show that Lumo-2 consistently outperforms strong vision-language-action (VLA) and world-action model (WAM) baselines, with gains on challenging real-world tasks requiring temporal reasoning, physical understanding, or high control complexity, including long-horizon and dexterous manipulation. These findings suggest that structured multimodal alignment and predictive reasoning are fundamental principles for advancing embodied intelligence.",
+          "authors": [
+            "Peijun Tang",
+            "Shangjin Xie",
+            "Baifu Huang",
+            "Binyan Sun",
+            "Haotian Yang",
+            "Kuncheng Luo",
+            "Weiqi Jin",
+            "Shilin Fang",
+            "Jianan Wang"
+          ],
+          "primary_category": "cs.RO",
+          "categories": [
+            "cs.RO",
+            "cs.AI"
+          ],
+          "published": "2026-07-13T08:53:34+00:00",
+          "link": "https://arxiv.org/pdf/2607.11270v1",
+          "tags": [
+            "keyword:emb-wm-gen",
+            "keyword:tta-vlm",
+            "query:emb-wm-gen",
+            "query:tta-vlm"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "latent world-action model for predictive reasoning and robot generalization",
+          "llm_evidence_cn": "潜在世界动作模型用于预测推理和机器人泛化",
+          "llm_evidence": "潜在世界动作模型用于预测推理和机器人泛化",
+          "canonical_evidence": "潜在世界动作模型用于预测推理和机器人泛化",
+          "llm_tldr_en": "Introduces Lumo-2, a latent world-action model that reasons over world dynamics in latent space for predictive robot learning and generalization.",
+          "llm_tldr_cn": "该论文提出Lumo-2，一种潜在世界动作模型，通过在潜在空间中推理世界动态来生成动作。关键假设是动作生成质量受潜在空间几何支配，并提出对齐损失来优化结构。实验表明Lumo-2在多种机器人任务上实现了强泛化，且模型轻量。该工作将世界模型与动作生成统一在潜在空间，为可扩展的机器人学习提供了新方向。",
+          "llm_tldr": "该论文提出Lumo-2，一种潜在世界动作模型，通过在潜在空间中推理世界动态来生成动作。关键假设是动作生成质量受潜在空间几何支配，并提出对齐损失来优化结构。实验表明Lumo-2在多种机器人任务上实现了强泛化，且模型轻量。该工作将世界模型与动作生成统一在潜在空间，为可扩展的机器人学习提供了新方向。",
+          "llm_tags": [
+            "query:emb-wm-gen"
+          ],
+          "matched_query_tag": "query:emb-wm-gen",
+          "matched_query_text": "world model generalization",
+          "matched_requirement_id": "req-11",
+          "selection_source": "carryover_cache",
+          "paper_id": "2607.11270v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2606.29501v1",
+          "source": "arxiv",
+          "title": "Learning Transferable Dynamics Priors from Action to World Modeling",
+          "abstract": "We study action-conditioned world modeling as a scalable way to learn transferable dynamics priors for robot learning. By pretraining a model to predict how actions drive visual scene evolution, the resulting world model captures reusable interaction dynamics beyond appearance-level video generation. Concretely, we pretrain a multi-view interactive base diffusion world model, A2World, on large-scale robot manipulation data with real action annotations. We validate the learned dynamics priors from two complementary perspectives. First, we adapt A2World into a task- or scene-specialized real-world simulator, A2World-sim, whose long-horizon rollouts support simulator-based policy evaluation and scalable what-if analysis by replacing real-robot rollouts with world model rollouts. Second, starting from the same pretrained weights, we adapt A2World into a video-action joint prediction model, A2World-policy, that predicts actions under visual and instruction conditioning. Experiments across simulation benchmarks and real-robot settings demonstrate that action-conditioned world model pretraining yields transferable dynamics priors that benefit both simulator-centric and policy-centric robot learning.",
+          "authors": [
+            "Ze Huang",
+            "Jiahui Zhang",
+            "Hairuo Liu",
+            "Chenxi Zhang",
+            "Ran Cheng",
+            "Li Zhang"
+          ],
+          "primary_category": "cs.RO",
+          "categories": [
+            "cs.RO"
+          ],
+          "published": "2026-06-28T17:01:55+00:00",
+          "link": "https://arxiv.org/pdf/2606.29501v1",
+          "tags": [
+            "keyword:emb-wm-gen",
+            "keyword:tta-vlm",
+            "query:emb-wm-gen",
+            "query:tta-vlm"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "transferable world model priors for generalization",
+          "llm_evidence_cn": "可迁移世界模型先验用于泛化",
+          "llm_evidence": "可迁移世界模型先验用于泛化",
+          "canonical_evidence": "可迁移世界模型先验用于泛化",
+          "llm_tldr_en": "A2World learns transferable dynamics priors by pretraining a multi-view interactive world model on large-scale robot manipulation data, enabling downstream policy evaluation and sim-to-real transfer.",
+          "llm_tldr_cn": "机器人学习需要可迁移的世界模型。A2World在大规模机器人操作数据上预训练多视角交互扩散世界模型，捕捉动作驱动的视觉动态先验。该模型可适应为任务专用模拟器，支持长程 rollout 的策略评估和假设分析，有效弥合仿真与真实的差距。验证了学习可迁移动力学先验的可行性。",
+          "llm_tldr": "机器人学习需要可迁移的世界模型。A2World在大规模机器人操作数据上预训练多视角交互扩散世界模型，捕捉动作驱动的视觉动态先验。该模型可适应为任务专用模拟器，支持长程 rollout 的策略评估和假设分析，有效弥合仿真与真实的差距。验证了学习可迁移动力学先验的可行性。",
+          "llm_tags": [
+            "query:emb-wm-gen"
+          ],
+          "matched_query_tag": "query:emb-wm-gen",
+          "matched_query_text": "world model generalization",
+          "matched_requirement_id": "req-11",
+          "selection_source": "carryover_cache",
+          "paper_id": "2606.29501v1",
+          "carry_days": 1
+        }
+      ]
+    }
+  }
 }
