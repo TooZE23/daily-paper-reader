@@ -1,0 +1,845 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-15T21:23:59.673676+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 2,
+    "deep_divecandidates": 27,
+    "deep_cap": 7,
+    "deep_selected": 7,
+    "quick_candidates": 39,
+    "quick_skim_target": 12,
+    "quick_selected": 12
+  },
+  "deep_dive": [
+    {
+      "id": "2607.06988v1",
+      "source": "arxiv",
+      "title": "WAM-TTT: Steering World-Action Models by Watching Human Play at Test Time",
+      "abstract": "Steering robot foundation models (RFMs) toward new task variants or user-preferred behaviors remains challenging, often requiring additional robot demonstrations, task-specific fine-tuning, or long-context conditioning. We present WAM-TTT, a test-time training framework for steering world action models from raw human videos. Rather than treating human videos as trajectories to imitate, WAM-TTT absorbs them into a lightweight adaptive memory inside a frozen WAM through self-supervised video prediction. To make this memory useful for control, we introduce a meta-training stage that aligns human demonstrations with robot behaviors using paired human-robot data and a key--value memory reconstruction objective. At test time, only unlabeled human videos are required to adapt the memory, while the pretrained WAM remains frozen. This enables efficient and reusable steering without robot actions, human-side annotations, or task-specific fine-tuning, while preserving the generalization ability of the foundation model. Extensive experiments show that WAM-TTT consistently outperforms in-context human-video conditioning baselines across diverse manipulation tasks and generalization settings.",
+      "authors": [
+        "Yusen Feng",
+        "Bingchen Han",
+        "Jiangran Lyu",
+        "Kai Liu",
+        "Yixin Zheng",
+        "Yuxuan Wan",
+        "Weiheng Liu",
+        "Sun Han",
+        "Ruiqin Li",
+        "Yulong Zhang",
+        "Fangfu Liu",
+        "Xuesong Shi",
+        "Libin Liu",
+        "Yizhou Wang",
+        "Zhizheng Zhang",
+        "He Wang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-07-08T04:23:22+00:00",
+      "link": "https://arxiv.org/pdf/2607.06988v1",
+      "tags": [
+        "keyword:emb-wm-gen",
+        "keyword:tta-vlm",
+        "query:emb-wm-gen",
+        "query:tta-vlm"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "test-time training for world-action models using human videos",
+      "llm_evidence_cn": "使用人类视频对世界动作模型进行测试时训练",
+      "llm_evidence": "使用人类视频对世界动作模型进行测试时训练",
+      "canonical_evidence": "使用人类视频对世界动作模型进行测试时训练",
+      "llm_tldr_en": "WAM-TTT performs test-time training of world-action models by absorbing unlabeled human videos into adaptive memory via self-supervised video prediction, enabling steering without extra robot data or fine-tuning.",
+      "llm_tldr_cn": "该论文提出WAM-TTT，一种测试时训练框架，通过自监督视频预测将未标注人类视频吸收到冻结的世界动作模型的轻量自适应记忆中，从而在测试时引导模型适应新任务变体，无需额外机器人演示或微调。实验表明该方法能有效利用人类视频来调整机器人行为。",
+      "llm_tldr": "该论文提出WAM-TTT，一种测试时训练框架，通过自监督视频预测将未标注人类视频吸收到冻结的世界动作模型的轻量自适应记忆中，从而在测试时引导模型适应新任务变体，无需额外机器人演示或微调。实验表明该方法能有效利用人类视频来调整机器人行为。",
+      "llm_tags": [
+        "query:tta-vlm"
+      ],
+      "matched_query_tag": "query:tta-vlm",
+      "matched_query_text": "world model test time adaptation",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.07395v1",
+      "source": "arxiv",
+      "title": "When Prompts Ignore Structure: Graph-Based Attribute Reasoning for Calibrated VLMs",
+      "abstract": "Reliable confidence estimation remains a key limitation of test-time adaptation in vision-language models (VLMs), where prompt tuning improves zero-shot accuracy but often degrades calibration due to entropy-driven overconfidence. Prior approaches mitigate this using LLM-derived class attributes and contrastive regularization, yet treat attributes independently, ignoring their relational structure. We propose ARGTCA, which represents (class, attribute) pairs as nodes in a Symbolic Attribute Graph and trains a Graph Attention Network (GAT) using contrastive objectives to produce structurally informed embeddings that capture inter-attribute dependencies. We introduce two attribute selection strategies: ARGTCA-DIV for intra-class diversity and ARGTCA-DISC for inter-class discrimination. Experiments across nine benchmarks show that ARGTCA-DIV reduces average Expected Calibration Error (ECE) by approximately ~37% over baselines, while ARGTCA-DISC consistently performs as the second-best variant, reducing average ECE by approximately ~17% over baselines. These results suggest that modeling symbolic attribute interactions provides a principled approach for reliable test-time adaptation in VLMs.",
+      "authors": [
+        "Tanay Sodha",
+        "Aditya Sharma",
+        "Ramya Hebbalaguppe",
+        "Vinti Agarwal",
+        "Pranav Murthy Yeluripaty"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-07-08T13:31:17+00:00",
+      "link": "https://arxiv.org/pdf/2607.07395v1",
+      "tags": [
+        "keyword:emb-wm-gen",
+        "keyword:tta-vlm",
+        "query:tta-vlm"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "directly addresses test-time adaptation in VLMs, proposing graph-based attribute reasoning for calibration",
+      "llm_evidence_cn": "直接处理VLM测试时适应，提出基于图的属性推理用于校准",
+      "llm_evidence": "直接处理VLM测试时适应，提出基于图的属性推理用于校准",
+      "canonical_evidence": "直接处理VLM测试时适应，提出基于图的属性推理用于校准",
+      "llm_tldr_en": "ARGTCA improves calibration of test-time adapted VLMs by representing class-attribute pairs as a graph and using a GAT with contrastive learning to capture inter-attribute dependencies, addressing overconfidence from entropy-driven adaptation.",
+      "llm_tldr_cn": "该论文指出VLM测试时自适应中提示调优虽提升准确率但损害校准，源于熵驱动过置信。提出ARGTCA，将（类，属性）对建模为符号属性图，用图注意力网络和对比学习产生结构感知嵌入，捕捉属性间依赖。还引入两种属性选择策略。实验表明该方法在多个基准上同时提升了自适应后的准确率和校准质量，为测试时VLM适应提供了更可靠的方案。",
+      "llm_tldr": "该论文指出VLM测试时自适应中提示调优虽提升准确率但损害校准，源于熵驱动过置信。提出ARGTCA，将（类，属性）对建模为符号属性图，用图注意力网络和对比学习产生结构感知嵌入，捕捉属性间依赖。还引入两种属性选择策略。实验表明该方法在多个基准上同时提升了自适应后的准确率和校准质量，为测试时VLM适应提供了更可靠的方案。",
+      "llm_tags": [
+        "query:tta-vlm"
+      ],
+      "matched_query_tag": "query:tta-vlm",
+      "matched_query_text": "test time adaptation for vision language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.10744v1",
+      "source": "arxiv",
+      "title": "Traj-VLN: Learning Pixel-Space Interaction via Autoregressive Trajectory Generation",
+      "abstract": "Benefiting from the powerful priors embedded in large-scale pre-training data and the emerging commonsense reasoning ability, large language models (LLMs) have shown unprecedented generalization capabilities in many research fields. Recently, projecting visual embeddings into the language space via vision-language models (VLMs) to achieve sim-toreal and cross-scene generalization has become a prevailing paradigm in the field of Vision-and-Language Navigation in Continuous Environments (VLN-CE). VLN requires an embodied agent to navigate through unseen environments following natural linguistic instructions. We emphasize that a VLN task can be decomposed into a sequence of sub-tasks, each corresponding to a process of 3D spatial interaction with the environments described by instructions such as \"walk to the end of the sofa and turn left.\" However, such spatial interactions involving moving into the image along the direction of depth sensing are puzzling for VLMs as they were predominantly trained on conversations with RGB images. Rather than incorporating depth or 3D geometric information-which VLMs rarely encounter during pretrainingwe propose an alternative approach: fine-tuning VLMs to learn navigation interactions directly in 2D pixel space through autoregressive trajectory generation. Given a linguistic instruction and historical observations, our model sequentially predicts a series of pixel coordinates, drawing a trajectory from the bottom center of the current observation. While prior work has proved that pixel-goal supervision outperforms learning of discrete actions, our experiments further verify that the supervision of pixel-space trajectory significantly enhances VLN performance. Moreover, we demonstrate that our flagship model achieves state-of-the-art level performance with relatively limited computational resources and training data.",
+      "authors": [
+        "Changfei Fu",
+        "Guangcheng Chen",
+        "Wenjun Xu",
+        "Hong Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-07-12T12:54:44+00:00",
+      "link": "https://arxiv.org/pdf/2607.10744v1",
+      "tags": [
+        "keyword:emb-wm-gen",
+        "keyword:tta-vlm",
+        "query:emb-wm-gen",
+        "query:tta-vlm"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "sim-to-real and cross-scene generalization in VLN",
+      "llm_evidence_cn": "VLN中的仿真到现实和跨场景泛化",
+      "llm_evidence": "VLN中的仿真到现实和跨场景泛化",
+      "canonical_evidence": "VLN中的仿真到现实和跨场景泛化",
+      "llm_tldr_en": "Traj-VLN leverages VLMs and autoregressive trajectory generation to achieve sim-to-real and cross-scene generalization in Vision-and-Language Navigation.",
+      "llm_tldr_cn": "视觉语言导航（VLN）要求智能体在未知环境中遵循指令导航，然而仿真到现实和跨场景泛化仍是难题。本文提出Traj-VLN，将导航任务分解为子任务序列，利用视觉语言模型的通用知识，通过自回归轨迹生成学习像素空间交互，实现高效的仿真到现实迁移和跨环境泛化。实验表明，该方法在连续环境VLN基准上取得了最先进的泛化性能。",
+      "llm_tldr": "视觉语言导航（VLN）要求智能体在未知环境中遵循指令导航，然而仿真到现实和跨场景泛化仍是难题。本文提出Traj-VLN，将导航任务分解为子任务序列，利用视觉语言模型的通用知识，通过自回归轨迹生成学习像素空间交互，实现高效的仿真到现实迁移和跨环境泛化。实验表明，该方法在连续环境VLN基准上取得了最先进的泛化性能。",
+      "llm_tags": [
+        "query:emb-wm-gen"
+      ],
+      "matched_query_tag": "query:emb-wm-gen",
+      "matched_query_text": "sim-to-real transfer generalization",
+      "matched_requirement_id": "req-14",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.11270v1",
+      "source": "arxiv",
+      "title": "Towards Predictive, Aligned, and Scalable Robot Learning",
+      "abstract": "Learning, at its core, extends beyond memorization to the ability to reason and solve novel problems by navigating a space of possibilities. We introduce Lumo-2, a latent world-action model that generates actions by reasoning over world dynamics in latent space. The learned latent world dynamics capture physically grounded visual transitions, naturally encoding future possibilities and providing a unified substrate for cross-modal alignment. This formulation enables predictive reasoning akin to world modelling while remaining lightweight and focused on physical dynamics relevant to control. Central to our approach is the hypothesis that action generation quality is governed by the geometry of the latent space. We observe that standard reconstruction-based action tokenization objectives induce representations biased toward low-level signal fidelity, leading to misalignment between reconstruction quality and downstream control performance. To address this limitation, we propose a multi-stage modality pre-alignment strategy in which action representations are progressively aligned with latent world dynamics, vision, and language. This process enforces cross-modal consistency, promotes abstraction, and induces a structured latent space for predictive reasoning. We provide a systematic empirical study of latent world modelling and modality alignment, analyzing their roles in scaling laws and out-of-distribution generalization. Results show that Lumo-2 consistently outperforms strong vision-language-action (VLA) and world-action model (WAM) baselines, with gains on challenging real-world tasks requiring temporal reasoning, physical understanding, or high control complexity, including long-horizon and dexterous manipulation. These findings suggest that structured multimodal alignment and predictive reasoning are fundamental principles for advancing embodied intelligence.",
+      "authors": [
+        "Peijun Tang",
+        "Shangjin Xie",
+        "Baifu Huang",
+        "Binyan Sun",
+        "Haotian Yang",
+        "Kuncheng Luo",
+        "Weiqi Jin",
+        "Shilin Fang",
+        "Jianan Wang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-07-13T08:53:34+00:00",
+      "link": "https://arxiv.org/pdf/2607.11270v1",
+      "tags": [
+        "keyword:emb-wm-gen",
+        "keyword:tta-vlm",
+        "query:emb-wm-gen",
+        "query:tta-vlm"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "latent world-action model for robot learning",
+      "llm_evidence_cn": "用于机器人学习的潜在世界-动作模型",
+      "llm_evidence": "用于机器人学习的潜在世界-动作模型",
+      "canonical_evidence": "用于机器人学习的潜在世界-动作模型",
+      "llm_tldr_en": "Introduces Lumo-2, a latent world-action model that generates actions by reasoning over world dynamics in latent space for robot learning.",
+      "llm_tldr_cn": "本文提出Lumo-2，一种潜在世界-动作模型，在潜在空间中对世界动态进行推理以生成动作。该方法通过捕获物理视觉转换，实现预测性推理，并验证了潜在空间几何对动作生成质量的影响。在机器人任务中展示了良好的泛化能力。",
+      "llm_tldr": "本文提出Lumo-2，一种潜在世界-动作模型，在潜在空间中对世界动态进行推理以生成动作。该方法通过捕获物理视觉转换，实现预测性推理，并验证了潜在空间几何对动作生成质量的影响。在机器人任务中展示了良好的泛化能力。",
+      "llm_tags": [
+        "query:emb-wm-gen"
+      ],
+      "matched_query_tag": "query:emb-wm-gen",
+      "matched_query_text": "world model generalization",
+      "matched_requirement_id": "req-11",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.12894v1",
+      "source": "arxiv",
+      "title": "Hy-Embodied-VLM-1.0: Efficient Physical-World Agents",
+      "abstract": "Building capable embodied agents requires not only multimodal perception and understanding, but also agentic capabilities for reasoning about actions, adapting to evolving situations, and interacting with the physical world. In this report, we introduce Hy-Embodied-VLM-1.0, an efficient and powerful embodied foundation model specifically designed for embodied agents operating in the physical world. To cultivate such capabilities from the pre-training stage onward, we define an action-centric capability taxonomy comprising three progressive dimensions: Action-Relevant State Understanding, Action-Transition Reasoning, and Sequential and Adaptive Reasoning. Guided by this taxonomy, we develop a systematic data pipeline and curate data mixtures spanning both pre-training and post-training. To deliver strong physical-world understanding and interaction capabilities while supporting latency-sensitive deployment, we build our model on the Hy3-A3B language backbone and the Hy-ViT2 vision encoder. Its efficient Mixture-of-Experts architecture combines strong model capacity with high inference efficiency. We evaluate Hy-Embodied-VLM-1.0 on a comprehensive suite of 38 benchmarks covering embodied perception, physical-world understanding, and embodied reasoning. The model achieves the best performance among similarly sized models on 19 of the 38 benchmarks and substantially outperforms strong competitors, including Qwen3.6-A3B and Cosmos 3. Compared with the previous-generation Hy-Embodied-0.5 MoT-2B, Hy-Embodied-VLM-1.0 improves average performance by 8.4%. Despite activating only 3B parameters, it achieves performance close to that of the previous-generation model with 32B activated parameters. Beyond static benchmark evaluation, Hy-Embodied-VLM-1.0 also demonstrates strong performance on embodied agentic tasks requiring multi-turn interaction and long-horizon reasoning.",
+      "authors": [
+        "Ziyi Wang",
+        "Xumin Yu",
+        "Yongming Rao",
+        "Yonggen Ling",
+        "Yunheng Li",
+        "Oran Wang",
+        "Mingqi Gao",
+        "Yuchen Zhou",
+        "Yves Liang",
+        "Zuyan Liu",
+        "Yani Zhang",
+        "Rui Huang",
+        "Xiaoran Xu",
+        "Bowen Yuan",
+        "Yifu Yuan",
+        "Xu Tan",
+        "He Zhang",
+        "Yufei Huang",
+        "Shenghao Zhang",
+        "Hongsheng Wu",
+        "Han Hu",
+        "Zhengyou Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-14T15:34:17+00:00",
+      "link": "https://arxiv.org/pdf/2607.12894v1",
+      "tags": [
+        "keyword:emb-wm-gen",
+        "keyword:tta-vlm",
+        "query:emb-wm-gen",
+        "query:tta-vlm"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "embodied VLM foundation model for physical-world agents with robust generalization",
+      "llm_evidence_cn": "面向物理世界代理的具身VLM基础模型，具备强泛化能力",
+      "llm_evidence": "面向物理世界代理的具身VLM基础模型，具备强泛化能力",
+      "canonical_evidence": "面向物理世界代理的具身VLM基础模型，具备强泛化能力",
+      "llm_tldr_en": "Introduces Hy-Embodied-VLM-1.0, a foundation model for embodied agents using action-centric capability taxonomy and systematic data pipeline to achieve generalization in physical world.",
+      "llm_tldr_cn": "该论文报告了Hy-Embodied-VLM-1.0，一个专为物理世界具身代理设计的基础模型。模型从预训练阶段开始，定义了以动作为核心的能力分类体系，包括状态理解、动作转换推理和顺序自适应推理三个维度。通过系统化的数据流程和数据混合策略，模型掌握了丰富的具身推理能力，在多个具身任务上展现出出色的泛化性能，为构建通用物理世界代理提供了有效方案。",
+      "llm_tldr": "该论文报告了Hy-Embodied-VLM-1.0，一个专为物理世界具身代理设计的基础模型。模型从预训练阶段开始，定义了以动作为核心的能力分类体系，包括状态理解、动作转换推理和顺序自适应推理三个维度。通过系统化的数据流程和数据混合策略，模型掌握了丰富的具身推理能力，在多个具身任务上展现出出色的泛化性能，为构建通用物理世界代理提供了有效方案。",
+      "llm_tags": [
+        "query:emb-wm-gen"
+      ],
+      "matched_query_tag": "query:emb-wm-gen",
+      "matched_query_text": "embodied intelligence generalization",
+      "matched_requirement_id": "req-10",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.05780v1",
+      "source": "arxiv",
+      "title": "FORGE: Towards Functional Tool-Use Generalization via Keypoint Trajectory Reasoning",
+      "abstract": "While humans readily repurpose a book, a stone, or a shoe to drive a nail, robots trained on specific tools fail to transfer the same function to novel ones -- a gap we formalize as functional generalization. Such tools share a common functional intent that is visually recognizable, yet this perceptual similarity does not carry over to action space, where each tool demands an entirely different motor pattern. To bridge this gap, we explore intermediate representations including affordance images, human video prompts, and 2D keypoint trajectories, finding that keypoint trajectories best balance functional expressiveness and action groundability. Building on this, we propose FunctiOnal Reasoning and Grounded Execution (FORGE), a two-stage policy that decouples functional reasoning from action execution: predicting generalizable keypoint trajectories from action-free data, then grounding them into robot actions with limited demonstrations. On a seven-tool hitting-function benchmark, FORGE consistently outperforms state-of-the-art methods on unseen tools in both simulation and the real world, achieving over 2X improvement in average success rate.",
+      "authors": [
+        "Chuhao Zhou",
+        "Liquan Wang",
+        "Shuxin Cao",
+        "Xiangyu Chen",
+        "Yuxuan Hu",
+        "Boyu Ma",
+        "Animesh Garg",
+        "Jianfei Yang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "published": "2026-07-07T03:10:57+00:00",
+      "link": "https://arxiv.org/pdf/2607.05780v1",
+      "tags": [
+        "keyword:emb-wm-gen",
+        "query:emb-wm-gen"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "robotic functional generalization via keypoint trajectory reasoning",
+      "llm_evidence_cn": "通过关键点轨迹推理实现机器人功能泛化",
+      "llm_evidence": "通过关键点轨迹推理实现机器人功能泛化",
+      "canonical_evidence": "通过关键点轨迹推理实现机器人功能泛化",
+      "llm_tldr_en": "FORGE addresses functional generalization for tool use by reasoning about keypoint trajectories, enabling robots to transfer tool functions to novel tools.",
+      "llm_tldr_cn": "机器人无法将工具的功能迁移到新工具上，因为感知相似性并不对应动作空间中的相似性。本文提出FORGE，分为功能推理和接地执行两阶段，利用关键点轨迹作为中间表示，平衡功能表达性和动作可接地性。实验表明，FORGE使机器人能够将功能成功迁移到未见过的工具，显著提升了工具使用的泛化能力。",
+      "llm_tldr": "机器人无法将工具的功能迁移到新工具上，因为感知相似性并不对应动作空间中的相似性。本文提出FORGE，分为功能推理和接地执行两阶段，利用关键点轨迹作为中间表示，平衡功能表达性和动作可接地性。实验表明，FORGE使机器人能够将功能成功迁移到未见过的工具，显著提升了工具使用的泛化能力。",
+      "llm_tags": [
+        "query:emb-wm-gen"
+      ],
+      "matched_query_tag": "query:emb-wm-gen",
+      "matched_query_text": "robotic generalization with world models",
+      "matched_requirement_id": "req-13",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.27014v1",
+      "source": "arxiv",
+      "title": "A Generalization Theory for JEPA-Based World Models",
+      "abstract": "Joint Embedding Predictive Architectures (JEPAs) have recently emerged as a promising paradigm for world modeling by learning predictive dynamics in a latent space rather than generating future observations at the input level. Despite their empirical success, the theoretical understanding of JEPA-based world models remains limited. In this paper, we develop the first generalization theory for JEPA-based world models. We formulate JEPA pretraining as a conditional spectral graph learning problem and show that the JEPA objective is equivalent to a low-rank factorization of an action-conditioned co-occurrence matrix. Building on this characterization, we establish a connection between JEPA pretraining error and downstream planning regret, leading to a finite-sample generalization bound for JEPA-based world models. Our analysis reveals an inherent trade-off between approximation and sample errors with respect to the latent dimension, providing theoretical insights into the advantages and limitations of latent predictive models compared with input-level predictive approaches.",
+      "authors": [
+        "Jingyi Cui",
+        "Qi Zhang",
+        "Hongwei Wen",
+        "Yisen Wang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-06-25T13:29:20+00:00",
+      "link": "https://arxiv.org/pdf/2606.27014v1",
+      "tags": [
+        "keyword:emb-wm-gen",
+        "keyword:tta-vlm",
+        "query:emb-wm-gen",
+        "query:tta-vlm"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "generalization theory for JEPA-based world models",
+      "llm_evidence_cn": "JEPA世界模型的泛化理论",
+      "llm_evidence": "JEPA世界模型的泛化理论",
+      "canonical_evidence": "JEPA世界模型的泛化理论",
+      "llm_tldr_en": "First generalization theory for JEPA world models, showing equivalence to low-rank factorization of action-conditioned co-occurrence and connecting pretraining error to planning regret.",
+      "llm_tldr_cn": "JEPA世界模型虽经验成功，但缺乏理论理解。本文建立了首个JEPA泛化理论：将预训练形式化为条件谱图学习，等价于对动作条件共现矩阵的低秩分解，并证明了预训练误差与下游规划遗憾之间的关联，给出了有限样本泛化界。",
+      "llm_tldr": "JEPA世界模型虽经验成功，但缺乏理论理解。本文建立了首个JEPA泛化理论：将预训练形式化为条件谱图学习，等价于对动作条件共现矩阵的低秩分解，并证明了预训练误差与下游规划遗憾之间的关联，给出了有限样本泛化界。",
+      "llm_tags": [
+        "query:emb-wm-gen"
+      ],
+      "matched_query_tag": "query:emb-wm-gen",
+      "matched_query_text": "world model generalization",
+      "matched_requirement_id": "req-11",
+      "selection_source": "carryover_cache",
+      "paper_id": "2606.27014v1"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.22351v1",
+      "source": "arxiv",
+      "title": "Reliability-Guided Adaptive Ensembling for Robust Test-Time Adaptation",
+      "abstract": "Test-time adaptation (TTA) can mitigate domain shift without source data, but it is highly brittle under adversarially contaminated test streams, where corrupted inputs also destabilize online updates. We study robust test-time adaptation (RTTA) in the adversarial-stream setting, which remains comparatively underexplored relative to standard TTA, and propose SAFER (Stochastic Augmentation Framework for Enhanced Robustness), a training-free reliability-guided augmentation wrapper for RTTA. SAFER preserves the wrapped TTA objective while replacing brittle single-view predictions with a reliability-guided pooled predictor. For each test sample, SAFER generates stochastic augmentations and aggregates their predictions through correlation-weighted pooling with outlier detection. We further study an adaptive-mixing extension that improves clean-performance retention by adjusting original-versus-augmentation weighting using feature disagreement signals. We evaluate on PACS, VLCS, and OfficeHome under PGD attacks at various attack rates. Across benchmarks, SAFER improves resilience of TTA methods to adversarial attacks while maintaining competitive clean performance.",
+      "authors": [
+        "Adam Koziak",
+        "Yuhong Guo"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "published": "2026-06-21T06:20:22+00:00",
+      "link": "https://arxiv.org/pdf/2606.22351v1",
+      "tags": [
+        "keyword:tta-vlm",
+        "query:tta-vlm"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "robust test-time adaptation against adversarial streams",
+      "llm_evidence_cn": "鲁棒的测试时适应，抵御对抗性流",
+      "llm_evidence": "鲁棒的测试时适应，抵御对抗性流",
+      "canonical_evidence": "鲁棒的测试时适应，抵御对抗性流",
+      "llm_tldr_en": "SAFER provides a training-free reliability-guided augmentation wrapper for robust test-time adaptation, using correlation-weighted pooling to handle adversarial streams.",
+      "llm_tldr_cn": "测试时适应在对抗性污染流下极易失效。本文提出SAFER，一种无需训练的可信导向增强包装器，通过随机增强和相关性加权池化替代单视图预测，提升了在对抗数据流中的鲁棒性，同时保持原有适应目标。",
+      "llm_tldr": "测试时适应在对抗性污染流下极易失效。本文提出SAFER，一种无需训练的可信导向增强包装器，通过随机增强和相关性加权池化替代单视图预测，提升了在对抗数据流中的鲁棒性，同时保持原有适应目标。",
+      "llm_tags": [
+        "query:tta-vlm"
+      ],
+      "matched_query_tag": "query:tta-vlm",
+      "matched_query_text": "test time adaptation for vision language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "carryover_cache",
+      "paper_id": "2606.22351v1",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.05798v1",
+      "source": "arxiv",
+      "title": "Segmentation before Answering: Pixel Grounding for MLLM Visual Reasoning",
+      "abstract": "Recent advancements in Multimodal Large Language Models (MLLMs) have evolved from static perception to interleaved visual-language reasoning, often referred to as ``thinking with images''. A basic operation in this reasoning process is to zoom in on regions of interest (often represented with bounding boxes) to acquire finer visual details. In this paper, we propose \\textbf{Seg}mentation before \\textbf{Answer}ing (SegAnswer), which shifts the unit of zoom-in from the popular bounding box to pixel-level segmentation mask. By employing fine-grained masks to isolate the target area from cluttered environments, segmented visual input yields a more precise region of interest, effectively filtering out redundant background and interfering objects. Furthermore, the discrete patches of segmented visual input align more seamlessly with how MLLMs structure visual tokens via positional embeddings. In experiments, we evaluate SegAnswer across diverse benchmarks, including high-resolution perception, general perception, and hallucination. It achieves consistent improvements and also exhibits considerable performance on segmentation tasks, validating its capability for reliable pixel grounding.",
+      "authors": [
+        "Yake Wei",
+        "Yuan Wang",
+        "Fengyun Rao",
+        "Jing Lyu",
+        "Di Hu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-07T03:50:43+00:00",
+      "link": "https://arxiv.org/pdf/2607.05798v1",
+      "tags": [
+        "keyword:emb-wm-gen",
+        "keyword:tta-vlm",
+        "query:tta-vlm"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "training-free pixel grounding to adapt MLLM inference for better reasoning",
+      "llm_evidence_cn": "无需训练的分割增强MLLM推理能力",
+      "llm_evidence": "无需训练的分割增强MLLM推理能力",
+      "canonical_evidence": "无需训练的分割增强MLLM推理能力",
+      "llm_tldr_en": "SegAnswer replaces bounding box zoom with pixel-level segmentation to improve MLLM visual reasoning without fine-tuning, effectively filtering background noise.",
+      "llm_tldr_cn": "该论文提出SegAnswer，将MLLM视觉推理中的放大操作从边界框提升到像素级分割掩码。通过精确隔离目标区域，有效过滤背景干扰，无需额外训练即可提升推理性能。在多个数据集上的实验证明，该方法在复杂场景下显著提高MLLM的接地准确性，尤其对小目标和遮挡场景效果显著。",
+      "llm_tldr": "该论文提出SegAnswer，将MLLM视觉推理中的放大操作从边界框提升到像素级分割掩码。通过精确隔离目标区域，有效过滤背景干扰，无需额外训练即可提升推理性能。在多个数据集上的实验证明，该方法在复杂场景下显著提高MLLM的接地准确性，尤其对小目标和遮挡场景效果显著。",
+      "llm_tags": [
+        "query:tta-vlm"
+      ],
+      "matched_query_tag": "query:tta-vlm",
+      "matched_query_text": "Search for techniques that adapt multimodal large language models during inference without fine tuning",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.06018v1",
+      "source": "arxiv",
+      "title": "RoboTALES: Learning Reasoning-Guided Robot Policies via Task-Aligned Simulated Futures",
+      "abstract": "Pretrained video generative models are promising backbones for visuomotor control, but their imagined futures often drift from task intent and are not reliably action-conditional. As a result, these models can be difficult to use for planning or policy extraction. To address these limitations, we propose RoboTALES, a single-stage framework that learns task-aligned simulated futures and uses them to train robot policies. Our approach introduces two key innovations: (1) a hierarchical LLM-based planner that breaks complex tasks into a sequence of subgoals to guide the model's imagination; and (2) a VLM-based critic that evaluates these ``imagined'' futures and uses reward-based feedback to keep the model's internal representations focused on the goal. By anchoring the video generator in abstract reasoning, we produce temporally consistent rollouts and more coherent actions. We evaluate RoboTALES on diverse manipulation tasks from RoboCasa and LIBERO10, and show that our method consistently outperforms existing methods, especially in long-horizon tasks. Our code and models are publicly available at https://github.com/hananshafi/RoboTALES.",
+      "authors": [
+        "Hanan Gani",
+        "Tejal Kulkarni",
+        "Madhoolika Chodavarapu",
+        "Nicklas Hansen",
+        "Manmohan Chandraker"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-07T08:58:29+00:00",
+      "link": "https://arxiv.org/pdf/2607.06018v1",
+      "tags": [
+        "keyword:emb-wm-gen",
+        "query:emb-wm-gen"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "robot policies using simulated futures and VLM critic, relevant to generalization in embodied AI with world models",
+      "llm_evidence_cn": "利用模拟未来和VLM批评器的机器人策略，与具身AI中世界模型泛化相关",
+      "llm_evidence": "利用模拟未来和VLM批评器的机器人策略，与具身AI中世界模型泛化相关",
+      "canonical_evidence": "利用模拟未来和VLM批评器的机器人策略，与具身AI中世界模型泛化相关",
+      "llm_tldr_en": "RoboTALES learns task-aligned simulated futures via a hierarchical LLM planner and VLM-based critic, enabling robot policy training that generalizes better to new tasks and environments.",
+      "llm_tldr_cn": "该论文针对预训练视频生成模型想象未来偏离任务意图的问题，提出RoboTALES框架。通过层次化LLM规划器分解任务为子目标，并用VLM批评器评估想象未来，实现任务对齐的模拟未来学习。该方法训练出的机器人策略在未见过的任务和环境上展现出更好的泛化能力，为利用世界模型进行具身智能泛化提供了可行方案。",
+      "llm_tldr": "该论文针对预训练视频生成模型想象未来偏离任务意图的问题，提出RoboTALES框架。通过层次化LLM规划器分解任务为子目标，并用VLM批评器评估想象未来，实现任务对齐的模拟未来学习。该方法训练出的机器人策略在未见过的任务和环境上展现出更好的泛化能力，为利用世界模型进行具身智能泛化提供了可行方案。",
+      "llm_tags": [
+        "query:emb-wm-gen"
+      ],
+      "matched_query_tag": "query:emb-wm-gen",
+      "matched_query_text": "methods for generalization in embodied AI using learned world models",
+      "matched_requirement_id": "req-15",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.29357v1",
+      "source": "arxiv",
+      "title": "Dynamic Parsing and Updating Natural Language Specification using VLMs for Robust Vision-Language Tracking",
+      "abstract": "Vision-language tracking guided by natural language specifications leverages high-level semantic cues of target objects to substantially boost tracking accuracy and robustness. Existing studies have verified that adaptively optimizing textual descriptions throughout the tracking process can effectively mitigate the semantic-visual mismatch induced by dynamic variations in target appearance, position, and other inherent attributes. Nevertheless, mainstream methods that directly generate textual information via sequence models or large language models inevitably suffer from inherent defects, including erroneous target updating, excessive background distraction, and pervasive hallucination artifacts. To address the aforementioned limitations, this paper proposes a novel language dependency parsing mechanism to precisely distill core tracking principal components, encompassing target objects, semantic concepts, and background contextual information. On this basis, we perform component-aware adaptive textual description updates by exploiting the powerful cross-modal understanding capability of the pre-trained vision-language model Qwen-VL. By integrating the proposed elaborately designed modules into the baseline framework, our method achieves consistent and superior tracking performance on multiple large-scale vision-language tracking benchmarks, including TNL2K, LaSOT, TNLLT, and OTB-LANG. The source code and pre-trained models will be released at https://github.com/Event-AHU/Open_VLTrack.",
+      "authors": [
+        "Xiao Wang",
+        "Liye Jin",
+        "Dan Xu",
+        "Yuehang Li",
+        "Lan Chen",
+        "Yaowei Wang",
+        "Yonghong Tian",
+        "Jin Tang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-06-28T12:12:18+00:00",
+      "link": "https://arxiv.org/pdf/2606.29357v1",
+      "tags": [
+        "keyword:tta-vlm",
+        "query:tta-vlm"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "dynamic VLM adaptation during tracking",
+      "llm_evidence_cn": "跟踪过程中动态适应VLM",
+      "llm_evidence": "跟踪过程中动态适应VLM",
+      "canonical_evidence": "跟踪过程中动态适应VLM",
+      "llm_tldr_en": "Proposes dynamic parsing and updating of natural language specifications using VLMs during tracking to adapt to target appearance changes, mitigating semantic-visual mismatch.",
+      "llm_tldr_cn": "视觉语言跟踪中目标外观动态变化导致语义-视觉失配。本文利用VLM动态解析和更新自然语言规格，自适应优化跟踪过程中的文本描述，以修正目标更新错误和背景干扰，提升跟踪鲁棒性。",
+      "llm_tldr": "视觉语言跟踪中目标外观动态变化导致语义-视觉失配。本文利用VLM动态解析和更新自然语言规格，自适应优化跟踪过程中的文本描述，以修正目标更新错误和背景干扰，提升跟踪鲁棒性。",
+      "llm_tags": [
+        "query:tta-vlm"
+      ],
+      "matched_query_tag": "query:tta-vlm",
+      "matched_query_text": "Retrieve articles about online adaptation of VLM and MLLM at test time",
+      "matched_requirement_id": "req-8",
+      "selection_source": "carryover_cache",
+      "paper_id": "2606.29357v1",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.05978v1",
+      "source": "arxiv",
+      "title": "Propose and Attend: Training-free MLLM Grounding Confidence via Multi-Token Localized Attention",
+      "abstract": "Multimodal large language models can emit localized predictions, bounding boxes for objects and temporal windows for video and audio events, but they hallucinate these regions prolifically. The model's own token log-probabilities are nearly uninformative: they conflate grounding quality with input ambiguity, and coordinate tokens become near-deterministic once the model commits. We propose Multi-Token Localized Attention (MTLA): a training-free, post-hoc score that measures how strongly a prediction's tokens attend to the region they claim. Prior attention-based detectors, which sum attention over the entire input modality and read a single response token, are weaker special cases; we show that summing only within the claimed region and aggregating across all prediction tokens recovers a stronger grounding signal. The same recipe applies almost trivially to other modalities and tasks: object detection in images and temporal localization in video and audio. Across multiple MLLM families and three modalities, MTLA improves hallucination AUROC by +7 to +38 over the best prior training-free baseline. Used as a confidence score for re-ranking, it nearly doubles the zero-shot COCO detection AP of an open-source 8B generalist (from 20.4 to 37.0), narrowing the gap to supervised detectors without any task-specific training.",
+      "authors": [
+        "Daniel Shalam",
+        "Emanuel Ben Baruch",
+        "Avi Ben Cohen",
+        "Tal Remez"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-07T08:10:57+00:00",
+      "link": "https://arxiv.org/pdf/2607.05978v1",
+      "tags": [
+        "keyword:tta-vlm",
+        "query:tta-vlm"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "training-free post-hoc grounding confidence for MLLMs during inference",
+      "llm_evidence_cn": "针对MLLM推理时的无需训练的后处理接地置信度方法",
+      "llm_evidence": "针对MLLM推理时的无需训练的后处理接地置信度方法",
+      "canonical_evidence": "针对MLLM推理时的无需训练的后处理接地置信度方法",
+      "llm_tldr_en": "Proposes Multi-Token Localized Attention (MTLA), a training-free score to measure grounding confidence of MLLM predictions by localized attention, addressing hallucination without fine-tuning.",
+      "llm_tldr_cn": "该论文提出Multi-Token Localized Attention (MTLA)，一种无需训练的后处理分数，通过局部化注意力来度量MLLM预测的接地置信度，有效缓解多模态大模型的幻觉问题。实验表明，该方法显著优于先前基于注意力总和的方法，能更准确区分接地质量与输入歧义。这一训练-free的评估技术为MLLM在推理时的可靠部署和无需微调的测试时适应提供了实用工具。",
+      "llm_tldr": "该论文提出Multi-Token Localized Attention (MTLA)，一种无需训练的后处理分数，通过局部化注意力来度量MLLM预测的接地置信度，有效缓解多模态大模型的幻觉问题。实验表明，该方法显著优于先前基于注意力总和的方法，能更准确区分接地质量与输入歧义。这一训练-free的评估技术为MLLM在推理时的可靠部署和无需微调的测试时适应提供了实用工具。",
+      "llm_tags": [
+        "query:tta-vlm"
+      ],
+      "matched_query_tag": "query:tta-vlm",
+      "matched_query_text": "Search for techniques that adapt multimodal large language models during inference without fine tuning",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.06370v1",
+      "source": "arxiv",
+      "title": "Training-Free Acceleration for Vision-Language-Action Models with Action Caching and Refinement",
+      "abstract": "Vision-Language-Action (VLA) models have emerged as a promising approach for generalizable robotic manipulations. In particular, flow matching-based VLA models have shown remarkable success due to their capability to generate precise and smooth action sequences and capture multimodal distributions. However, the iterative denoising process in the action head acts as a major computational bottleneck, posing a critical challenge for real-time deployment. To address this challenge, we propose ActionCache, a plug-and-play external cache that opportunistically reuses past intermediate actions to warm-start generations from the vicinity of target actions, thereby drastically reducing the inference latency. Specifically, ActionCache stores the intermediate actions with compact multimodal keys, which enables retrieval from similar past contexts across different episodes or even different tasks. Experimental results in simulation and real-world environments demonstrate that ActionCache maintains high task success rates in a low-latency regime, achieving inference acceleration of up to $11.75\\times$ and $34.43\\times$ for representative flow-based VLA models, $π_{0.5}$ and GR00T-N1.6, respectively.",
+      "authors": [
+        "Ryuji Oi",
+        "Hikari Otsuka",
+        "Kosuke Matsushima",
+        "Yuki Ichikawa",
+        "Masato Motomura",
+        "Tatsuya Kaneko",
+        "Daichi Fujiki"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-07-07T15:10:15+00:00",
+      "link": "https://arxiv.org/pdf/2607.06370v1",
+      "tags": [
+        "keyword:emb-wm-gen",
+        "keyword:tta-vlm",
+        "query:emb-wm-gen",
+        "query:tta-vlm"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "training-free inference acceleration for VLA models, adapts via caching without fine-tuning",
+      "llm_evidence_cn": "无需微调的VLA模型训练免费加速方法，通过缓存适应",
+      "llm_evidence": "无需微调的VLA模型训练免费加速方法，通过缓存适应",
+      "canonical_evidence": "无需微调的VLA模型训练免费加速方法，通过缓存适应",
+      "llm_tldr_en": "ActionCache enables training-free acceleration of VLA models by caching and reusing intermediate actions, reducing latency without finetuning. Highly relevant to test-time adaptation of multimodal models without additional training.",
+      "llm_tldr_cn": "针对流匹配VLA模型推理速度慢的问题，提出ActionCache，一种即插即用的外部缓存，通过重复利用过去中间动作来预热生成，大幅降低延迟。该方法无需任何微调，直接加速模型推理，适用于需要实时部署的机器人操控场景。虽非参数自适应，但其训练免费的特性与需求中‘无需微调的推理时适应’高度吻合。",
+      "llm_tldr": "针对流匹配VLA模型推理速度慢的问题，提出ActionCache，一种即插即用的外部缓存，通过重复利用过去中间动作来预热生成，大幅降低延迟。该方法无需任何微调，直接加速模型推理，适用于需要实时部署的机器人操控场景。虽非参数自适应，但其训练免费的特性与需求中‘无需微调的推理时适应’高度吻合。",
+      "llm_tags": [
+        "query:tta-vlm"
+      ],
+      "matched_query_tag": "query:tta-vlm",
+      "matched_query_text": "Search for techniques that adapt multimodal large language models during inference without fine tuning",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.29501v1",
+      "source": "arxiv",
+      "title": "Learning Transferable Dynamics Priors from Action to World Modeling",
+      "abstract": "We study action-conditioned world modeling as a scalable way to learn transferable dynamics priors for robot learning. By pretraining a model to predict how actions drive visual scene evolution, the resulting world model captures reusable interaction dynamics beyond appearance-level video generation. Concretely, we pretrain a multi-view interactive base diffusion world model, A2World, on large-scale robot manipulation data with real action annotations. We validate the learned dynamics priors from two complementary perspectives. First, we adapt A2World into a task- or scene-specialized real-world simulator, A2World-sim, whose long-horizon rollouts support simulator-based policy evaluation and scalable what-if analysis by replacing real-robot rollouts with world model rollouts. Second, starting from the same pretrained weights, we adapt A2World into a video-action joint prediction model, A2World-policy, that predicts actions under visual and instruction conditioning. Experiments across simulation benchmarks and real-robot settings demonstrate that action-conditioned world model pretraining yields transferable dynamics priors that benefit both simulator-centric and policy-centric robot learning.",
+      "authors": [
+        "Ze Huang",
+        "Jiahui Zhang",
+        "Hairuo Liu",
+        "Chenxi Zhang",
+        "Ran Cheng",
+        "Li Zhang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-06-28T17:01:55+00:00",
+      "link": "https://arxiv.org/pdf/2606.29501v1",
+      "tags": [
+        "keyword:emb-wm-gen",
+        "keyword:tta-vlm",
+        "query:emb-wm-gen",
+        "query:tta-vlm"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "transferable world model priors for generalization",
+      "llm_evidence_cn": "可迁移世界模型先验用于泛化",
+      "llm_evidence": "可迁移世界模型先验用于泛化",
+      "canonical_evidence": "可迁移世界模型先验用于泛化",
+      "llm_tldr_en": "A2World learns transferable dynamics priors by pretraining a multi-view interactive world model on large-scale robot manipulation data, enabling downstream policy evaluation and sim-to-real transfer.",
+      "llm_tldr_cn": "机器人学习需要可迁移的世界模型。A2World在大规模机器人操作数据上预训练多视角交互扩散世界模型，捕捉动作驱动的视觉动态先验。该模型可适应为任务专用模拟器，支持长程 rollout 的策略评估和假设分析，有效弥合仿真与真实的差距。验证了学习可迁移动力学先验的可行性。",
+      "llm_tldr": "机器人学习需要可迁移的世界模型。A2World在大规模机器人操作数据上预训练多视角交互扩散世界模型，捕捉动作驱动的视觉动态先验。该模型可适应为任务专用模拟器，支持长程 rollout 的策略评估和假设分析，有效弥合仿真与真实的差距。验证了学习可迁移动力学先验的可行性。",
+      "llm_tags": [
+        "query:emb-wm-gen"
+      ],
+      "matched_query_tag": "query:emb-wm-gen",
+      "matched_query_text": "world model generalization",
+      "matched_requirement_id": "req-11",
+      "selection_source": "carryover_cache",
+      "paper_id": "2606.29501v1",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.06522v1",
+      "source": "arxiv",
+      "title": "Bridging Physical Reasoning and Task Generalization via Visual Action Outcome Reasoning Alignment",
+      "abstract": "Vision-language models (VLMs) struggle to generalize in interactive physical reasoning, particularly under unseen tasks and environments. Two key failure modes are prominent: hallucinated chain-of-thought (CoT) reasoning that contradicts physical reality, and misalignment between the model's reasoning and actions. We present VAORA (Visual Action Outcome Reasoning Alignment), a novel reward design that directly addresses both issues. VAORA introduces two complementary rewards: Visual Alignment Reward, which anchors VLM reasoning to the visual context independent of the agent action itself, and Visual-Action Alignment Reward, which grounds reasoning in the visual outcome induced by the model's action. Together, these rewards suppress hallucinated CoT and reduce the gap between reasoning and behavior. To improve training stability, we further employ smooth, dense rewards by estimating success probabilities using a pre-trained in-domain expert agent. Experiments on PHYRE and Virtual Tool support our performances across novel-task and unseen-environment settings, confirming that grounded and generalizable physical intelligence can be induced through VAORA.",
+      "authors": [
+        "Han-Jun Ko",
+        "Jr-Jen Chen",
+        "Haobo Yuan",
+        "Hsin-Ying Lee",
+        "Tiancheng Shen",
+        "Ming-Hsuan Yang",
+        "Yu-Chiang Frank Wang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "published": "2026-07-07T17:27:59+00:00",
+      "link": "https://arxiv.org/pdf/2607.06522v1",
+      "tags": [
+        "keyword:emb-wm-gen",
+        "keyword:tta-vlm",
+        "query:emb-wm-gen",
+        "query:tta-vlm"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "improves VLM generalization in interactive physical reasoning via visual-action outcome alignment rewards",
+      "llm_evidence_cn": "通过视觉-动作结果对齐奖励提升VLM在交互式物理推理中的泛化能力",
+      "llm_evidence": "通过视觉-动作结果对齐奖励提升VLM在交互式物理推理中的泛化能力",
+      "canonical_evidence": "通过视觉-动作结果对齐奖励提升VLM在交互式物理推理中的泛化能力",
+      "llm_tldr_en": "VAORA introduces alignment rewards to ground VLM reasoning in visual outcomes, overcoming hallucinated reasoning and improving task generalization in unseen environments.",
+      "llm_tldr_cn": "该论文提出VAORA奖励设计，通过视觉对齐奖励和视觉-动作对齐奖励，将VLM的推理锚定到视觉上下文和动作结果中，从而消除幻觉式推理，提升模型在未见任务和环境中的交互式物理推理泛化能力。",
+      "llm_tldr": "该论文提出VAORA奖励设计，通过视觉对齐奖励和视觉-动作对齐奖励，将VLM的推理锚定到视觉上下文和动作结果中，从而消除幻觉式推理，提升模型在未见任务和环境中的交互式物理推理泛化能力。",
+      "llm_tags": [
+        "query:emb-wm-gen"
+      ],
+      "matched_query_tag": "query:emb-wm-gen",
+      "matched_query_text": "generalization in embodied AI",
+      "matched_requirement_id": "req-12",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.06558v2",
+      "source": "arxiv",
+      "title": "RynnWorld-Teleop: An Action-Conditioned World Model for Digital Teleoperation",
+      "abstract": "Scaling robot learning requires massive, diverse trajectory data, yet collection is currently bottlenecked by physical teleoperation, where every demonstration binds operator time to specific hardware and workspaces. We introduce digital teleoperation, a paradigm that decouples data collection from physical constraints by replacing the real robot with a generative world model. In this framework, an operator's hand-pose stream drives a robot-centric generative world model to synthesize high-fidelity egocentric videos from a single reference image. The recorded pose stream serves as an embodiment-agnostic action label transferable to any target robot via standard retargeting, yielding complete state-action trajectories for imitation learning independent of physical hardware. We instantiate this paradigm in RynnWorld-Teleop, a system that integrates depth-aware skeletal conditioning, progressive human-to-robot training on a video Diffusion Transformer, and streaming autoregressive distillation. This pipeline compresses the generative process into a single-pass inference, enabling 40+ FPS, real-time interactive generation on a single H100 GPU. Policies trained exclusively on RynnWorld-Teleop-generated data achieve effective zero-shot Sim2Real transfer across dexterous and diverse bimanual tasks. Moreover, augmenting real-world datasets with our digitally teleoperated data consistently improves success rates, demonstrating that RynnWorld-Teleop serves as a high-fidelity, scalable data engine for the next generation of robotic agents.",
+      "authors": [
+        "Haoyu Zhao",
+        "Xingyue Zhao",
+        "Hangyu Li",
+        "Biao Gong",
+        "Kehan Li",
+        "Siteng Huang",
+        "Xin Li",
+        "Deli Zhao",
+        "Zhongyu Li"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-07T17:58:11+00:00",
+      "link": "https://arxiv.org/pdf/2607.06558v2",
+      "tags": [
+        "keyword:emb-wm-gen",
+        "keyword:tta-vlm",
+        "query:emb-wm-gen",
+        "query:tta-vlm"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "world model for data collection, supports generalization",
+      "llm_evidence_cn": "用于数据采集的世界模型，有助于泛化",
+      "llm_evidence": "用于数据采集的世界模型，有助于泛化",
+      "canonical_evidence": "用于数据采集的世界模型，有助于泛化",
+      "llm_tldr_en": "RynnWorld-Teleop introduces a generative world model for digital teleoperation, decoupling data collection from physical hardware.",
+      "llm_tldr_cn": "机器人学习数据采集受限于物理远程操作，每个演示绑定特定硬件和工作空间。本文提出数字远程操作范式，用生成式世界模型替代真实机器人，从单张参考图像合成高保真第一人称视频。操作者手部姿态流作为动作标签，可迁移到任意目标机器人，从而大规模产生状态-动作轨迹用于模仿学习，加速机器人学习的数据收集。",
+      "llm_tldr": "机器人学习数据采集受限于物理远程操作，每个演示绑定特定硬件和工作空间。本文提出数字远程操作范式，用生成式世界模型替代真实机器人，从单张参考图像合成高保真第一人称视频。操作者手部姿态流作为动作标签，可迁移到任意目标机器人，从而大规模产生状态-动作轨迹用于模仿学习，加速机器人学习的数据收集。",
+      "llm_tags": [
+        "query:emb-wm-gen"
+      ],
+      "matched_query_tag": "query:emb-wm-gen",
+      "matched_query_text": "world model generalization",
+      "matched_requirement_id": "req-11",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.00457v1",
+      "source": "arxiv",
+      "title": "Multi-scale Mixture of World Models for Embodied Agents in Evolving Environments",
+      "abstract": "Embodied agents operating in the real world require multi-scale reasoning and knowledge adaptation as conditions change. We identify two challenges in applying Mixture of Experts (MoE) to this setting: routing lacks an explicit notion of scale, preventing targeted updates at specific scales, and a uniform update policy cannot accommodate the different rates at which knowledge at each scale becomes outdated. We present MuSix, a framework that addresses both challenges through scale-aware world model mixture and evolution. A two-stage routing mechanism grounds scale selection in experiential distance, a measure of situational novelty inspired by Construal Level Theory: a meta-router first maps this quantity to a weight over continuous scale space, then per-scale base routers select world models within the identified scale. For adaptation, scale-dependent forgetting rates allow low-scale knowledge to refresh rapidly while high-scale abstractions persist, and gated inter-scale transfer maintains coherence across the hierarchy. Experiments on EmbodiedBench and HAZARD show that MuSix improves over state-of-the-art baselines on multi-scale reasoning and dynamic adaptation.",
+      "authors": [
+        "Jinwoo Jang",
+        "Daniel J. Rho",
+        "Sihyung Yoon",
+        "Hyunsuk Cho",
+        "Honguk Woo"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-01T05:23:56+00:00",
+      "link": "https://arxiv.org/pdf/2607.00457v1",
+      "tags": [
+        "keyword:emb-wm-gen",
+        "keyword:tta-vlm",
+        "query:emb-wm-gen",
+        "query:tta-vlm"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "world model adaptation at test time via scale-aware mixture",
+      "llm_evidence_cn": "通过尺度感知混合实现世界模型的测试时适应",
+      "llm_evidence": "通过尺度感知混合实现世界模型的测试时适应",
+      "canonical_evidence": "通过尺度感知混合实现世界模型的测试时适应",
+      "llm_tldr_en": "MuSix introduces scale-aware mixture of world models for embodied agents, with a two-stage routing mechanism based on experiential distance to enable targeted updates at different scales.",
+      "llm_tldr_cn": "具身智能体在变化环境中需多尺度推理与知识适应。现有MoE缺乏尺度感知且更新策略单一。MuSix提出尺度感知的世界模型混合与进化框架：通过两阶段路由机制将尺度选择与经验距离关联，实现不同尺度世界模型的局部更新。在演化环境任务中展示了更强的适应能力。",
+      "llm_tldr": "具身智能体在变化环境中需多尺度推理与知识适应。现有MoE缺乏尺度感知且更新策略单一。MuSix提出尺度感知的世界模型混合与进化框架：通过两阶段路由机制将尺度选择与经验距离关联，实现不同尺度世界模型的局部更新。在演化环境任务中展示了更强的适应能力。",
+      "llm_tags": [
+        "query:tta-vlm"
+      ],
+      "matched_query_tag": "query:tta-vlm",
+      "matched_query_text": "world model test time adaptation",
+      "matched_requirement_id": "req-5",
+      "selection_source": "carryover_cache",
+      "paper_id": "2607.00457v1",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.06559v1",
+      "source": "arxiv",
+      "title": "RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation",
+      "abstract": "Robotic manipulation in the open world requires not only recognizing what a scene looks like, but also anticipating how its 3D structure moves under interaction. We argue that synchronized RGB, depth, and optical flow, namely RGB-DF, provide a physically grounded representation that captures the underlying 4D dynamics of a scene. Compared to 2D pixel videos, this multi-modal synergy aligns visual appearance with geometric structure and temporal motion, creating a representation space significantly closer to the low-level end-effector actions demanded by robotic systems, thereby narrowing the gap between world prediction and policy learning. Building on this insight, we introduce RynnWorld-4D, a generative model that co-produces future RGB frames, depth maps, and optical flow from a single RGB-D image and a language instruction within one unified diffusion process. This 4D world model features a tri-branch architecture that integrates cross-modal attention with frame-wise 3D RoPE, ensuring that appearance, geometry, and motion evolve consistently. To supply training data at scale, we curate Rynn4DDataset 1.0, a massive dataset of over 254.4 million frames across egocentric human and robotic manipulation videos with high-quality pseudo-labels for depth and optical flow. We further propose RynnWorld-4D-Policy, an inverse dynamics head that consumes the internal 4D representations of RynnWorld-4D in a single forward pass, bypassing expensive multi-step denoising, to output robot actions in a closed-loop manner. Experiments show that RynnWorld-4D produces temporally and spatially coherent 4D predictions, and that RynnWorld-4D-Policy achieves state-of-the-art performance on real-world dexterous bimanual manipulation tasks, particularly excelling in tasks demanding spatial precision and temporal coordination.",
+      "authors": [
+        "Haoyu Zhao",
+        "Xingyue Zhao",
+        "Siteng Huang",
+        "Xin Li",
+        "Deli Zhao",
+        "Zhongyu Li"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-07T17:58:15+00:00",
+      "link": "https://arxiv.org/pdf/2607.06559v1",
+      "tags": [
+        "keyword:emb-wm-gen",
+        "keyword:tta-vlm",
+        "query:emb-wm-gen",
+        "query:tta-vlm"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "4D embodied world model for robotic manipulation, addressing generalization in embodied AI",
+      "llm_evidence_cn": "4D具身世界模型用于机器人操作，涉及具身AI泛化",
+      "llm_evidence": "4D具身世界模型用于机器人操作，涉及具身AI泛化",
+      "canonical_evidence": "4D具身世界模型用于机器人操作，涉及具身AI泛化",
+      "llm_tldr_en": "RynnWorld-4D is a generative world model that co-predicts future RGB, depth, and optical flow for robotic manipulation, reducing the gap between world prediction and policy learning and enabling better generalization across scenes.",
+      "llm_tldr_cn": "该论文针对开放世界机器人操作中场景动态预测与策略学习之间的鸿沟，提出RynnWorld-4D，一种联合预测未来RGB、深度和光流的生成式世界模型。通过多模态协同表示，模型更贴近机器人底层动作空间，缩小了世界预测与策略学习的差距。实验表明，该方法在多场景操作任务中提升了泛化能力和任务成功率，为具身智能体的世界模型泛化提供了新思路。",
+      "llm_tldr": "该论文针对开放世界机器人操作中场景动态预测与策略学习之间的鸿沟，提出RynnWorld-4D，一种联合预测未来RGB、深度和光流的生成式世界模型。通过多模态协同表示，模型更贴近机器人底层动作空间，缩小了世界预测与策略学习的差距。实验表明，该方法在多场景操作任务中提升了泛化能力和任务成功率，为具身智能体的世界模型泛化提供了新思路。",
+      "llm_tags": [
+        "query:emb-wm-gen:composite"
+      ],
+      "matched_query_tag": "query:emb-wm-gen:composite",
+      "matched_query_text": "Papers central to 结合具身智能或世界模型的泛化相关工作, especially work that connects or combines: embodied intelligence generalization; world model generalization; generalization in embodied AI; robotic generalization with world models; sim-to-real transfer generalization; methods for generalization in embodied AI using learned world models; How can world models improve generalization in embodied agents?; Methods for sim to real transfer in robotics.",
+      "matched_requirement_id": "req-composite-emb-wm-gen",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.08857v2",
+      "source": "arxiv",
+      "title": "AgenticFocus: Object-Preserving Mixed Reality Synthesis from Human FPV Video for Dexterous Humanoid Learning",
+      "abstract": "Human egocentric video is a scalable supervision source for humanoid policy learning, but current pipelines struggle with hand-object occlusion, oversimplified motion, or specialized capture hardware. We introduce AgenticFocus, a Mixed Reality synthesis pipeline that converts ordinary first-person-view human videos into robot-trainable demonstrations by restoring occluded object geometry, reconstructing full-hand motion, and retargeting it to a humanoid embodiment through camera-relative alignment and layered compositing. The resulting dataset pairs focused visual observations with synchronized robot actions and states. AgenticFocus achieves lower trajectory error and smoother wrist motion than cross-embodiment baselines, with SPARC scores of -5.18 versus -5.56 and -6.05.",
+      "authors": [
+        "Iaroslav Kolomiets",
+        "Miguel Altamirano Cabrera",
+        "Artem Lykov",
+        "Jeffrin Sam",
+        "Dmitrii Iarchuk",
+        "Yara Mahmoud",
+        "Daniia Zinniatullina",
+        "Mikhail Konenkov",
+        "Dzmitry Tsetserukou"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-09T18:27:41+00:00",
+      "link": "https://arxiv.org/pdf/2607.08857v2",
+      "tags": [
+        "keyword:emb-wm-gen",
+        "keyword:tta-vlm",
+        "query:emb-wm-gen",
+        "query:tta-vlm"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Mixed reality synthesis from human FPV video for dexterous humanoid learning",
+      "llm_evidence_cn": "利用人类第一人称视频生成混合现实数据用于灵巧人形机器人学习",
+      "llm_evidence": "利用人类第一人称视频生成混合现实数据用于灵巧人形机器人学习",
+      "canonical_evidence": "利用人类第一人称视频生成混合现实数据用于灵巧人形机器人学习",
+      "llm_tldr_en": "Introduces AgenticFocus, a pipeline that converts human FPV videos into robot demonstrations via occlusion restoration and motion retargeting, enabling sim-to-real transfer.",
+      "llm_tldr_cn": "本文提出AgenticFocus，一种混合现实合成流水线，将普通人类第一人称视频转化为机器人可训练的演示。通过恢复被遮挡物体几何、重建完整手部运动并重新定位到人形机器人，得到聚焦视觉观察与同步动作状态的数据集。相比跨实体基线，该方法实现了更低的轨迹误差和更平滑的腕部运动，为从人类视频进行灵巧机器人学习提供了可扩展的sim-to-real方案。",
+      "llm_tldr": "本文提出AgenticFocus，一种混合现实合成流水线，将普通人类第一人称视频转化为机器人可训练的演示。通过恢复被遮挡物体几何、重建完整手部运动并重新定位到人形机器人，得到聚焦视觉观察与同步动作状态的数据集。相比跨实体基线，该方法实现了更低的轨迹误差和更平滑的腕部运动，为从人类视频进行灵巧机器人学习提供了可扩展的sim-to-real方案。",
+      "llm_tags": [
+        "query:emb-wm-gen"
+      ],
+      "matched_query_tag": "query:emb-wm-gen",
+      "matched_query_text": "sim-to-real transfer generalization",
+      "matched_requirement_id": "req-14",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
