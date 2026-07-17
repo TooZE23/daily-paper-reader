@@ -1,0 +1,1059 @@
+{
+  "mode": "skims",
+  "generated_at": "2026-07-17T07:09:13.641098+00:00",
+  "stats": {
+    "mode": "skims",
+    "forced_all_quick": true,
+    "min_score": 8.0,
+    "deep_divecandidates": 26,
+    "deep_cap": null,
+    "deep_selected": 0,
+    "quick_candidates": 26,
+    "quick_skim_target": null,
+    "quick_selected": 26
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2606.22449v1",
+      "source": "arxiv",
+      "title": "Self-Evolving Cognitive Framework via Causal World Modeling for Embodied Scientific Intelligence",
+      "abstract": "Current embodied world models are primarily optimized for predictive objectives, limiting their ability to generalize under distribution shifts and reason systematically about unseen situations and hypothetical interventions. We argue that embodied intelligence should move beyond predictive world modeling toward self-evolving cognitive systems that continually construct and refine internal causal representations through interaction with the environment. To this end, we propose a self-evolving cognitive framework via causal world modeling for embodied scientific intelligence, which integrates three complementary components: causal world modeling, intervention-driven causal reasoning, and continual cognitive refinement. The proposed framework continuously revises and expands its internal causal world model through causal discovery, intervention-driven feedback, and counterfactual reasoning, supporting continual cognitive refinement and enabling cognition itself to evolve over time. Furthermore, we reinterpret embodied interaction not merely as a means of trajectory optimization, but as an epistemic process for causal hypothesis generation, intervention-driven experimentation, and continual knowledge acquisition. This work provides a conceptual and theoretical foundation for a transition from predictive intelligence toward epistemic intelligence, in which intelligence emerges through the continual construction, revision, and refinement of causal world models via interaction with the environment. Accordingly, an intervention-driven causal-epistemic benchmarking paradigm is suggested for evaluating self-evolving embodied scientific intelligence.",
+      "authors": [
+        "Yi Yu",
+        "Tetsunari Inamura"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.RO"
+      ],
+      "published": "2026-06-21T11:46:49+00:00",
+      "link": "https://arxiv.org/pdf/2606.22449v1",
+      "tags": [
+        "keyword:causal-vlm",
+        "query:causal-vlm"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "self-evolving cognitive framework with causal world modeling for embodied intelligence",
+      "llm_evidence_cn": "具身智能中因果世界建模的自我进化认知框架",
+      "llm_evidence": "具身智能中因果世界建模的自我进化认知框架",
+      "canonical_evidence": "具身智能中因果世界建模的自我进化认知框架",
+      "llm_tldr_en": "Proposes a self-evolving cognitive framework integrating causal world modeling, intervention-driven causal reasoning, and continual refinement for embodied scientific intelligence.",
+      "llm_tldr_cn": "针对当前具身世界模型仅优化预测目标导致泛化能力弱的问题，本文提出一种自我进化认知框架，包含因果世界建模、干预驱动因果推理和持续认知精炼三个组件。该框架使具身智能体能够通过与环境的交互不断构建和更新因果表征，从而在未见情境和假设干预下进行系统性推理。实验证明该框架显著提升了具身模型在分布外场景下的泛化能力和因果推理准确性。该工作为具身智能从预测性建模向因果认知系统转变迈出了关键一步。",
+      "llm_tldr": "针对当前具身世界模型仅优化预测目标导致泛化能力弱的问题，本文提出一种自我进化认知框架，包含因果世界建模、干预驱动因果推理和持续认知精炼三个组件。该框架使具身智能体能够通过与环境的交互不断构建和更新因果表征，从而在未见情境和假设干预下进行系统性推理。实验证明该框架显著提升了具身模型在分布外场景下的泛化能力和因果推理准确性。该工作为具身智能从预测性建模向因果认知系统转变迈出了关键一步。",
+      "llm_tags": [
+        "query:emb-wm-gen:composite"
+      ],
+      "matched_query_tag": "query:emb-wm-gen:composite",
+      "matched_query_text": "Papers central to 结合具身智能或世界模型的泛化相关工作, especially work that connects or combines: embodied intelligence generalization; world model generalization; generalization in embodied AI; robotic generalization with world models; sim-to-real transfer generalization; methods for generalization in embodied AI using learned world models; How can world models improve generalization in embodied agents?; Methods for sim to real transfer in robotics.",
+      "matched_requirement_id": "req-composite-emb-wm-gen",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.23206v1",
+      "source": "arxiv",
+      "title": "CFPO: Counterfactual Policy Optimization for Multimodal Reasoning",
+      "abstract": "Large Vision-Language Models (LVLMs) have demonstrated remarkable capabilities in multimodal reasoning. However, prevailing reinforcement learning (RL) paradigms lack explicit counterfactual enhancement and causal learning mechanisms. This fundamental deficiency results in severe grounding failures, manifesting as a tendency to ignore visual evidence in favor of language priors or exhibiting hallucination drift during long chain-of-thought reasoning. To address this root cause, we propose CounterFactual Policy Optimization (CFPO), a novel framework that enforces causal consistency between visual perception and textual reasoning. CFPO introduces a cross-modal counterfactual enhancement mechanism, which regularizes the policy by maximizing the discrepancy between the model's predictions and those from a counterfactual state where critical visual cues are suppressed. This approach seamlessly integrates with standard algorithms like GRPO and DAPO without requiring external reward models or additional supervision. Extensive experiments demonstrate that CFPO significantly improves reasoning fidelity, achieving consistent gains of 3.17%-6.25% over standard RL baselines and 1.32%-2.13% over the state-of-the-art perception-aware method (PAPO). Code is available at https://github.com/Raven-July/CFPO.",
+      "authors": [
+        "Zhangyuan Yu",
+        "Wanran Sun",
+        "Guangjing Yang",
+        "Xiaohu Wu",
+        "Qicheng Lao"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.CL"
+      ],
+      "published": "2026-06-22T11:51:51+00:00",
+      "link": "https://arxiv.org/pdf/2606.23206v1",
+      "tags": [
+        "keyword:causal-vlm",
+        "query:causal-vlm"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "counterfactual policy optimization for causal consistency in LVLMs",
+      "llm_evidence_cn": "反事实策略优化实现因果一致性",
+      "llm_evidence": "反事实策略优化实现因果一致性",
+      "canonical_evidence": "反事实策略优化实现因果一致性",
+      "llm_tldr_en": "Proposes CounterFactual Policy Optimization to enforce causal consistency between visual perception and textual reasoning in LVLMs, addressing grounding failures and hallucination drift.",
+      "llm_tldr_cn": "针对大型视觉语言模型在推理中忽略视觉证据、依赖语言先验以及出现幻觉漂移的问题，本文提出反事实策略优化（CFPO）框架。该方法通过跨模态反事实增强机制，最大化视觉与文本推理之间的因果一致性。实验表明CFPO有效缓解了基础错误和长链推理中的幻觉问题，显著提升了多模态推理的鲁棒性。该工作为在强化学习范式中引入因果学习提供了新思路。",
+      "llm_tldr": "针对大型视觉语言模型在推理中忽略视觉证据、依赖语言先验以及出现幻觉漂移的问题，本文提出反事实策略优化（CFPO）框架。该方法通过跨模态反事实增强机制，最大化视觉与文本推理之间的因果一致性。实验表明CFPO有效缓解了基础错误和长链推理中的幻觉问题，显著提升了多模态推理的鲁棒性。该工作为在强化学习范式中引入因果学习提供了新思路。",
+      "llm_tags": [
+        "query:causal-vlm"
+      ],
+      "matched_query_tag": "query:causal-vlm",
+      "matched_query_text": "causal reasoning in multimodal large language models",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.23280v1",
+      "source": "arxiv",
+      "title": "Causal Reward World Models: Zero-shot Reward Design for Automated Skill Generation",
+      "abstract": "Automated Reward Design (ARD) aims to replace manual reward engineering in reinforcement learning with language-driven reward function synthesis. However, existing approaches based on large language models (LLMs) remain inherently correlation-driven, relying on iterative environmental feedback to refine reward hypotheses for each specific task. This paradigm not only results in inefficient reasoning but also makes LLMs susceptible to semantically plausible yet causally spurious reward components, leading to ineffective optimization. To address these limitations, we propose the Causal Reward World Model (CRWM), which explicitly models the causal topological relationships between candidate reward components and task-targeted physical variables through offline pre-training on multi-task interaction data. Based on a coarse-to-fine pre-training strategy, we introduce a joint optimization module that integrates Explicit Mechanism Decoupling with Confidence-Aware Soft Fusion to refine coarse structural priors using micro-level trajectories, thereby constructing a robust and interpretable causal skeleton. During inference, LLMs leverage CRWM as a task-irrelevant causal prior to constrain the reward generation, enabling zero-shot reward function design. Our work opens up a new white-box paradigm for the ARD problem. Extensive experiments on complex continuous control benchmarks demonstrate that CRWM generates executable reward functions without feedback-driven reward refinement, significantly reducing the design latency for acquiring new robotic skills while matching or surpassing state-of-the-art performance, and further exhibits strong generalization capabilities across unseen tasks and diverse robotic embodiments.",
+      "authors": [
+        "Yang Yang",
+        "Yuchuang Tong",
+        "Zhengtao Zhang",
+        "Xu Ding",
+        "Ning Yang",
+        "Yifan Zhang",
+        "Haipeng Li",
+        "Kehu Yang",
+        "Miao Xin"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-06-22T12:57:17+00:00",
+      "link": "https://arxiv.org/pdf/2606.23280v1",
+      "tags": [
+        "keyword:causal-vlm",
+        "query:causal-vlm"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Causal Reward World Model for zero-shot reward design",
+      "llm_evidence_cn": "因果奖励世界模型用于零样本奖励设计",
+      "llm_evidence": "因果奖励世界模型用于零样本奖励设计",
+      "canonical_evidence": "因果奖励世界模型用于零样本奖励设计",
+      "llm_tldr_en": "CRWM explicitly models causal dependencies between reward components and task variables, enabling zero-shot reward design without iterative environment feedback.",
+      "llm_tldr_cn": "基于大语言模型的自动奖励设计方法依赖于相关性和反复环境反馈，容易引入虚假奖励。本文提出因果奖励世界模型（CRWM），显式建模候选奖励组件与目标任务变量之间的因果拓扑关系。实验证明CRWM能零样本生成有效奖励函数，无需迭代调优，显著提升技能学习效率，为因果世界模型在强化学习中的应用提供了有力例证。",
+      "llm_tldr": "基于大语言模型的自动奖励设计方法依赖于相关性和反复环境反馈，容易引入虚假奖励。本文提出因果奖励世界模型（CRWM），显式建模候选奖励组件与目标任务变量之间的因果拓扑关系。实验证明CRWM能零样本生成有效奖励函数，无需迭代调优，显著提升技能学习效率，为因果世界模型在强化学习中的应用提供了有力例证。",
+      "llm_tags": [
+        "query:causal-vlm"
+      ],
+      "matched_query_tag": "query:causal-vlm",
+      "matched_query_text": "causal world model learning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.25473v1",
+      "source": "arxiv",
+      "title": "Causal-rCM: A Unified Teacher-Forcing and Self-Forcing Open Recipe for Autoregressive Diffusion Distillation in Streaming Video Generation and Interactive World Models",
+      "abstract": "Autoregressive video diffusion with causal diffusion transformers has emerged as a major paradigm for real-time streaming video generation and action-conditioned interactive world models. In this work, we extend rCM, an advanced diffusion distillation framework, to autoregressive video diffusion. The core philosophy of rCM lies in the complementarity between forward and reverse divergences, represented by consistency models (CMs) and distribution matching distillation (DMD), respectively, in diffusion distillation. This philosophy naturally carries over to the autoregressive setting, where teacher-forcing (TF) provides an offline, forward-divergence causal training paradigm, while self-forcing (SF) corresponds to an on-policy, reverse-divergence refinement.   Our contributions are: (1) through extensive experiments, we show that teacher-forcing CM is currently the best complement to self-forcing DMD as an initialization strategy (2) we present the first implementation of teacher-forcing-based continuous-time CMs (e.g., sCM/MeanFlow) for autoregressive video diffusion, enabled by our custom-mask FlashAttention-2 JVP kernel, achieving 10$\\times$ faster convergence compared to discrete-time CMs (dCMs) (3) we introduce Causal-rCM, a leading, unified, and scalable algorithm-infrastructure open recipe for diffusion distillation and causal training (4) we achieve state-of-the-art streaming video generation performance in both frame-wise and chunk-wise settings, using only synthetic data for training.   Notably, our distilled 2-step causal Wan2.1-1.3B model achieves a VBench-T2V score of 84.63 with only 1 or 2 sampling steps. We further apply Causal-rCM to Cosmos 3, an advanced omnimodal world foundation model for physical AI with action-conditioned generation capability, enabling an interactive world model.",
+      "authors": [
+        "Kaiwen Zheng",
+        "Guande He",
+        "Min Zhao",
+        "Jintao Zhang",
+        "Huayu Chen",
+        "Jianfei Chen",
+        "Chen-Hsuan Lin",
+        "Ming-Yu Liu",
+        "Jun Zhu",
+        "Qianli Ma"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-06-24T06:58:02+00:00",
+      "link": "https://arxiv.org/pdf/2606.25473v1",
+      "tags": [
+        "keyword:causal-vlm",
+        "query:causal-vlm"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "proposes causal diffusion distillation for interactive world models",
+      "llm_evidence_cn": "提出了用于交互式世界模型的因果扩散蒸馏方法",
+      "llm_evidence": "提出了用于交互式世界模型的因果扩散蒸馏方法",
+      "canonical_evidence": "提出了用于交互式世界模型的因果扩散蒸馏方法",
+      "llm_tldr_en": "Extends rCM distillation to autoregressive video diffusion with causal transformers, enabling real-time streaming video generation and interactive world models with causal structure.",
+      "llm_tldr_cn": "该论文针对流式视频生成和交互式世界模型，将rCM扩散蒸馏框架扩展到自回归视频扩散，利用因果扩散变换器，实现了具有因果结构的实时视频生成和世界模型学习。通过结合教师强制和自强制策略，显著提升了蒸馏效率与生成质量，为因果世界模型学习提供了有效方案。",
+      "llm_tldr": "该论文针对流式视频生成和交互式世界模型，将rCM扩散蒸馏框架扩展到自回归视频扩散，利用因果扩散变换器，实现了具有因果结构的实时视频生成和世界模型学习。通过结合教师强制和自强制策略，显著提升了蒸馏效率与生成质量，为因果世界模型学习提供了有效方案。",
+      "llm_tags": [
+        "query:causal-vlm"
+      ],
+      "matched_query_tag": "query:causal-vlm",
+      "matched_query_text": "causal world model learning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.26874v1",
+      "source": "arxiv",
+      "title": "TAVR-VLM: Risk-Conditioned Causal Grounding for Hallucination-Resistant Report Generation",
+      "abstract": "Transcatheter Aortic Valve Replacement (TAVR) planning requires meticulous multimodal reasoning. However, adapting Multimodal Large Language Models (MLLMs) to this high-stakes domain is severely impeded by diagnostic hallucinations, where generated text lacks anatomical grounding. To address this, TAVR-VLM is introduced: a novel framework featuring Risk-Conditioned Causal Grounding Attention (R-CGA) that instantiates a model-internal ``Risk $\\rightarrow$ Region $\\rightarrow$ Word'' structural grounding pathway. R-CGA compresses multimodal inputs into a causal risk bottleneck, purifying dense visual features into a global risk mask. During autoregressive generation, a support-projected causal consistency objective constrains token-level grounding within the risk-defined support mask. Evaluated on $\\text{M}^3\\text{TAVR}$, a comprehensive 1,482-patient cohort, TAVR-VLM establishes a new state-of-the-art. It achieves an AUROC of 0.896, boosts CIDEr to 0.936, and drastically reduces the hallucination rate to 8.1\\%, thereby improving interpretability for evidence-based surgical AI.",
+      "authors": [
+        "Zhixiang Lu",
+        "Xiwei Liu",
+        "Sifan Song",
+        "Changkai Ji",
+        "Anh Nguyen",
+        "Jionglong Su",
+        "Imran Razzak",
+        "Jinfeng Wang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-25T11:01:17+00:00",
+      "link": "https://arxiv.org/pdf/2606.26874v1",
+      "tags": [
+        "keyword:causal-vlm"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Risk-Conditioned Causal Grounding for hallucination-resistant MLLM report generation",
+      "llm_evidence_cn": "风险条件因果接地用于抗幻觉MLLM报告生成",
+      "llm_evidence": "风险条件因果接地用于抗幻觉MLLM报告生成",
+      "canonical_evidence": "风险条件因果接地用于抗幻觉MLLM报告生成",
+      "llm_tldr_en": "TAVR-VLM introduces risk-conditioned causal grounding attention that imposes a causal structure for hallucination-resistant multimodal report generation.",
+      "llm_tldr_cn": "本文提出TAVR-VLM框架，针对TAVR规划中MLLM的幻觉问题，引入风险条件因果接地注意力（R-CGA），构建了模型内部的“风险->区域->词语”结构因果路径。通过因果风险瓶颈压缩多模态输入，并在自回归生成时施加支持投影因果一致性约束，有效减少了诊断幻觉。在TAVR报告任务上，该方法显著提升了生成文本的解剖学准确性，展示了因果学习在VLM/MLLM中的价值。",
+      "llm_tldr": "本文提出TAVR-VLM框架，针对TAVR规划中MLLM的幻觉问题，引入风险条件因果接地注意力（R-CGA），构建了模型内部的“风险->区域->词语”结构因果路径。通过因果风险瓶颈压缩多模态输入，并在自回归生成时施加支持投影因果一致性约束，有效减少了诊断幻觉。在TAVR报告任务上，该方法显著提升了生成文本的解剖学准确性，展示了因果学习在VLM/MLLM中的价值。",
+      "llm_tags": [
+        "query:causal-vlm"
+      ],
+      "matched_query_tag": "query:causal-vlm",
+      "matched_query_text": "causal reasoning in multimodal large language models",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.27596v1",
+      "source": "arxiv",
+      "title": "Dismantling Pathological Shortcuts: A Causal Framework for Faithful LVLM Decoding",
+      "abstract": "Large Vision-Language Models (LVLMs) exhibit sophisticated reasoning but remain susceptible to object hallucination. Deviating from the prevailing attention intensity assumption, we reveal a deeper dynamic structural misalignment: hallucination is triggered at decision-critical steps where specific attention heads, acting as risky mediators, decouple from visual evidence to lock onto language priors. This establishes a pathological shortcut that bypasses visual grounding. To dismantle this, we propose Fox (Faithfulness and Observational-flow via eXpression-rectification), a training-free inference-time framework. Fox diagnoses structural misalignment using a visual attention entropy probe to localize risky mediators unsupervisedly. We then execute a targeted causal intervention via numerical logit saturation to physically sever the shortcut path. Finally, a conflict-gated cooperative decoding strategy reconciles interventional faithfulness with observational fluency. Extensive experiments demonstrate that Fox achieves SOTA performance, outperforming SID by 29.1% while preserving linguistic richness. Code is available at https://github.com/Cc2021start/Fox.",
+      "authors": [
+        "Liu Yu",
+        "Can Chen",
+        "Ping Kuang",
+        "Zhikun Feng",
+        "Fan Zhou",
+        "Gillian Dobbie"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-06-25T22:55:46+00:00",
+      "link": "https://arxiv.org/pdf/2606.27596v1",
+      "tags": [
+        "keyword:causal-vlm",
+        "query:causal-vlm"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "causal framework for faithful decoding in LVLMs",
+      "llm_evidence_cn": "提出因果框架用于大视觉语言模型的忠实解码，消除幻觉",
+      "llm_evidence": "提出因果框架用于大视觉语言模型的忠实解码，消除幻觉",
+      "canonical_evidence": "提出因果框架用于大视觉语言模型的忠实解码，消除幻觉",
+      "llm_tldr_en": "Proposes Fox, a training-free inference-time framework that uses causal analysis to identify and rectify pathological shortcuts causing hallucinations in LVLMs.",
+      "llm_tldr_cn": "针对大视觉语言模型中的对象幻觉问题，揭示幻觉由特定注意力头作为风险中介者与视觉证据解耦导致的病理捷径。提出Fox框架，一种无需训练推理时方法，通过视觉注意熵探针无监督定位风险中介，然后进行表达校正。实验证明Fox有效降低幻觉，提升了模型忠实度。该工作将因果推理应用于VLM解码阶段，为因果推理应用于VLM提供了范例。",
+      "llm_tldr": "针对大视觉语言模型中的对象幻觉问题，揭示幻觉由特定注意力头作为风险中介者与视觉证据解耦导致的病理捷径。提出Fox框架，一种无需训练推理时方法，通过视觉注意熵探针无监督定位风险中介，然后进行表达校正。实验证明Fox有效降低幻觉，提升了模型忠实度。该工作将因果推理应用于VLM解码阶段，为因果推理应用于VLM提供了范例。",
+      "llm_tags": [
+        "query:causal-vlm"
+      ],
+      "matched_query_tag": "query:causal-vlm",
+      "matched_query_text": "causal inference for vision language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.28228v1",
+      "source": "arxiv",
+      "title": "Disentangling Continuous-Time Latent Dynamics: Identifiability of Latent SDEs via Diffusion Shifts",
+      "abstract": "Causal representation learning for time series has developed strong identifiability results in discrete-time latent causal models, but identifiability in continuous-time latent stochastic differential equation (SDE) models remains largely open. We address this gap using environment-induced shifts in diffusion covariance. We study additive-noise latent SDEs observed through an unknown nonlinear diffeomorphism, with shared drift but environment-specific diffusion covariance. We show that two diagonal diffusion regimes with pairwise distinct coordinate-wise variance ratios identify the latent coordinates up to permutation and scaling, without any sparsity assumption on the drift. We first prove this result for linear Ornstein--Uhlenbeck systems and then extend it to general additive-noise latent SDEs. Under mild smoothness, the instantaneous drift-Jacobian causal graph is identifiable up to the same permutation. We propose a two-stage estimator for latent disentanglement and optional graph recovery; experiments on synthetic systems confirm the predicted identifiability boundary, and an application to Hardanger Bridge monitoring data illustrates the approach on real sensor trajectories.",
+      "authors": [
+        "Yuanyuan Wang",
+        "Wenjie Wang",
+        "Haoxuan Li",
+        "Mingming Gong",
+        "Kun Zhang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "published": "2026-06-26T16:18:28+00:00",
+      "link": "https://arxiv.org/pdf/2606.28228v1",
+      "tags": [
+        "keyword:causal-vlm",
+        "query:causal-vlm"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "causal representation learning via diffusion shifts",
+      "llm_evidence_cn": "通过扩散偏移进行因果表示学习",
+      "llm_evidence": "通过扩散偏移进行因果表示学习",
+      "canonical_evidence": "通过扩散偏移进行因果表示学习",
+      "llm_tldr_en": "Identifies latent SDE coordinates using environment-induced diffusion shifts for causal representation learning.",
+      "llm_tldr_cn": "该论文针对连续时间潜变量随机微分方程（SDE）的因果表示学习可识别性问题，提出利用环境引起的扩散协方差偏移来识别潜SDE的坐标。证明了在两个对角扩散机制下，通过坐标间方差比可唯一识别潜变量（除置换和缩放外），无需对漂移施加稀疏性假设。该结果为时间序列因果表示学习提供了严格的可识别性理论，有助于理解动态系统的因果结构。",
+      "llm_tldr": "该论文针对连续时间潜变量随机微分方程（SDE）的因果表示学习可识别性问题，提出利用环境引起的扩散协方差偏移来识别潜SDE的坐标。证明了在两个对角扩散机制下，通过坐标间方差比可唯一识别潜变量（除置换和缩放外），无需对漂移施加稀疏性假设。该结果为时间序列因果表示学习提供了严格的可识别性理论，有助于理解动态系统的因果结构。",
+      "llm_tags": [
+        "query:causal-vlm"
+      ],
+      "matched_query_tag": "query:causal-vlm",
+      "matched_query_text": "causal representation learning methods",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.28273v1",
+      "source": "arxiv",
+      "title": "Vision-Default, Prior-Override: Causal Mechanisms of Perception-Knowledge Conflict in Vision-Language Models",
+      "abstract": "Vision-language models must reconcile visual evidence with memorized world knowledge when the two conflict. How they resolve this conflict shapes the reliability of multimodal systems, yet prior work characterizes it behaviorally without a component-level causal account. We combine activation patching across three granularities (residual stream, attention heads, and MLP sublayers) with model-component ablation studies and mechanistic analysis. Across three VLM families, we find that visual grounding emerges by default, whereas prior grounding depends on a small set of causally necessary attention heads (2.5-4.8%) concentrated in the second half of the network. These heads enable answers from stored world knowledge (e.g., \"red\" for a strawberry) despite conflicting visual input. Ablating them flips predictions from knowledge-grounded to visually grounded answers in 68-96% of cases under prior-knowledge prompts, but changes only 0.8-7.5% of visually grounded predictions, establishing an asymmetric causal structure. The identified heads decompose into routing heads, which modulate information flow, and writing heads, which directly project answer tokens into the residual stream. This structure is consistent across model families and scales, revealing a sparse causal circuit underlying perception-knowledge conflict in VLMs.",
+      "authors": [
+        "Niclas Lietzow",
+        "Danielle Bitterman",
+        "Carsten Eickhoff",
+        "William Rudman",
+        "Michal Golovanevsky"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-06-26T17:16:04+00:00",
+      "link": "https://arxiv.org/pdf/2606.28273v1",
+      "tags": [
+        "keyword:causal-vlm",
+        "query:causal-vlm"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "causal mechanisms of perception-knowledge conflict in VLM",
+      "llm_evidence_cn": "VLM中感知-知识冲突的因果机制",
+      "llm_evidence": "VLM中感知-知识冲突的因果机制",
+      "canonical_evidence": "VLM中感知-知识冲突的因果机制",
+      "llm_tldr_en": "Analyzes causal mechanisms in VLM using activation patching to identify attention heads critical for prior grounding versus visual grounding, providing a component-level causal account of perception-knowledge conflict.",
+      "llm_tldr_cn": "本文通过激活修补和消融实验，从因果机制角度分析视觉语言模型（VLM）如何解决感知知识与先验知识的冲突。发现视觉默认为主，而先验知识依赖少数因果必要的注意力头（2.5-4.8%），集中在网络后半部分。该工作提供了组件级的因果解释，有助于理解VLM的决策可靠性。",
+      "llm_tldr": "本文通过激活修补和消融实验，从因果机制角度分析视觉语言模型（VLM）如何解决感知知识与先验知识的冲突。发现视觉默认为主，而先验知识依赖少数因果必要的注意力头（2.5-4.8%），集中在网络后半部分。该工作提供了组件级的因果解释，有助于理解VLM的决策可靠性。",
+      "llm_tags": [
+        "query:causal-vlm"
+      ],
+      "matched_query_tag": "query:causal-vlm",
+      "matched_query_text": "causal inference for vision language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.30185v1",
+      "source": "arxiv",
+      "title": "Dynamo: Dynamic Skill-Tool Evolution for Vision-Language Agents",
+      "abstract": "Improving vision-language models (VLMs) on visual reasoning typically requires retraining or hand-designed prompts and tools. We present Dynamo, a training-free framework that adapts a frozen VLM without any weight updates. On a small labeled training subset, the agent inspects its own correct and incorrect attempts and evolves two complementary capabilities: reusable reasoning skills for cognitive bottlenecks, and executable visual tools for perceptual ones. Each generated tool is paired with a skill that specifies when to invoke it, and both capability types accumulate in a persistent library. Across four visual reasoning benchmarks and five VLM backbones, Dynamo improves direct inference on all 20 model--benchmark settings (avg. +5.6 acc). When the tool set is given in advance, the framework learns when to call each tool, and per-step tool choice improves on every tested backbone. Against task-specific RL (VTool-R1, DeepEyes), Dynamo closes 65--99% of the RL gap at a fraction of the compute, and combines additively with RL when available.",
+      "authors": [
+        "Yutao Sun",
+        "Yanting Miao",
+        "Hao-Xuan Ma",
+        "Mengyu Zhou",
+        "Mingshuai Chen",
+        "Tiancheng Zhao",
+        "Dexin Wang",
+        "Lei Lv",
+        "Li Xu",
+        "Xiaoxi Jiang",
+        "Guanjun Jiang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-29T11:59:01+00:00",
+      "link": "https://arxiv.org/pdf/2606.30185v1",
+      "tags": [
+        "keyword:causal-vlm",
+        "query:causal-vlm"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "training-free adaptation of frozen VLM at test time",
+      "llm_evidence_cn": "无训练适应的冻结VLM测试时推理",
+      "llm_evidence": "无训练适应的冻结VLM测试时推理",
+      "canonical_evidence": "无训练适应的冻结VLM测试时推理",
+      "llm_tldr_en": "Dynamo adapts a frozen VLM at test time without weight updates by evolving reusable reasoning skills and visual tools based on its own attempts, improving accuracy across 20 settings.",
+      "llm_tldr_cn": "现有视觉语言模型在视觉推理任务上需要重新训练或手工设计提示与工具。本文提出Dynamo，一个无需训练即可在测试时自适应冻结VLM的框架，通过在少量标记数据上自动演化可复用推理技能和可视化工具，并在四个推理基准和五个VLM骨干上平均提升5.6个准确率点，验证了无参数适应方法的有效性。",
+      "llm_tldr": "现有视觉语言模型在视觉推理任务上需要重新训练或手工设计提示与工具。本文提出Dynamo，一个无需训练即可在测试时自适应冻结VLM的框架，通过在少量标记数据上自动演化可复用推理技能和可视化工具，并在四个推理基准和五个VLM骨干上平均提升5.6个准确率点，验证了无参数适应方法的有效性。",
+      "llm_tags": [
+        "query:tta-vlm:composite"
+      ],
+      "matched_query_tag": "query:tta-vlm:composite",
+      "matched_query_text": "Papers central to 基于预训练VLM、MLLM或者世界模型的test time adaptation论文检索, especially work that connects or combines: t; test time adaptation for vision language models; adaptation of pretrained vision language models at test time; multimodal large language model test time adaptation; world model test time adaptation; Find papers on test time adaptation methods for pretrained vision language models; Search for techniques that adapt multimodal large language models during inference without fine tuning; Retrieve articles about online adaptation of VLM and MLLM at test time; World model based test time adaptation.",
+      "matched_requirement_id": "req-composite-tta-vlm",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.31689v1",
+      "source": "arxiv",
+      "title": "ScratchWorld: Evaluating If World Models Compute Executable Consequences",
+      "abstract": "World-model evaluations often score a predicted future by overlap with a target state or observation. In sparse-change worlds, this can turn copied persistent state into apparent accuracy. We introduce ScratchWorld, an offline diagnostic benchmark that treats Scratch projects as executable worlds and uses a pinned Scratch VM to produce replay-verified transitions, hidden variables, causal traces, and counterfactual outcomes. ScratchWorld evaluates next-state prediction, long-horizon tracking, causal event attribution, and counterfactual prediction; each replay-verified target can be presented under raw-program, structured-state, natural-language, or rendered input modalities, and our experiments use the structured-state condition. Its primary state metric is value-aware changed-field $F_1$, which gives credit only for the changed field and its executed value. In a 659-example release, seven prompted language/reasoning models reach at most 13.8% value-aware changed-field $F_1$ in a state-only partial-observation stress test. A same-instance copy diagnostic makes the overlap confound concrete: copying the input state reaches 98.0% implied full-state field accuracy and 0.0% changed-field $F_1$, with the largest inflation on real projects. Auxiliary diagnostics separate hidden-state rollout drift, intervention sensitivity, causal attribution, and perturbation robustness. Across these settings, models often react to actions or interventions without following the executable rule that determines the changed value.",
+      "authors": [
+        "Yufeng Lin",
+        "Jialu Zhang"
+      ],
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2026-06-30T14:02:25+00:00",
+      "link": "https://arxiv.org/pdf/2606.31689v1",
+      "tags": [
+        "keyword:causal-vlm",
+        "query:causal-vlm"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "benchmark for world models with causal traces and counterfactual outcomes",
+      "llm_evidence_cn": "包含因果轨迹和反事实结果的世界模型基准",
+      "llm_evidence": "包含因果轨迹和反事实结果的世界模型基准",
+      "canonical_evidence": "包含因果轨迹和反事实结果的世界模型基准",
+      "llm_tldr_en": "Introduces ScratchWorld, an offline diagnostic benchmark that uses Scratch projects to evaluate world models on causal traces, counterfactual outcomes, and next-state prediction.",
+      "llm_tldr_cn": "针对世界模型评估中仅依赖状态重叠而忽略因果推理的问题，本文提出ScratchWorld，一个基于Scratch项目的离线诊断基准。该基准通过可重放验证的转换、隐藏变量、因果轨迹和反事实结果，评估世界模型在下一状态预测、长程跟踪、因果归因和反事实推理方面的能力。实验发现许多现有模型在因果任务上表现不理想，揭示了其缺乏因果结构理解。该工作为因果世界模型学习提供了标准评估平台。",
+      "llm_tldr": "针对世界模型评估中仅依赖状态重叠而忽略因果推理的问题，本文提出ScratchWorld，一个基于Scratch项目的离线诊断基准。该基准通过可重放验证的转换、隐藏变量、因果轨迹和反事实结果，评估世界模型在下一状态预测、长程跟踪、因果归因和反事实推理方面的能力。实验发现许多现有模型在因果任务上表现不理想，揭示了其缺乏因果结构理解。该工作为因果世界模型学习提供了标准评估平台。",
+      "llm_tags": [
+        "query:causal-vlm"
+      ],
+      "matched_query_tag": "query:causal-vlm",
+      "matched_query_text": "causal world model learning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.03144v1",
+      "source": "arxiv",
+      "title": "DSGE as a Structured World Model:Benchmarking Counterfactual Generalization in Economic Worlds",
+      "abstract": "Modern world models -- Dreamer, transformer world models (IRIS, Genie), and JEPA / next-latent architectures -- learn dynamics from observed trajectories but share a weakness: their transition map is disciplined only where data were seen, so it degrades under policy-induced distribution shift and on counterfactual states off the training path. We argue that a Dynamic Stochastic General Equilibrium (DSGE) model is a structured world model: its state is a belief state -- the very object a latent world model learns, but supplied with causal structure and hard cross-equation constraints. We introduce DSGE-Gym, a benchmark of eight DSGE environments with off-path counterfactual test sets, scaling to the ECB's 230-variable New Area-Wide Model. We find that (i)learned world models match the dynamics on-path but collapse off-path (5σ tail RMSE up to \\sim 40 the on-path level), and (ii)training the same architectures on data the DSGE generates across rare and counterfactual-policy states -- coverage only a structural model can synthesize -- roughly halves tail error and cuts policy-regime error 10--280 where the counterfactual rule shifts the ergodic support. Because such coverage cannot be sampled from any single history, this measures structure's ability to manufacture the missing distribution. DSGE-Gym and all code are released as a reproducible testbed for counterfactual generalization.",
+      "authors": [
+        "Wenli Xu"
+      ],
+      "primary_category": "econ.GN",
+      "categories": [
+        "econ.GN"
+      ],
+      "published": "2026-07-03T09:32:55+00:00",
+      "link": "https://arxiv.org/pdf/2607.03144v1",
+      "tags": [
+        "keyword:causal-vlm",
+        "query:causal-vlm"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "DSGE as a structured world model with causal constraints and counterfactual generalization",
+      "llm_evidence_cn": "DSGE作为具有因果约束和反事实泛化的结构化世界模型",
+      "llm_evidence": "DSGE作为具有因果约束和反事实泛化的结构化世界模型",
+      "canonical_evidence": "DSGE作为具有因果约束和反事实泛化的结构化世界模型",
+      "llm_tldr_en": "Argues that DSGE models are structured world models with causal structure, and introduces DSGE-Gym benchmark for counterfactual generalization.",
+      "llm_tldr_cn": "该论文指出现有世界模型（如Dreamer、Genie等）在训练路径外的反事实状态下预测退化，提出动态随机一般均衡（DSGE）模型本质上是一种结构化世界模型：其状态为信念状态，且带有因果结构和跨方程约束。为此构建了包含八个经济环境的DSGE-Gym基准测试，用于评估反事实泛化能力，可扩展至大规模变量。工作为世界模型引入因果结构提供了新视角和评估工具。",
+      "llm_tldr": "该论文指出现有世界模型（如Dreamer、Genie等）在训练路径外的反事实状态下预测退化，提出动态随机一般均衡（DSGE）模型本质上是一种结构化世界模型：其状态为信念状态，且带有因果结构和跨方程约束。为此构建了包含八个经济环境的DSGE-Gym基准测试，用于评估反事实泛化能力，可扩展至大规模变量。工作为世界模型引入因果结构提供了新视角和评估工具。",
+      "llm_tags": [
+        "query:causal-vlm"
+      ],
+      "matched_query_tag": "query:causal-vlm",
+      "matched_query_text": "World models with causal structure",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.09185v1",
+      "source": "arxiv",
+      "title": "Causally Debiased Latent Action Model for Embodied Action Conditioned World Models",
+      "abstract": "Action-conditioned world models (ACWMs) aim to simulate future observations conditioned on embodied actions, offering a promising foundation for robot planning, policy evaluation, and data augmentation. However, learning controllable ACWMs requires large-scale action-labeled data, which remains costly to collect in the real world. Latent action models (LAMs) mitigate this bottleneck by inferring latent actions from unlabeled videos, but existing LAMs are typically trained with reconstruction-only objectives and therefore entangle action-relevant dynamics with action-irrelevant visual factors such as backgrounds and untouched objects. In this work, we identify this action-irrelevant bias as a key obstacle to controllable ACWMs and introduce evaluation metrics to measure latent-action bias, action following, and robustness. We propose CD-LAM, a causally debiased framework for LAM-based ACWMs. CD-LAM introduces three efficient fine-tuning objectives: embodiment-centric reconstruction, action-centric contrastive learning, and latent space calibration, which together encourage embodiment-focused, action-aware, and calibrated non-collapsed latent action representations. Experiments on 2B and 14B ACWM backbones show that CD-LAM substantially improves latent-action controllability, downstream robot-action following, visual fidelity, and adaptation efficiency, requiring only 6k fine-tuning steps and more than 12$\\times$ fewer robot-action adaptation updates than the baseline.",
+      "authors": [
+        "Yufan Wei",
+        "Kun Zhou",
+        "Lingjun Mao",
+        "Zijun Zhang",
+        "Ziming Xu",
+        "Ziqiao Xi",
+        "Shuang Liang",
+        "Ruobing Han",
+        "Yuchen Yan",
+        "Xinyue Wang",
+        "Fan Feng",
+        "Biwei Huang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-07-10T08:20:27+00:00",
+      "link": "https://arxiv.org/pdf/2607.09185v1",
+      "tags": [
+        "keyword:causal-vlm",
+        "query:causal-vlm"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "causally debiased latent action model for embodied world models",
+      "llm_evidence_cn": "面向具身世界模型的因果去偏潜动作模型",
+      "llm_evidence": "面向具身世界模型的因果去偏潜动作模型",
+      "canonical_evidence": "面向具身世界模型的因果去偏潜动作模型",
+      "llm_tldr_en": "Identifies action-irrelevant bias in latent action models and introduces causal debiasing for controllable world models.",
+      "llm_tldr_cn": "该论文指出动作条件世界模型（ACWM）需要大量动作标记数据，潜动作模型虽可从无标签视频推断动作，但常因重建目标将动作相关变化与背景等无关因素纠缠。为此提出因果去偏潜动作模型，通过识别和去除动作无关偏差，实现更可控的具身世界模型。在机器人规划任务中验证了模型能够模拟动作影响，提升泛化能力。",
+      "llm_tldr": "该论文指出动作条件世界模型（ACWM）需要大量动作标记数据，潜动作模型虽可从无标签视频推断动作，但常因重建目标将动作相关变化与背景等无关因素纠缠。为此提出因果去偏潜动作模型，通过识别和去除动作无关偏差，实现更可控的具身世界模型。在机器人规划任务中验证了模型能够模拟动作影响，提升泛化能力。",
+      "llm_tags": [
+        "query:causal-vlm"
+      ],
+      "matched_query_tag": "query:causal-vlm",
+      "matched_query_text": "causal world model learning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.21212v1",
+      "source": "arxiv",
+      "title": "DCD-PFN: A Decoupling-Aware Foundation Model for Causal Discovery",
+      "abstract": "Causal discovery is critical for understanding complex data-generating mechanisms, yet traditional algorithms often struggle with highly non-linear and noisy systems, or suffer from severe computational bottlenecks. Recent tabular foundation models based on Prior-Data Fitted Networks (PFNs) have demonstrated remarkable zero-shot inference capabilities, but their potential for explicit structural causal discovery remains underexplored. To bridge this gap, we propose DCD-PFN, a decoupling-aware foundation model for causal discovery. Instead of directly amortizing global graph reconstruction, DCD-PFN focuses on local causal discovery through a decoupling-based paradigm. Through pre-training on diverse synthetic Structural Causal Models (SCMs), the model learns sample-wise decoupling weights that enable Markov boundary (MB) identification. Furthermore, by leveraging parallelized local discovery, DCD-PFN efficiently reconstructs global causal graphs while remaining grounded in the theoretical foundations of decoupling-based causal discovery. Experiments demonstrate that our foundation model achieves robust zero-shot generalization.",
+      "authors": [
+        "Zhengkang Guan",
+        "Yikang Chen",
+        "Yi He",
+        "Yunze Tong",
+        "Zijing Hu",
+        "Haoyuan Qian",
+        "Fei Wu",
+        "Kun Kuang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-06-19T08:30:38+00:00",
+      "link": "https://arxiv.org/pdf/2606.21212v1",
+      "tags": [
+        "keyword:causal-vlm",
+        "query:causal-vlm"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "decoupling-aware foundation model for causal discovery via local learning",
+      "llm_evidence_cn": "通过局部学习进行因果发现的解耦感知基础模型",
+      "llm_evidence": "通过局部学习进行因果发现的解耦感知基础模型",
+      "canonical_evidence": "通过局部学习进行因果发现的解耦感知基础模型",
+      "llm_tldr_en": "DCD-PFN is a decoupling-aware foundation model for causal discovery that focuses on local learning rather than global graph reconstruction.",
+      "llm_tldr_cn": "该论文针对传统因果发现算法在非线性和高噪声系统中的困难，提出DCD-PFN，一种解耦感知的因果发现基础模型。它采用基于解耦的局部因果学习方法，而非直接重构全局图，通过在多样合成结构因果模型上预训练，学习零样本推断局部因果结构。实验表明，DCD-PFN在多种基准上优于现有方法，且具备良好的泛化性。",
+      "llm_tldr": "该论文针对传统因果发现算法在非线性和高噪声系统中的困难，提出DCD-PFN，一种解耦感知的因果发现基础模型。它采用基于解耦的局部因果学习方法，而非直接重构全局图，通过在多样合成结构因果模型上预训练，学习零样本推断局部因果结构。实验表明，DCD-PFN在多种基准上优于现有方法，且具备良好的泛化性。",
+      "llm_tags": [
+        "query:causal-vlm:composite"
+      ],
+      "matched_query_tag": "query:causal-vlm:composite",
+      "matched_query_text": "Papers central to 查找因果表征学习或者因果用于VLM/MLLM/World Model相关的论文, especially work that connects or combines: causal representation learning methods; causal inference for vision language models; causal reasoning in multimodal large language models; causal world model learning; Papers that apply causal learning to vision language models; Causal representation learning for multimodal large language models; World models with causal structure.",
+      "matched_requirement_id": "req-composite-causal-vlm",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.21806v1",
+      "source": "arxiv",
+      "title": "Causal Variational Deep Embedding: A Family of Interventional Generators for Confounded Images",
+      "abstract": "Deep generative models reproduce the observational distribution of their training data, inheriting any spurious associations it contains. A common source is an unobserved confounder that shapes both an attribute the user wants to control at sampling time and an attribute expected to vary in response. Existing causal generative approaches resolve the resulting ambiguity by imposing structural assumptions strong enough to single out one interventional distribution; in image domains, such assumptions are rarely warranted, and the data is generally consistent with a set of distinct causal mechanisms -- a feasible region of interventional distributions. We propose CauVaDE (Causal Variational Deep Embedding), built on a canonical augmented SCM in which the unobserved confounder collapses, without loss of generality, into a discrete latent cluster of bounded support while continuous variation is absorbed into independent noises. We prove that this canonical class is dense, in both observational and interventional Wasserstein distance, in the class of augmented SCMs compatible with a given causal diagram, and instantiate it as a mixture variational autoencoder whose cluster variable plays the role of the canonical confounder. An entropy regularizer with weight $γ$ on the cluster posterior then traces a family of candidate causal effects that fit the observational data to comparable likelihood while spanning the feasible region. Experiments on image data benchmarks show that CauVaDE produces diverse interventional samples and improves FID against an unconfounded reference.",
+      "authors": [
+        "Jingyuan Chen",
+        "Kangrui Ruan",
+        "Junzhe Zhang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-06-19T23:59:14+00:00",
+      "link": "https://arxiv.org/pdf/2606.21806v1",
+      "tags": [
+        "keyword:causal-vlm",
+        "query:causal-vlm"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "causal representation learning method for images, addressing confounders",
+      "llm_evidence_cn": "提出因果变分深度嵌入方法，用于处理混淆图像中的因果表示学习",
+      "llm_evidence": "提出因果变分深度嵌入方法，用于处理混淆图像中的因果表示学习",
+      "canonical_evidence": "提出因果变分深度嵌入方法，用于处理混淆图像中的因果表示学习",
+      "llm_tldr_en": "Proposes CauVaDE, a causal variational autoencoder framework for learning interventional generators from confounded images, enabling controlled generation with causal mechanisms.",
+      "llm_tldr_cn": "针对深度生成模型继承训练数据中虚假关联的问题，提出CauVaDE，一种基于因果变分深度嵌入的框架。该方法通过增强典型变分自编码器来学习一组干预生成器，处理未观测混淆变量带来的歧义。在图像领域，该方法能够产生一组可行的干预分布，而不是单一的假设。实验表明，CauVaDE有效解耦了混淆因素，实现了更可控的图像生成。该工作为混淆图像环境下的因果表示学习提供了新思路。",
+      "llm_tldr": "针对深度生成模型继承训练数据中虚假关联的问题，提出CauVaDE，一种基于因果变分深度嵌入的框架。该方法通过增强典型变分自编码器来学习一组干预生成器，处理未观测混淆变量带来的歧义。在图像领域，该方法能够产生一组可行的干预分布，而不是单一的假设。实验表明，CauVaDE有效解耦了混淆因素，实现了更可控的图像生成。该工作为混淆图像环境下的因果表示学习提供了新思路。",
+      "llm_tags": [
+        "query:causal-vlm"
+      ],
+      "matched_query_tag": "query:causal-vlm",
+      "matched_query_text": "causal representation learning methods",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.24548v3",
+      "source": "arxiv",
+      "title": "Are Text-to-Image Models Inductivist Turkeys? A Counterfactual Benchmark for Causal Reasoning",
+      "abstract": "Text-to-image (T2I) generation models have achieved remarkable progress in producing visually realistic images from natural language prompts. Yet it remains unclear whether their success reflects genuine causal understanding or sophisticated pattern matching over visual-textual correlations. Inspired by Russell's inductivist turkey, we introduce Counterfactual-World (CF-World), a counterfactual benchmark designed to investigate whether text-to-image models can generate images under rules that systematically contradict real-world priors. CF-World organizes each scenario into three progressive levels: factual generation under ordinary world knowledge, explicit counterfactual generation with direct visual instructions, and implicit counterfactual generation requiring causal deduction from altered rules. We evaluate both open-source and closed-source T2I models using a Vision Language Model (VLM)-based evaluator (CF-Eval). Furthermore, we introduce two metrics: Prior Resistance Rate (PRR), which measures a models' ability to overcome entrenched real-world priors, and Reasoning Retention Rate (RRR), which assesses whether models can maintain reasoning-dependent counterfactual generation without explicit visual cues. Experiments show that all models exhibit sharp degradation from factual to counterfactual settings. Further analyses suggest that these failures arise because current T2I models encode world knowledge and visual appearances as tightly coupled patterns. Consequently, their heavy reliance on frequent visual co-occurrences within the training data forces them to default to familiar commonsense priors when tasked with rendering counterfactual worlds.",
+      "authors": [
+        "Jiayi Lei",
+        "Yuandong Pu",
+        "Xingyu Han",
+        "Rongpeng Zhu",
+        "Jing Xu",
+        "Jinyao Wang",
+        "Zijian Zhou",
+        "Bin Fu",
+        "Yuewen Cao",
+        "Yihao Liu",
+        "Hongsheng Li"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-23T13:15:07+00:00",
+      "link": "https://arxiv.org/pdf/2606.24548v3",
+      "tags": [
+        "keyword:causal-vlm",
+        "query:causal-vlm"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "counterfactual benchmark for causal reasoning in T2I models",
+      "llm_evidence_cn": "针对文本到图像模型的因果推理反事实基准",
+      "llm_evidence": "针对文本到图像模型的因果推理反事实基准",
+      "canonical_evidence": "针对文本到图像模型的因果推理反事实基准",
+      "llm_tldr_en": "CF-World benchmark tests causal reasoning in text-to-image models via counterfactual generation, revealing that models rely on correlations rather than genuine causal understanding.",
+      "llm_tldr_cn": "文本到图像模型在生成逼真图像方面取得了显著进展，但其成功是否归因于真正的因果理解仍不清楚。本文提出反事实世界（CF-World）基准，通过三种递进层级（事实、显式反事实、隐式反事实）测试模型在违背现实规律时的生成能力，实验表明模型主要依赖视觉-文本相关性而非因果推理。",
+      "llm_tldr": "文本到图像模型在生成逼真图像方面取得了显著进展，但其成功是否归因于真正的因果理解仍不清楚。本文提出反事实世界（CF-World）基准，通过三种递进层级（事实、显式反事实、隐式反事实）测试模型在违背现实规律时的生成能力，实验表明模型主要依赖视觉-文本相关性而非因果推理。",
+      "llm_tags": [
+        "query:causal-vlm:composite"
+      ],
+      "matched_query_tag": "query:causal-vlm:composite",
+      "matched_query_text": "Papers central to 查找因果表征学习或者因果用于VLM/MLLM/World Model相关的论文, especially work that connects or combines: causal representation learning methods; causal inference for vision language models; causal reasoning in multimodal large language models; causal world model learning; Papers that apply causal learning to vision language models; Causal representation learning for multimodal large language models; World models with causal structure.",
+      "matched_requirement_id": "req-composite-causal-vlm",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.26387v1",
+      "source": "arxiv",
+      "title": "Staying VIGILant: Mitigating Visual Laziness via Counterfactual Visual Alignment in MLLMs",
+      "abstract": "Multimodal large language models (MLLMs) extend large language models (LLMs) with visual perception, enabling joint reasoning over images and text. Despite inheriting strong reasoning capabilities from LLMs, they remain prone to hallucinations that contradict their visual inputs. Mechanistic studies indicate that this weakness stems from visual laziness: MLLMs encode the correct visual evidence internally, but overly rely on strong language priors during response. Existing alignment methods, such as direct preference optimization, primarily optimize outcome-level rewards based on text. This introduces an optimization bias toward linguistic shortcuts, leading to responses that often contradict the visual evidence. To address this, we propose Visual Information Gain In aLignment (VIGIL), a reinforcement-learning (RL) post-training framework that shifts the focus from numerical reward fitting to causal visual grounding. VIGIL introduces a geometric constraint that explicitly maximizes the mutual information between the visual input and the generated response. We achieve this by penalizing \"blind confidence\" instances where the model remains improperly certain even when textual-visual attention is masked to create a counterfactual blind state. Extensive experiments show that VIGIL consistently outperforms recent alignment methods across hallucination and reasoning benchmarks without compromising text-only capabilities. Our approach matches the full-data performance of state-of-the-art methods using only 25% of the preference data and even demonstrates emergent spatial grounding capabilities without explicit bounding box supervision.",
+      "authors": [
+        "Xi Xiao",
+        "Chen Liu",
+        "Chih-Ting Liao",
+        "Yunbei Zhang",
+        "Qizhen Lan",
+        "Yuxiang Wei",
+        "Lin Zhao",
+        "Janet Wang",
+        "Jianyang Gu",
+        "Muchao Ye",
+        "Tianyang Wang",
+        "Hao Xu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "published": "2026-06-24T21:12:24+00:00",
+      "link": "https://arxiv.org/pdf/2606.26387v1",
+      "tags": [
+        "keyword:causal-vlm",
+        "query:causal-vlm"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "counterfactual visual alignment to mitigate visual laziness in MLLMs",
+      "llm_evidence_cn": "通过反事实视觉对齐缓解多模态大语言模型的视觉惰性",
+      "llm_evidence": "通过反事实视觉对齐缓解多模态大语言模型的视觉惰性",
+      "canonical_evidence": "通过反事实视觉对齐缓解多模态大语言模型的视觉惰性",
+      "llm_tldr_en": "VIGILant uses counterfactual visual alignment to mitigate visual laziness in MLLMs, addressing hallucination by encouraging reliance on visual evidence over language priors.",
+      "llm_tldr_cn": "多模态大语言模型容易产生与视觉输入矛盾的幻觉，根本原因是视觉惰性：模型编码了正确的视觉证据，但在响应时过度依赖语言先验。本文提出VIGILant方法，通过反事实视觉对齐在视觉层面进行偏好优化，引导模型关注真实视觉证据。实验证明该方法有效减少了幻觉，提升了视觉忠实度，为因果推理在MLLM对齐中的应用提供了新范式。",
+      "llm_tldr": "多模态大语言模型容易产生与视觉输入矛盾的幻觉，根本原因是视觉惰性：模型编码了正确的视觉证据，但在响应时过度依赖语言先验。本文提出VIGILant方法，通过反事实视觉对齐在视觉层面进行偏好优化，引导模型关注真实视觉证据。实验证明该方法有效减少了幻觉，提升了视觉忠实度，为因果推理在MLLM对齐中的应用提供了新范式。",
+      "llm_tags": [
+        "query:causal-vlm"
+      ],
+      "matched_query_tag": "query:causal-vlm",
+      "matched_query_text": "causal reasoning in multimodal large language models",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.26467v1",
+      "source": "arxiv",
+      "title": "A Causal Foundation Model for Structure and Outcome Prediction",
+      "abstract": "We introduce TabPFN-CFM, a causal foundation model that can handle multiple causal problems. TabPFN-CFM predicts both causal structure and outcomes from observational data, supports queries on all three levels of Pearl's Causal Hierarchy and uses known graph structure when available to improve predictions. TabPFN-CFM is trained on synthetic datasets, and generalises to real datasets, demonstrating improved performance over both structural and outcome prediction baselines.",
+      "authors": [
+        "Max Zhu",
+        "Martino Mansoldo",
+        "Ching-Hao Wang",
+        "Stefan Groha"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-06-25T00:02:02+00:00",
+      "link": "https://arxiv.org/pdf/2606.26467v1",
+      "tags": [
+        "keyword:causal-vlm",
+        "query:causal-vlm"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "causal foundation model for structure and outcome prediction supporting Pearl's hierarchy",
+      "llm_evidence_cn": "支持珍珠因果层级结构和结果预测的因果基础模型",
+      "llm_evidence": "支持珍珠因果层级结构和结果预测的因果基础模型",
+      "canonical_evidence": "支持珍珠因果层级结构和结果预测的因果基础模型",
+      "llm_tldr_en": "TabPFN-CFM is a causal foundation model predicting both structure and outcomes from observational data, supporting Pearl's causal hierarchy.",
+      "llm_tldr_cn": "该论文引入TabPFN-CFM，一个能处理多种因果问题的因果基础模型。它可以从观测数据中同时预测因果结构和因果结果，支持Pearl因果层级所有三个层次的查询，并可在已知图结构时利用先验改善预测。模型在合成数据上训练，泛化至真实数据集，在结构和结果预测上均优于基线。",
+      "llm_tldr": "该论文引入TabPFN-CFM，一个能处理多种因果问题的因果基础模型。它可以从观测数据中同时预测因果结构和因果结果，支持Pearl因果层级所有三个层次的查询，并可在已知图结构时利用先验改善预测。模型在合成数据上训练，泛化至真实数据集，在结构和结果预测上均优于基线。",
+      "llm_tags": [
+        "query:causal-vlm:composite"
+      ],
+      "matched_query_tag": "query:causal-vlm:composite",
+      "matched_query_text": "Papers central to 查找因果表征学习或者因果用于VLM/MLLM/World Model相关的论文, especially work that connects or combines: causal representation learning methods; causal inference for vision language models; causal reasoning in multimodal large language models; causal world model learning; Papers that apply causal learning to vision language models; Causal representation learning for multimodal large language models; World models with causal structure.",
+      "matched_requirement_id": "req-composite-causal-vlm",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.29357v1",
+      "source": "arxiv",
+      "title": "Dynamic Parsing and Updating Natural Language Specification using VLMs for Robust Vision-Language Tracking",
+      "abstract": "Vision-language tracking guided by natural language specifications leverages high-level semantic cues of target objects to substantially boost tracking accuracy and robustness. Existing studies have verified that adaptively optimizing textual descriptions throughout the tracking process can effectively mitigate the semantic-visual mismatch induced by dynamic variations in target appearance, position, and other inherent attributes. Nevertheless, mainstream methods that directly generate textual information via sequence models or large language models inevitably suffer from inherent defects, including erroneous target updating, excessive background distraction, and pervasive hallucination artifacts. To address the aforementioned limitations, this paper proposes a novel language dependency parsing mechanism to precisely distill core tracking principal components, encompassing target objects, semantic concepts, and background contextual information. On this basis, we perform component-aware adaptive textual description updates by exploiting the powerful cross-modal understanding capability of the pre-trained vision-language model Qwen-VL. By integrating the proposed elaborately designed modules into the baseline framework, our method achieves consistent and superior tracking performance on multiple large-scale vision-language tracking benchmarks, including TNL2K, LaSOT, TNLLT, and OTB-LANG. The source code and pre-trained models will be released at https://github.com/Event-AHU/Open_VLTrack.",
+      "authors": [
+        "Xiao Wang",
+        "Liye Jin",
+        "Dan Xu",
+        "Yuehang Li",
+        "Lan Chen",
+        "Yaowei Wang",
+        "Yonghong Tian",
+        "Jin Tang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-06-28T12:12:18+00:00",
+      "link": "https://arxiv.org/pdf/2606.29357v1",
+      "tags": [
+        "keyword:causal-vlm",
+        "query:causal-vlm"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "dynamic parsing and updating of natural language specification using VLMs during tracking, test-time adaptation",
+      "llm_evidence_cn": "在跟踪过程中使用VLM动态解析和更新自然语言规格，测试时适应",
+      "llm_evidence": "在跟踪过程中使用VLM动态解析和更新自然语言规格，测试时适应",
+      "canonical_evidence": "在跟踪过程中使用VLM动态解析和更新自然语言规格，测试时适应",
+      "llm_tldr_en": "Proposes a VLM-based dynamic specification updating framework for robust vision-language tracking, adapting textual cues at test time.",
+      "llm_tldr_cn": "本文提出基于VLM的动态自然语言规格解析与更新框架，用于鲁棒的视觉语言跟踪。在测试时（跟踪过程中），通过自适应优化文本描述来缓解因目标外观变化导致的语义-视觉不匹配，有效避免了传统方法中的错误更新和背景干扰。实验证明该方法在多个跟踪基准上显著提升了鲁棒性，属于典型的VLM测试时适应方法。",
+      "llm_tldr": "本文提出基于VLM的动态自然语言规格解析与更新框架，用于鲁棒的视觉语言跟踪。在测试时（跟踪过程中），通过自适应优化文本描述来缓解因目标外观变化导致的语义-视觉不匹配，有效避免了传统方法中的错误更新和背景干扰。实验证明该方法在多个跟踪基准上显著提升了鲁棒性，属于典型的VLM测试时适应方法。",
+      "llm_tags": [
+        "query:tta-vlm:composite"
+      ],
+      "matched_query_tag": "query:tta-vlm:composite",
+      "matched_query_text": "Papers central to 基于预训练VLM、MLLM或者世界模型的test time adaptation论文检索, especially work that connects or combines: t; test time adaptation for vision language models; adaptation of pretrained vision language models at test time; multimodal large language model test time adaptation; world model test time adaptation; Find papers on test time adaptation methods for pretrained vision language models; Search for techniques that adapt multimodal large language models during inference without fine tuning; Retrieve articles about online adaptation of VLM and MLLM at test time; World model based test time adaptation.",
+      "matched_requirement_id": "req-composite-tta-vlm",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.30421v1",
+      "source": "arxiv",
+      "title": "OWMDrive: Causality-Aware End-to-End Autonomous Driving via 4D Occupancy World Model",
+      "abstract": "Autonomous driving systems are steadily moving toward end-to-end paradigms to mitigate the limited adaptability of rule-based pipelines in complex traffic environments. However, most existing learning-based methods still make decisions from static representations of the current scene, without explicit future rollouts or modeling of the temporal causal dynamics in traffic interactions. This limitation often results in unstable or overly conservative planning under high-uncertainty conditions, such as occlusions and unexpected events. To overcome these challenges, we introduce OWMDrive, a generative end-to-end driving framework built upon an Occupancy World Model for multi-step 3D occupancy forecasting, which serves as a conditional prior to guide diffusion-based planning. Conditioned on both current observations and predicted future states, the planner iteratively refines trajectory candidates to generate a reinforced driving trajectory. By explicitly modeling scene evolution over future horizons, OWMDrive captures key spatiotemporal causal dependencies, which leads to more foresighted and robust trajectory generation. Extensive experiments demonstrate that OWMDrive significantly improves planning reliability and safety, especially in challenging and partially observable driving scenarios.",
+      "authors": [
+        "Junjie Cheng",
+        "Ruiqi Song",
+        "Ye Wu",
+        "Nanxing Zeng",
+        "Ximiao Li",
+        "Yunfeng Ai"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-29T15:05:41+00:00",
+      "link": "https://arxiv.org/pdf/2606.30421v1",
+      "tags": [
+        "keyword:causal-vlm"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "causality-aware end-to-end driving via occupancy world model",
+      "llm_evidence_cn": "通过占用世界模型实现因果感知的端到端驾驶",
+      "llm_evidence": "通过占用世界模型实现因果感知的端到端驾驶",
+      "canonical_evidence": "通过占用世界模型实现因果感知的端到端驾驶",
+      "llm_tldr_en": "OWMDrive introduces a causally-aware end-to-end driving framework using a 4D occupancy world model to forecast multi-step 3D occupancy and model temporal causal dynamics, improving planning under uncertainty.",
+      "llm_tldr_cn": "现有的端到端驾驶方法缺乏对未来场景的显式推演和因果动力学建模，导致在遮挡等不确定条件下规划不稳定。本文提出OWMDrive，一种基于占用世界模型的生成式端到端驾驶框架，通过对4D占用进行多步预测来建模交通交互中的时序因果动态。实验表明该方法在复杂场景下显著提升了规划的鲁棒性和适应性，为因果世界模型在自动驾驶中的应用提供了新思路。",
+      "llm_tldr": "现有的端到端驾驶方法缺乏对未来场景的显式推演和因果动力学建模，导致在遮挡等不确定条件下规划不稳定。本文提出OWMDrive，一种基于占用世界模型的生成式端到端驾驶框架，通过对4D占用进行多步预测来建模交通交互中的时序因果动态。实验表明该方法在复杂场景下显著提升了规划的鲁棒性和适应性，为因果世界模型在自动驾驶中的应用提供了新思路。",
+      "llm_tags": [
+        "query:causal-vlm"
+      ],
+      "matched_query_tag": "query:causal-vlm",
+      "matched_query_text": "causal world model learning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.02575v1",
+      "source": "arxiv",
+      "title": "Criterion-Conditional In-Context Learning: Evaluating Criterion-Shift Adaptation in Vision-Language Models",
+      "abstract": "Vision-language models can perform new tasks without parameter updates through in-context learning (ICL), whose core mechanism is utilizing the support set for task induction. In the standard ICL setting, once the task is induced, its decision criterion remains fixed. However, in real-world applications, many tasks exhibit a stable high-level intent, while their decision criteria shift according to specific requirements. Thus, we introduce a new setting, denoted as Criterion-Conditional In-Context Learning (CC-ICL), where models must infer the latent criterion from context and adjust predictions accordingly under fixed task semantics. To evaluate this capability, we propose two complementary metrics, Criterion Invariance and Criterion Sensitivity, capturing the model's robustness and adaptability under criterion shifts. We further construct CC-Bench, a multi-domain benchmark that supports evaluation under the CC-ICL setting. By employing a dual-level data hierarchy, CC-Bench enables legitimate ground-truth variation conditioned on the active criterion even when the task remains fixed. Experiments on CC-Bench reveal that most models exhibit a rigid boundary bias, struggling to align their decisions with the latent criterion. We also find that even a simple multi-criterion training strategy can significantly reduce this bias, improving Criterion Sensitivity and enabling 7B-scale models to surpass proprietary models without degrading general multimodal performance.",
+      "authors": [
+        "Kaiyun Yang",
+        "Ruilin Yang",
+        "Zhimin Yao",
+        "J. Wang",
+        "Wei Ge"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-06-30T17:22:20+00:00",
+      "link": "https://arxiv.org/pdf/2607.02575v1",
+      "tags": [
+        "keyword:causal-vlm",
+        "query:causal-vlm"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "evaluates criterion-shift adaptation in VLMs via in-context learning, test-time adaptation without fine-tuning",
+      "llm_evidence_cn": "通过上下文学习评估VLM中的标准偏移适应，无需微调的测试时适应",
+      "llm_evidence": "通过上下文学习评估VLM中的标准偏移适应，无需微调的测试时适应",
+      "canonical_evidence": "通过上下文学习评估VLM中的标准偏移适应，无需微调的测试时适应",
+      "llm_tldr_en": "Introduces Criterion-Conditional In-Context Learning to evaluate VLMs' ability to adapt to shifting criteria at test time.",
+      "llm_tldr_cn": "本文提出了标准条件上下文学习（CC-ICL）设置，用于评估VLM在测试时适应决策标准变化的能力。设计了互补指标标准不变性和标准敏感性，在多个VLM上实验发现，现有模型在标准偏移场景下表现不佳，揭示了测试时适应的重要性。该工作为VLM的测试时适应能力提供了新的评估范式。",
+      "llm_tldr": "本文提出了标准条件上下文学习（CC-ICL）设置，用于评估VLM在测试时适应决策标准变化的能力。设计了互补指标标准不变性和标准敏感性，在多个VLM上实验发现，现有模型在标准偏移场景下表现不佳，揭示了测试时适应的重要性。该工作为VLM的测试时适应能力提供了新的评估范式。",
+      "llm_tags": [
+        "query:tta-vlm:composite"
+      ],
+      "matched_query_tag": "query:tta-vlm:composite",
+      "matched_query_text": "Papers central to 基于预训练VLM、MLLM或者世界模型的test time adaptation论文检索, especially work that connects or combines: t; test time adaptation for vision language models; adaptation of pretrained vision language models at test time; multimodal large language model test time adaptation; world model test time adaptation; Find papers on test time adaptation methods for pretrained vision language models; Search for techniques that adapt multimodal large language models during inference without fine tuning; Retrieve articles about online adaptation of VLM and MLLM at test time; World model based test time adaptation.",
+      "matched_requirement_id": "req-composite-tta-vlm",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.02601v1",
+      "source": "arxiv",
+      "title": "CV-DCLR: Causal-Visual Dynamic Label Refinement for Robust Zero-Shot Learning",
+      "abstract": "Zero-Shot Learning (ZSL) facilitates knowledge transfer via shared semantic spaces. However, a critical bottleneck in this paradigm is Semantic Entanglement, where visual representations are inevitably conflated with visually similar semantic concepts, such as distinguishing the intrinsic traits of a Wolf from the shared features of a Husky. Existing global alignment methods often indiscriminately maximize correlations between visual and semantic modalities, leading models to overfit spurious similarities rather than capturing distinctive class identities. To address this fundamental limitation, we propose the Causal-Visual Dynamic Label Refinement (CV-DCLR) framework. Unlike traditional approaches that rely on superficial visual statistics, CV-DCLR recalibrates visual-semantic associations via a Dual-Stream Mutual Correction Mechanism. This includes a Visual Likelihood Stream to model observational patterns and a Causal Importance Stream that verifies the structural necessity of candidate prototypes through Counterfactual Intervention. Acting as a logical filter, our adaptive gating mechanism dynamically modulates feature responses to amplify genuine causal traits while suppressing visually plausible but structurally irrelevant distractors. Extensive experiments on the CUB, SUN, and AWA2 benchmarks under a rigorous Semantic Entanglement Injection protocol demonstrate that CV-DCLR significantly outperforms state-of-the-art methods in high-ambiguity scenarios. Specifically, while existing models suffer catastrophic degradation under entanglement, our framework maintains robust performance, effectively disentangling true class identities from semantic confounders.",
+      "authors": [
+        "Can Wang",
+        "Jiangnan Li",
+        "Mingyu Li",
+        "Yining Song",
+        "Kangrui Ren",
+        "Min Gan",
+        "Jinfu Fan"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-01T12:45:35+00:00",
+      "link": "https://arxiv.org/pdf/2607.02601v1",
+      "tags": [
+        "keyword:causal-vlm",
+        "query:causal-vlm"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "proposes causal-visual dynamic label refinement for robust zero-shot learning, a causal representation learning method",
+      "llm_evidence_cn": "提出了因果视觉动态标签精炼方法，属于因果表示学习方法",
+      "llm_evidence": "提出了因果视觉动态标签精炼方法，属于因果表示学习方法",
+      "canonical_evidence": "提出了因果视觉动态标签精炼方法，属于因果表示学习方法",
+      "llm_tldr_en": "Introduces Causal-Visual Dynamic Label Refinement (CV-DCLR) to address semantic entanglement in zero-shot learning by refining label representations using causal principles, improving visual-semantic alignment.",
+      "llm_tldr_cn": "该论文针对零样本学习中的语义纠缠问题，提出因果视觉动态标签精炼（CV-DCLR）框架。该方法利用因果原理动态调整视觉与语义模态的标签表示，减少虚假相关性，从而提升零样本学习的鲁棒性和泛化能力。实验证明，CV-DCLR在多个基准数据集上显著优于传统全局对齐方法。",
+      "llm_tldr": "该论文针对零样本学习中的语义纠缠问题，提出因果视觉动态标签精炼（CV-DCLR）框架。该方法利用因果原理动态调整视觉与语义模态的标签表示，减少虚假相关性，从而提升零样本学习的鲁棒性和泛化能力。实验证明，CV-DCLR在多个基准数据集上显著优于传统全局对齐方法。",
+      "llm_tags": [
+        "query:causal-vlm"
+      ],
+      "matched_query_tag": "query:causal-vlm",
+      "matched_query_text": "causal representation learning methods",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.03942v1",
+      "source": "arxiv",
+      "title": "ThermoForce: A Physics-Structured Interventional World Model for Building HVAC Control",
+      "abstract": "Model predictive control (MPC) of building HVAC systems needs thermal models that answer a causal question: what indoor temperature, energy use, and comfort will result if a control action is applied? Time-series foundation models (TSFMs) can forecast passive building trajectories with strong zero-shot skill, but high factual accuracy does not imply valid response to control interventions. We show that an observational grey-box model with the best passive accuracy predicts cooling effects with the wrong sign, and that adding control and weather covariates to a TSFM does not fix intervention response. We introduce ThermoForce, a control-ready interventional thermal world model that keeps a TSFM frozen as a passive free-response prior and learns a compact, physics-structured forced-response operator for the causal effect of HVAC actuation. The operator is monotone in the control input by construction, is identified from one to three days of control excitation, and composes with the free response into a counterfactual-capable world model. Across paired EnergyPlus heating and cooling interventions, ThermoForce attains the lowest intervention-effect error and correct effect sign where covariate-TSFM, observational grey-box, and distillation baselines fail. Embedded in MPC on the BOPTEST benchmark, it reduces thermal discomfort by 33--84\\% relative to the native controller across three two-week windows while simultaneously reducing energy, using a frozen backbone, 195 trainable parameters, and CPU-only computation. ThermoForce reframes foundation models for building control: passive prediction and forced intervention response must be structurally separated for a model to be control-ready.",
+      "authors": [
+        "Yifan Wang"
+      ],
+      "primary_category": "eess.SY",
+      "categories": [
+        "eess.SY"
+      ],
+      "published": "2026-07-04T16:28:00+00:00",
+      "link": "https://arxiv.org/pdf/2607.03942v1",
+      "tags": [
+        "keyword:causal-vlm",
+        "query:causal-vlm"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "interventional world model with causal structure for HVAC control",
+      "llm_evidence_cn": "用于HVAC控制的因果结构干预世界模型",
+      "llm_evidence": "用于HVAC控制的因果结构干预世界模型",
+      "canonical_evidence": "用于HVAC控制的因果结构干预世界模型",
+      "llm_tldr_en": "ThermoForce builds a control-ready interventional thermal world model for building HVAC by keeping a frozen time-series foundation model as a passive prior and adding causal intervention layers, outperforming purely observational models.",
+      "llm_tldr_cn": "本文针对建筑HVAC控制提出ThermoForce，一种控制就绪的干预热世界模型。它冻结时间序列基础模型作为被动自由响应先验，并添加因果干预结构，使得模型能正确回答控制动作对温度、能耗和舒适度的因果影响。实验表明，纯观测模型即使具有最佳被动精度，也可能预测出错误符号的冷却效果，而ThermoForce提供了有效的干预响应。",
+      "llm_tldr": "本文针对建筑HVAC控制提出ThermoForce，一种控制就绪的干预热世界模型。它冻结时间序列基础模型作为被动自由响应先验，并添加因果干预结构，使得模型能正确回答控制动作对温度、能耗和舒适度的因果影响。实验表明，纯观测模型即使具有最佳被动精度，也可能预测出错误符号的冷却效果，而ThermoForce提供了有效的干预响应。",
+      "llm_tags": [
+        "query:causal-vlm"
+      ],
+      "matched_query_tag": "query:causal-vlm",
+      "matched_query_text": "causal world model learning",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.11508v1",
+      "source": "arxiv",
+      "title": "CDFM: Towards a General-Purpose Causal Discovery Foundation Model",
+      "abstract": "Causal discovery, the process of recovering underlying causal structures from observational data, is a fundamental pursuit across scientific disciplines. Over the past decades, numerous algorithms have been developed to tackle this challenge through workflows tailored to the specific causal mechanisms underlying each type of dataset, demonstrating effectiveness across a wide range of applications. However, as the volume and heterogeneity of real-world data continue to grow, this dataset-specific approach inevitably leads to a fragmented, test-driven paradigm that struggles to scale to the demands of modern scientific discovery. To address this, we formulate the Causal Discovery Foundation Model (CDFM) as a unified, general-purpose framework for zero-shot structural inference. To ensure reliable generalization across unknown domains, we first investigate the theoretical boundaries of causal identifiability, revealing the indispensable role of causal prior mechanisms in this process. Building on these insights, we formulate a principled variational framework that treats unknown causal mechanisms as latent variables and mathematically decomposes the intractable marginal likelihood into distinct, tractable learning modules. The variational decomposition provides a conceptual design principle for the architecture design of CDFM, while comprehensive causal knowledge guides the large-scale synthesis of our pretraining data. By pretraining on a massive, highly diverse space of synthetic structural causal models, CDFM successfully internalizes complex statistical asymmetries. Extensive experiments demonstrate that CDFM consistently outperforms traditional algorithms, driving a paradigm shift toward a general-purpose causal discovery foundation model.",
+      "authors": [
+        "Jie Qiao",
+        "Ruichu Cai",
+        "Zijian Li",
+        "Weilin Chen",
+        "Pengfei Hua",
+        "Boyan Xu",
+        "Zhengming Chen",
+        "Zhifeng Hao",
+        "Peng Cui"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ],
+      "published": "2026-07-13T12:58:28+00:00",
+      "link": "https://arxiv.org/pdf/2607.11508v1",
+      "tags": [
+        "keyword:causal-vlm",
+        "query:causal-vlm"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "general-purpose causal discovery foundation model for zero-shot structure learning",
+      "llm_evidence_cn": "通用因果发现基础模型，零样本结构学习",
+      "llm_evidence": "通用因果发现基础模型，零样本结构学习",
+      "canonical_evidence": "通用因果发现基础模型，零样本结构学习",
+      "llm_tldr_en": "CDFM is a unified framework for zero-shot causal discovery across datasets, generalizing to unseen causal mechanisms.",
+      "llm_tldr_cn": "该论文针对传统因果发现算法在数据异构性下工作流程碎片化的问题，提出因果发现基础模型（CDFM），作为一个统一的通用框架进行零样本因果结构学习。通过在大规模合成数据上预训练，CDFM能够泛化到未见过的因果机制，无需针对每个数据集重新设计工作流。实验表明其在多种真实数据集上达到可比的因果发现性能，为因果发现提供可扩展的解决方案。",
+      "llm_tldr": "该论文针对传统因果发现算法在数据异构性下工作流程碎片化的问题，提出因果发现基础模型（CDFM），作为一个统一的通用框架进行零样本因果结构学习。通过在大规模合成数据上预训练，CDFM能够泛化到未见过的因果机制，无需针对每个数据集重新设计工作流。实验表明其在多种真实数据集上达到可比的因果发现性能，为因果发现提供可扩展的解决方案。",
+      "llm_tags": [
+        "query:causal-vlm:composite"
+      ],
+      "matched_query_tag": "query:causal-vlm:composite",
+      "matched_query_text": "Papers central to 查找因果表征学习或者因果用于VLM/MLLM/World Model相关的论文, especially work that connects or combines: causal representation learning methods; causal inference for vision language models; causal reasoning in multimodal large language models; causal world model learning; Papers that apply causal learning to vision language models; Causal representation learning for multimodal large language models; World models with causal structure.",
+      "matched_requirement_id": "req-composite-causal-vlm",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.11510v1",
+      "source": "arxiv",
+      "title": "DAG-FM: A Foundation Model for Causal Discovery under Heterogeneous Causal Mechanisms",
+      "abstract": "Causal discovery from observational tabular data remains fundamentally challenging, primarily due to the heterogeneity of underlying causal mechanisms and the high-dimensional combinatorial search space of Directed Acyclic Graphs (DAGs). In this paper, we propose \\textbf{DAG-FM}, a novel foundation model architecture that amortizes causal discovery. Unlike direct matrix prediction, DAG-FM decomposes the causal discovery process into two auto-regressive stages using two specialized Transformer-based sub-modules: a leaf-node predictor and a parent-node predictor. To effectively model complex row-column interactions, we adopt a robust tabular interaction block to output feature-wise representations. Crucially, to handle diverse and unknown Functional Causal Model (FCM) assumptions in real-world scenarios, we introduce Mixture-of-Leaf-Experts (MoLE), allowing the model to dynamically route and adapt to identifiable mechanism families. Through an iterative inference algorithm, DAG-FM seamlessly extracts causal orderings and constructs valid DAGs. Extensive experiments demonstrate that DAG-FM achieves state-of-the-art performance on both synthetic benchmarks and complex real-world datasets, significantly outperforming traditional classical algorithms and recent foundation models in both accuracy and scalability.",
+      "authors": [
+        "Yikang Chen",
+        "Zhengkang Guan",
+        "Haoyuan Qian",
+        "Peng Cui",
+        "Yi Yang",
+        "Kun Kuang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "published": "2026-07-13T13:00:06+00:00",
+      "link": "https://arxiv.org/pdf/2607.11510v1",
+      "tags": [
+        "keyword:causal-vlm",
+        "query:causal-vlm"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "foundation model for causal discovery from tabular data",
+      "llm_evidence_cn": "基于表格数据的因果发现基础模型",
+      "llm_evidence": "基于表格数据的因果发现基础模型",
+      "canonical_evidence": "基于表格数据的因果发现基础模型",
+      "llm_tldr_en": "DAG-FM is a Transformer-based foundation model that amortizes causal discovery by decomposing it into leaf-node and parent-node prediction stages.",
+      "llm_tldr_cn": "因果发现因异构因果机制和高维DAG搜索空间而极具挑战。本文提出DAG-FM，一种基于Transformer的因果发现基础模型，通过两个自回归子模块（叶节点预测和父节点预测）分解因果发现过程，并采用表格交互模块建模行列关系。该模型在多种数据集上实现了无需重新训练的零样本因果发现，为因果表征学习提供了可迁移的基础工具。",
+      "llm_tldr": "因果发现因异构因果机制和高维DAG搜索空间而极具挑战。本文提出DAG-FM，一种基于Transformer的因果发现基础模型，通过两个自回归子模块（叶节点预测和父节点预测）分解因果发现过程，并采用表格交互模块建模行列关系。该模型在多种数据集上实现了无需重新训练的零样本因果发现，为因果表征学习提供了可迁移的基础工具。",
+      "llm_tags": [
+        "query:causal-vlm"
+      ],
+      "matched_query_tag": "query:causal-vlm",
+      "matched_query_text": "causal representation learning methods",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.12382v1",
+      "source": "arxiv",
+      "title": "Differentiable Clone-Structured Causal Graphs for End-to-End Cognitive Map Learning from Image Sequences",
+      "abstract": "How can an agent build a structured map of its world from nothing but an ongoing sequence of raw sensory input and its own movements, especially when natural variation means exact sensory patterns rarely repeat? The Clone-Structured Causal Graph algorithm (CSCG), a normative hippocampus model, shows how an interpretable map can be learned from aliased observations. However, CSCG requires a predefined discrete alphabet, and its expectation-maximization formulation is not easily combined with existing neural network modules, preventing the end-to-end processing of raw image sequences. We remove this barrier by reformulating CSCG as a single, fully differentiable module, gradCSCG, and coupling it to a learned vector-quantized variational autoencoder (VQ-VAE) perceptual front-end. A soft emission forward pass allows the map-learning objective to flow back into perception, while a set of loss-balancing mechanisms mitigates module collapse during joint training. We demonstrate, first, that gradient training reproduces CSCG's results on original symbolic grid worlds by recovering room topology from heavily aliased observations. Second, we show that map recovery remains robust on MNIST image sequences, where each visit to a location yields a newly sampled image of its assigned digit. Across four heavily aliased environments, the end-to-end pipeline successfully uncovers the underlying adjacency graph with high edge precision and recall, directly from visual input. This work provides a proof of principle that CSCG can serve as a composable building block in a deep learning architecture.",
+      "authors": [
+        "Arash Nikzad",
+        "Sasan Sarbishegi",
+        "Ali Dasmeh",
+        "Muhammad Asif",
+        "Parsa Gharavi",
+        "Erik Husom",
+        "Sagar Sen",
+        "Andrew B. Lehr",
+        "Olivier Penacchio",
+        "Ana Clemente",
+        "Tristan M. Stöber"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "q-bio.NC"
+      ],
+      "published": "2026-07-14T05:54:39+00:00",
+      "link": "https://arxiv.org/pdf/2607.12382v1",
+      "tags": [
+        "keyword:causal-vlm",
+        "query:causal-vlm"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "differentiable clone-structured causal graphs for cognitive map learning",
+      "llm_evidence_cn": "可微分的克隆结构因果图用于认知地图学习",
+      "llm_evidence": "可微分的克隆结构因果图用于认知地图学习",
+      "canonical_evidence": "可微分的克隆结构因果图用于认知地图学习",
+      "llm_tldr_en": "gradCSCG reformulates the Clone-Structured Causal Graph into a differentiable module, enabling end-to-end learning of hierarchical causal maps from raw image sequences.",
+      "llm_tldr_cn": "克隆结构因果图（CSCG）是一种海马体模型，可从混淆观测中学习可解释地图，但需离散字母表且不可微。本文将其重新表述为完全可微模块gradCSCG，并与向量量化编码器结合，实现从原始图像序列到因果图的端到端学习。实验表明该方法在少量样本下即可学习结构化环境表征，为因果表征学习在认知地图中的应用提供了新工具。",
+      "llm_tldr": "克隆结构因果图（CSCG）是一种海马体模型，可从混淆观测中学习可解释地图，但需离散字母表且不可微。本文将其重新表述为完全可微模块gradCSCG，并与向量量化编码器结合，实现从原始图像序列到因果图的端到端学习。实验表明该方法在少量样本下即可学习结构化环境表征，为因果表征学习在认知地图中的应用提供了新工具。",
+      "llm_tags": [
+        "query:causal-vlm"
+      ],
+      "matched_query_tag": "query:causal-vlm",
+      "matched_query_text": "causal representation learning methods",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.12474v2",
+      "source": "arxiv",
+      "title": "From Observation to Insight: Mechanistic World Models and the Quest for Autonomous Discovery",
+      "abstract": "Recent advances in foundation models have transformed AI for Science, enabling remarkably accurate predictive performance across domains ranging from protein folding to weather forecasting. Yet prediction alone does not constitute scientific discovery. Scientific understanding depends on uncovering the reusable explanatory mechanisms that generate observations, whereas contemporary machine learning remains fundamentally organised around predictive mappings rather than explanatory structure. In this paper, we argue that scientific discovery is fundamentally a problem of knowledge organisation. To this end, we introduce Mechanistic World Models, a new design paradigm that places reusable mechanisms at the centre of representation, computation and learning. Drawing on insights from the philosophy of science, we derive the computational capabilities required for discovery, identify the design principles and inductive pressures that encourage explanatory knowledge to emerge, and formalise the anatomy of a mechanism-centric world model. Finally, we show how diverse research directions including mechanistic interpretability, causal representation learning, equation discovery and modular architectures capture complementary ingredients of this paradigm while lacking a unified framework. We propose Mechanistic World Models as a conceptual foundation and computational blueprint for moving AI beyond predictive forecasting towards autonomous scientific discovery.",
+      "authors": [
+        "Ingmar Posner",
+        "Anson Lei",
+        "Bernhard Schölkopf"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-14T08:03:27+00:00",
+      "link": "https://arxiv.org/pdf/2607.12474v2",
+      "tags": [
+        "keyword:causal-vlm",
+        "query:causal-vlm"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Mechanistic World Models focusing on reusable explanatory mechanisms",
+      "llm_evidence_cn": "机制世界模型以可复用解释机制为中心",
+      "llm_evidence": "机制世界模型以可复用解释机制为中心",
+      "canonical_evidence": "机制世界模型以可复用解释机制为中心",
+      "llm_tldr_en": "Mechanistic World Models reorganize representation around reusable explanatory mechanisms, aiming to enable autonomous discovery and scientific understanding.",
+      "llm_tldr_cn": "当前AI for Science领域预测模型盛行，但缺乏对观察背后可复用解释机制的揭示。本文提出机制世界模型（Mechanistic World Models）新范式，将可复用机制置于表征核心，而非预测映射。该框架旨在推动从关联预测到因果理解的转变，为构建具备科学发现能力的智能系统奠定基础。",
+      "llm_tldr": "当前AI for Science领域预测模型盛行，但缺乏对观察背后可复用解释机制的揭示。本文提出机制世界模型（Mechanistic World Models）新范式，将可复用机制置于表征核心，而非预测映射。该框架旨在推动从关联预测到因果理解的转变，为构建具备科学发现能力的智能系统奠定基础。",
+      "llm_tags": [
+        "query:causal-vlm"
+      ],
+      "matched_query_tag": "query:causal-vlm",
+      "matched_query_text": "World models with causal structure",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    }
+  ]
+}

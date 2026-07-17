@@ -1,0 +1,595 @@
+Title: CV-DCLR: Causal-Visual Dynamic Label Refinement for Robust Zero-Shot Learning
+
+URL Source: https://arxiv.org/pdf/2607.02601v1
+
+Published Time: Tue, 07 Jul 2026 00:06:35 GMT
+
+Number of Pages: 9
+
+Markdown Content:
+# CV-DCLR: Causal-Visual Dynamic Label Refinement for Robust Zero-Shot Learning 
+
+## Can Wang 
+
+School of Computer Science and Technology, Qingdao University Qingdao, China 
+
+## Jiangnan Li 
+
+School of Computer Science and Technology, Qingdao University Qingdao, China 
+
+## Mingyu Li 
+
+School of Computer Science and Technology, Qingdao University Qingdao, China 
+
+## Yining Song 
+
+School of Computer Science and Technology, Qingdao University Qingdao, China 
+
+## Kangrui Ren 
+
+School of Software Engineering, Tongji University Shanghai, China 
+
+## Min Gan 
+
+School of Computer Science and Technology, Qingdao University Qingdao, China 
+
+## Jinfu Fan ∗
+
+fan_jinfu@163.com School of Computer Science and Technology, Qingdao University Qingdao, China 
+
+Abstract 
+
+Zero-Shot Learning (ZSL) facilitates knowledge transfer via shared semantic spaces. However, a critical bottleneck in this paradigm is Semantic Entanglement , where visual representations are in-evitably conflated with visually similar semantic concepts (e.g., distinguishing the intrinsic traits of a Wolf from the shared features of a Husky ). Existing global alignment methods often indiscrimi-nately maximize correlations between visual and semantic modal-ities, leading models to overfit spurious similarities rather than capturing distinctive class identities. To address this fundamental limitation, we propose the Causal-Visual Dynamic Label Refine-ment (CV-DCLR) framework. Unlike traditional approaches that rely on superficial visual statistics, CV-DCLR recalibrates visual-semantic associations via a Dual-Stream Mutual Correction Mechanism . This includes a Visual Likelihood Stream to model observational patterns and a Causal Importance Stream that verifies the structural necessity of candidate prototypes through Coun-terfactual Intervention . Acting as a logical filter, our adaptive gating mechanism dynamically modulates feature responses to am-plify genuine causal traits while suppressing visually plausible but structurally irrelevant distractors. Extensive experiments on the CUB, SUN, and AWA2 benchmarks under a rigorous Semantic En-tanglement Injection protocol demonstrate that CV-DCLR sig-nificantly outperforms state-of-the-art methods in high-ambiguity scenarios. Specifically, while existing models suffer catastrophic degradation under entanglement, our framework maintains robust performance, effectively disentangling true class identities from semantic confounders. 
+
+CCS Concepts 
+
+• Computing methodologies → Object recognition ; Neural networks ; Supervised learning by classification .
+
+∗Corresponding author. (a)  substantive  visual -semantic  correlation  (CV -DCLR)                                                                    
+
+> (b) spurious visual -semantic correlation (Conventional ZSL)
+> Seen class images
+> Seen class images
+> Semantic information
+> CV -DCLR ()𝐏 𝐟𝐢𝐧𝐚𝐥
+> Causal: ear shape
+> Causal: muzzle shape
+> Causal: fur pattern
+> …
+> CV -DCLR ()𝐏 𝐟𝐢𝐧𝐚𝐥
+> Causal: ear shape
+> Causal: muzzle shape
+> Causal: fur pattern
+> …
+> Global Alignment( )𝐏 𝐨𝐛𝐬
+> Contextual distractor:
+> white background
+> Contextual distractor: snow
+> Causal: ear shape
+> …
+> Semantic information
+> Global Alignment( )𝐏 𝐨𝐛𝐬
+> Contextual distractor:
+> white background
+> Contextual distractor: snow
+> Causal: ear shape
+> …
+> Husky
+> (seen)
+> Husky
+> (seen)
+> Unseen class image
+> Unseen class image
+> CV -DCLR ()𝐏 𝐟𝐢𝐧𝐚𝐥
+> Causal: ear shape
+> Causal: muzzle shape
+> Causal: fur pattern
+> …
+> Semantic information
+> Semantic information
+> Global Alignment( )𝐏 𝐨𝐛𝐬
+> Contextual distractor:
+> white background
+> Contextual distractor: snow
+> Causal: ear shape
+> …
+> Wolf
+> (unseen)
+> Husky
+> (seen)
+> Correct result
+> Incorrect result
+> ✓
+
+×  
+
+> Knowledge transfer ✓
+
+×Limited  knowledge  transfer 
+
+> Knowledge
+> transfer
+> Knowledge
+> transfer
+> ✓
+> ✓
+> ✓
+> ✓
+
+Figure 1: Conceptual Comparison. (a) Conventional ZSL con-fuses the target (e.g., Wolf ) with Semantic Distractors (e.g., 
+
+Husky ) due to shared attributes. (b) Our CV-DCLR leverages Causal Intervention to verify Structural Necessity, effectively disentangling the true identity from spurious correlations. 
+
+Keywords 
+
+Zero-Shot Learning, Causal Inference, Disentangled Representation, Vision Transformer 
+
+1 Introduction 
+
+Zero-Shot Learning (ZSL) aims to mimic human cognitive flexibility by mapping visual inputs to a shared semantic space, enabling the recognition of unseen categories. A core challenge in this para-digm is bridging the modality gap between low-level perception and high-level cognition. However, dominant approaches often rely on the idealized assumption that visual representations estab-lish a one-to-one correspondence with semantic attributes [ 8 , 14 ]. This assumption drastically oversimplifies real-world complexity, where visual signals are inevitably entangled with Semantic Con-founders [12]. In practice, objects rarely exhibit isolated features; instead, they share extensive visual patterns with semantically similar categories. 
+
+> arXiv:2607.02601v1 [cs.CV] 1 Jul 2026 Wang et al.
+
+For instance, Wolves and Huskies share high-frequency traits such as fur texture and ear shape. If a model blindly associates these shared features with a single identity, it falls into the trap of Spurious Correlation [ 25 ]. Causal inference theory suggests that this visual similarity induces a back-door path , where ambiguous visual pat-terns overshadow genuine, identity-defining causal cues [ 18 , 30 , 47 ]. Consequently, models rely on ambiguous mappings rather than intrinsic features, leading to fragility when distinguishing fine-grained categories [12, 20]. To address this fundamental limitation, we propose the Causal-Visual Dynamic Label Refinement (CV-DCLR) framework. Un-like single-stream approaches that passively accept observational statistics, CV-DCLR introduces a Dual-Stream Mutual Correc-tion Mechanism culminating in an Adaptive Gating Arbitra-tion . Specifically, our framework operates through a rigorous three-stage cognitive process: First, a Visual Likelihood Stream captures observational com-patibility to identify all visually plausible categories (e.g., highlight-ing both Wolf and Husky due to shared textures); however, this stream is inherently prone to ambiguity caused by semantic entan-glement. To resolve this, a Causal Importance Stream functions as a structural validator via Counterfactual Intervention [ 22 , 34 ]. Inspired by the principle of Natural Direct Effect (NDE), we simulate intervention by virtually masking the prototype of a specific can-didate and measuring the resultant Feature Deviation . The core rationale is that removing a Semantic Distractor (e.g., Husky ) causes minimal shift as it merely shares surface features, whereas masking the True Identity (e.g., Wolf ) induces a representational collapse ,revealing its role as a necessary semantic anchor. Finally, to syn-thesize these diverging signals, we employ a sample-dependent 
+
+Adaptive Gating Mechanism . This module acts as a logical filter 
+
+that dynamically amplifies genuine causal traits while suppressing visually plausible but structurally redundant distractors, ensuring the final prediction relies on intrinsic causality. Our main contributions are summarized as follows: 
+
+• Dual-Stream Mutual Correction Architecture. We in-troduce a novel architecture that integrates observational probability with causal validation. This design effectively mitigates semantic entanglement by distinguishing statisti-cally frequent features from structurally necessary ones. 
+
+• Adaptive Gating for Dynamic Refinement. We pro-pose a learnable logical filter mechanism. Unlike static fu-sion strategies, this gate dynamically recalibrates feature responses for each sample, ensuring robust performance even in the presence of high-similarity distractors. 
+
+• State-of-the-Art Performance and Interpretability. By incorporating counterfactual intervention, our framework provides interpretability beyond standard attention maps and explicitly identifies structurally necessary attributes. Extensive experiments on CUB, SUN, and AWA2 bench-marks demonstrate that CV-DCLR outperforms state-of-the-art methods with superior robustness against semantic confounding. 
+
+2 Related Work 2.1 Visual-Semantic Alignment in Zero-Shot Learning 
+
+A central challenge in Zero-Shot Learning (ZSL) is bridging the modality gap to establish robust correspondences between visual features and semantic embeddings. Early approaches utilized lin-ear projections for alignment [ 1, 2 ]. Subsequent deep learning-based methods adopted non-linear mappings to better handle do-main shifts [ 41 , 43 ]. Recently, Transformer-based architectures have shown remarkable promise in capturing global dependen-cies [ 3, 9, 31 ]. To improve discriminability, attention mechanisms were introduced to localize informative regions [ 42 , 48 ]. However, these methods often fail due to semantic entanglement , where atten-tion mechanisms indiscriminately capture non-causal background noise [ 7, 44 ]. In contrast, CV-DCLR explicitly addresses this limita-tion via causal intervention. By incorporating a causal validation stream, our model rigorously filters non-causal visual activations, prioritizing substantive attributes over environmental artifacts. 
+
+2.2 Disentangled Representations and Causal Inference 
+
+Addressing background interference and attribute coupling ne-cessitates feature disentanglement. Generative frameworks (e.g., VAEs, GANs) attempt to separate features into class-relevant and irrelevant components [ 15 , 21 , 41 ]. However, relying on implicit dis-tributional assumptions without explicit logical verification makes these methods fragile against complex spurious correlations. Re-cently, Causal Inference has emerged as a tool for systematically eliminating confounders [ 25 ]. Researchers have employed counter-factual intervention to isolate causal features, a strategy successful in VQA and long-tailed recognition [ 22 , 27 , 30 ]. In ZSL, state-of-the-art methods like TransZero attempt to enhance consistency but often treat causal cues implicitly. Our approach evolves this para-digm from static constraints to dynamic interaction via structural necessity verification. Through a Dual-Stream Mutual Correction mechanism, CV-DCLR actively identifies and rectifies visual biases during inference, offering adaptive robustness rather than mere fixed regularization. 
+
+2.3 Dynamic vs. Post-hoc Causal Correction 
+
+Most causal methods in ZSL operate as post-hoc corrections , merely adjusting prediction scores based on causal priors after feature ex-traction [ 37 , 45 ]. While effective for output calibration, this strategy fails to purify the underlying feature representations themselves— essentially treating the symptom rather than the disease. To ad-dress this fundamental limitation, CV-DCLR adapts dynamic gating mechanisms [ 4] to the causal-visual domain. We propose a learn-able Gating Mechanism that functions as a feature-level logical filter. Unlike static or post-hoc adjustments, our mechanism dy-namically modulates visual responses during the forward pass based on causal evidence. This allows the model to selectively suppress spurious activations at the source (e.g., dampening the water fea-ture when identifying a bird ), achieving true structural denoising .CV-DCLR: Causal-Visual Dynamic Label Refinement for Robust Zero-Shot Learning 
+
+Figure 2: The Structural Causal Model (SCM) of Zero-Shot Learning. (a) The Causal Path ( 𝑌 → 𝑂 → v) represents the intrinsic mechanism where the object identity determines vi-sual features. (b) The Back-door Path ( 𝑌 ← 𝐶 → v) represents spurious correlations introduced by dataset bias (e.g., Water 
+
+co-occurring with Duck ). Our CV-DCLR framework aims to block the back-door path via counterfactual intervention. 
+
+Consequently, the final feature representation becomes intrinsi-cally robust to environmental confounders, significantly enhancing generalization to unseen domains [19, 33]. 
+
+3 Methodology 
+
+In this section, we formalize the problem by adapting the standard setting of Zero-Shot Learning with ambiguous supervision [ 7], rein-terpreting it through the lens of Semantic Entanglement . We then utilize a Structural Causal Model to reveal the mechanism of visual-semantic confusion and elaborate on the CV-DCLR framework. The theoretical foundation of our mutual information optimization is inspired by recent advances in variational estimation [5, 26]. 
+
+3.1 Problem Formulation 
+
+Let X ⊆ R𝐻 ×𝑊 ×3 denote the input image space and Y = S ∪ U 
+
+denote the label space, where S and U represent disjoint seen and unseen classes. Each class 𝑦 ∈ Y is uniquely identified by a Semantic Attribute Prototype a𝑦 ∈ R𝑑 𝑎 (typically the class attribute vector). In this context, we use the terms label and category 
+
+interchangeably. The variable 𝑦 denotes not only the discrete class index for supervision but also the semantic entity characterized by the intrinsic attributes a𝑦 .
+
+Training with Semantic Entanglement. We define the training dataset as D𝑡𝑟 = {( 𝑥 𝑖 , Y𝑖 , A𝑖 ) | 1 ≤ 𝑖 ≤ 𝐵 }, where 𝐵 denotes the batch size. Unlike traditional ZSL where the ground-truth label 𝑦 𝑖 
+
+is explicitly given, we operate under a Semantic Entanglement 
+
+setting where 𝑦 𝑖 is hidden within a Confounded Candidate Set 
+
+Y𝑖 ⊆ S .
+
+• Candidate Set Construction Y𝑖 contains the true class 𝑦 𝑖 
+
+and 𝑁 − 1 Semantic Distractor Classes . These distractors are generated based on visual similarity, such as a Husky 
+
+appearing in the candidate set of a Wolf , simulating realistic semantic ambiguity. 
+
+• Prototype Matrix A𝑖 = [a1, . . . , a𝑁 ]⊤ ∈ R𝑁 ×𝑑 𝑎 denotes the matrix formed by stacking the semantic attribute pro-totypes corresponding to the candidate set Y𝑖 .
+
+3.2 Structural Causal Analysis 
+
+To differentiate between visual correlation and structural neces-sity, we analyze the data generation process using an SCM ℭ :=
+
+(U𝑒𝑥𝑜 , V𝑒𝑛𝑑𝑜 , F ) . Here, U𝑒𝑥𝑜 represents the set of exogenous back-ground factors, V𝑒𝑛𝑑𝑜 = {𝑌, 𝑂, 𝐶, v} includes the endogenous vari-ables, and F denotes the set of structural functions governing the causal mechanisms. We posit that the visual representation v of an image 𝑥 is generated by two latent factors. 
+
+• Object Identity 𝑂 The core semantic concept determined by the true category 𝑌 , such as the intrinsic identity of a 
+
+Wolf .
+
+• Shared Semantic Confounder 𝐶 A latent confounding factor that induces spurious visual correlations across mul-tiple categories (e.g., shared fur texture between Wolf and 
+
+Husky ). 
+
+Structural Equations. Formally, we instantiate the structural func-tion 𝑓 𝐺 ∈ F to define the generation of the visual feature vector 
+
+v:
+
+v = 𝑓 𝐺 (𝑂, 𝐶, 𝑈 𝑣 ) (1) where 𝑂 is the object identity derived from prototype a𝑦 , 𝐶 is the confounder context, and 𝑈 𝑣 ∈ U𝑒𝑥𝑜 represents exogenous noise. In our framework, 𝑓 𝐺 is approximated by the deep neural backbone. Our goal is to estimate 𝑃 (𝑌 | 𝑂 ) while blocking the back-door path 
+
+𝐶 → v.As shown in Figure 2, the causal graph reveals the conflict. 
+
+• Causal Link 𝑌 → 𝑂 → v This represents Structural Necessity . The visual feature v must contain specific traits 
+
+𝑂 to be intrinsically defined as category 𝑌 .
+
+• Back-door Path 𝑌 ← 𝐶 → v This represents Semantic Confusion . Since the confounder 𝐶 co-occurs in both the target 𝑌 and the distractors, models relying on 𝑃 (𝑌 |v) easily establish erroneous mappings. This is a blurring of semantic boundaries between classes rather than mere background noise. 
+
+3.3 Stream I: Visual Likelihood Estimation 
+
+The first stream captures visual similarity via a Recall Mechanism. Given the input image 𝑥 , we first extract the global visual feature 
+
+v ∈ R𝑑 𝑣 using the backbone. We then project the candidate attribute prototypes A𝑖 into the visual space to obtain the projected matrix 
+
+E𝑖 = 𝜙 𝑚𝑙𝑝 (A𝑖 ) ∈ R𝑁 ×𝑑 𝑣 .We compute the cosine similarity between v and each projected prototype vector e𝑛 (the 𝑛 -th row of E𝑖 ) to obtain the observational probability scalar 𝑠 𝑜𝑏𝑠 𝑛 for the 𝑛 -th candidate: 
+
+𝑠 𝑜𝑏𝑠 𝑛 = exp (𝜏 𝑜𝑏𝑠 · cos (v, e𝑛 )) 
+
+Í𝑁 𝑗 =1 exp (𝜏 𝑜𝑏𝑠 · cos (v, e𝑗 )) (2) where 𝜏 𝑜𝑏𝑠 is a temperature parameter. The resulting probability vector is denoted as p𝑜𝑏𝑠 = [𝑠 𝑜𝑏𝑠  
+
+> 1
+
+, . . . , 𝑠 𝑜𝑏𝑠 𝑁 ]⊤.Wang et al. Input image  𝒙      
+
+> Patch embedding
+> ViT -B/16
+> 𝑬 𝑖𝑚𝑔
+> Global visual
+> Feature 𝒗
+> Noisy candidate
+> set (K) 𝑨
+> (causal) a1
+> (spurious) a2
+> (spurious) aK
+> …
+> Softmax
+
+# ~ 
+
+> Cosine
+> 𝐏 obs
+> (visual likelihood) Attribute
+> embeddings
+> 𝐄 attr
+> Sema ntic
+> MLP
+> Semantic
+> Projection
+> MLP
+
+Visual Likelihood Stream 
+
+Q
+
+K,V 
+
+Causal Importance Stream         
+
+> Context
+> 𝐡 ctx
+> Causal
+> effect
+> 𝐄 k
+> Softmax
+> 𝐏 𝐜𝐚𝐮
+> (causa limportance)
+> I
+> Counterfactual
+> Y
+> RZ
+> for each k=1..K
+> Counterfactual
+> intervention
+> do( =0) ak
+> MHCA
+> (Cross -Attention)
+> Adaptive gating
+> (Logical Filter)
+> Concat
+> Gating  MLP
+> Sigmoid
+> Gate
+> 𝐠
+> Dynamic
+> refinement
+> (refined)
+> 𝐏 𝐟𝐢𝐧𝐚𝐥
+> Task
+> (CE)
+> ℒ𝑡𝑎𝑠𝑘
+> Total
+> ℒ𝑡𝑜𝑡𝑎𝑙
+> Robustness
+> (LSE)
+> ℒLSE loss
+> Prediction
+> ොy
+> Calibrated
+> stacking
+> (CS)
+> S
+> U
+> Class semantic
+> vector sc
+
+Adaptive Gating, Prediction, and Losses 
+
+> Class
+> scores
+> ෝsc
+
+Figure 3: The overall framework of Causal-Visual Dynamic Label Refinement (CV-DCLR). The architecture consists of three integrated modules: (A) Feature Extraction, utilizing a ViT-B/16 backbone to obtain global visual representations; (B) Dual-Stream Mutual Correction Mechanism, which comprises a Visual Likelihood Stream to capture observational priors and a 
+
+Causal Importance Stream to quantify the structural necessity of attributes via counterfactual intervention; (C) Adaptive Gating and Prediction, where a learnable logical filter dynamically modulates visual features based on causal evidence to produce robust predictions supervised by Task and Robustness losses. 
+
+Limitations of Visual Likelihood. This stream relies on Surface Attribute Co-occurrence. It essentially asks whether the features in the image match the prototype. In cases of Semantic Entanglement, the answer is positive for both the target and the distractors because they share the feature set associated with 𝐶 . Consequently, p𝑜𝑏𝑠 
+
+becomes uniform and uninformative, failing to identify the true class. 
+
+3.4 Stream II: Causal Importance via Counterfactual Intervention 
+
+To resolve the ambiguity of Stream I, this stream acts as a Struc-tural Validator . Instead of checking if features exist, we verify which class prototype is structurally indispensable for the semantic representation. 
+
+3.4.1 Context-Aware Interaction. We construct a global semantic field using Multi-Head Cross-Attention (MHCA). The image feature 
+
+v serves as the Query ( Q), and the Candidate Attribute Matrix A𝑖 
+
+serves as Keys ( K) and Values ( V). 
+
+Q = vW 𝑞 , K = A𝑖 W𝑘 , V = A𝑖 W𝑣 (3) where W𝑞 , W𝑘 , W𝑣 are learnable projection matrices. The aggre-gated attention representation h𝑎𝑡𝑡 is computed as: 
+
+h𝑎𝑡𝑡 = MHCA (Q, K, V) = Softmax 
+
+ QK ⊤
+
+√𝑑 𝑘 
+
+
+
+V + v (4) where 𝑑 𝑘 is the scaling factor derived from the dimension of the key vectors. This h𝑎𝑡𝑡 represents the projection of the image 𝑥 within the semantic space defined by the candidate set Y𝑖 . Note that we use h𝑎𝑡𝑡 to distinguish from the confounder 𝐶 in SCM. 
+
+3.4.2 Counterfactual Intervention Analysis. To quantify the causal contribution of each candidate prototype, we formulate a Coun-terfactual Intervention Operator . We adopt the 𝑑𝑜 -calculus no-tation [ 24 ] to simulate the physical removal of semantic concepts in the feature space. 
+
+The Intervention Operator. Let m(𝑛 ) ∈ { 0, 1}𝑁 denote a binary intervention mask vector for the 𝑛 -th candidate, where the 𝑛 -th entry is set to 0 and all others are 1. The counterfactual intervention 
+
+𝑑𝑜 (𝑦 𝑛 = ∅) is mathematically realized by applying this mask to the attention mechanism. We define the intervened representation h\𝑛 𝑎𝑡𝑡 
+
+as: 
+
+h\𝑛 𝑎𝑡𝑡 = MHCA (Q, A𝑖 ⊙ m(𝑛 ) , A𝑖 ⊙ m(𝑛 ) ) (5) where ⊙ represents the broadcasting element-wise multiplication that effectively zeros out the contribution of the 𝑛 -th attribute prototype in the Key and Value matrices. 
+
+Causal Effect Quantification. We verify the structural necessity by comparing the factual representation h𝑎𝑡𝑡 against the counterfac-tual outcome. The Causal Effect E𝑛 is derived via the Discrepancy Operator 𝛿 (·) :
+
+E𝑛 = 𝛿 (h𝑎𝑡𝑡 , h\𝑛 𝑎𝑡𝑡 ) = h𝑎𝑡𝑡 − h\𝑛 𝑎𝑡𝑡  
+
+> 22
+
+(6) We utilize the 𝐿 2 norm for its gradient stability. This metric serves as a proxy for the Natural Direct Effect . If candidate 𝑛 is a Semantic Distractor, cutting its connection yields E𝑛 ≈ 0. If it is the Structural Anchor, the intervention triggers a representational collapse where 
+
+E𝑛 ≫ 0.
+
+3.4.3 Theoretical Analysis. We differentiate candidates based on their role in explaining the image semantics. CV-DCLR: Causal-Visual Dynamic Label Refinement for Robust Zero-Shot Learning 
+
+• Distractor as Redundant Explanation Consider a Husky 
+
+as a distractor in a Wolf image. While the Husky prototype matches the visual features linked to 𝐶 , these features are already explained by the Wolf prototype. Therefore, the Husky prototype provides redundant information. If we in-tervene and mask it via 𝑑𝑜 (𝑦 𝐻𝑢𝑠𝑘𝑦 = ∅) , the Wolf prototype remains to support the semantic representation h𝑎𝑡𝑡 . Thus, the representation remains stable and E𝐻𝑢𝑠𝑘𝑦 → 0.
+
+• True Class as Structural Anchor The Wolf prototype contains unique attributes 𝑂 that are not covered by the Husky prototype. It acts as the Structural Anchor. If we mask it via 𝑑𝑜 (𝑦 𝑊 𝑜𝑙 𝑓 = ∅) , the unique visual features 𝑂 
+
+lose their semantic descriptor, and the remaining prototypes cannot fully reconstruct the semantic context. This leads to a Representational Collapse resulting in a large E𝑊 𝑜𝑙 𝑓 .We normalize these effects to obtain the causal probability vector: 
+
+p𝑐𝑎𝑢 = Softmax (E/𝜏 𝑐𝑎𝑢 ) (7) where E ∈ R𝑁 is the causal effect vector, and 𝜏 𝑐𝑎𝑢 is a scalar temperature parameter that modulates the prediction entropy. 
+
+3.5 Adaptive Gating and Optimization 
+
+3.5.1 Dynamic Gating Arbitration. To synthesize the signals, we employ a sample-dependent Adaptive Gating Mechanism . The gate g ∈ [ 0, 1]𝑁 is computed as: 
+
+g = 𝜎  MLP 𝑔𝑎𝑡𝑒 ([ p𝑜𝑏𝑠 ⊕ p𝑐𝑎𝑢 ])  (8) where 𝜎 denotes the Sigmoid activation function, and ⊕ represents the vector concatenation operation. The final refined probability vector is: 
+
+p𝑓 𝑖𝑛𝑎𝑙 = g ⊙ p𝑜𝑏𝑠 + ( 1 − g) ⊙ p𝑐𝑎𝑢 (9) 
+
+Arbitration Logic The gate learns to trust the stream with higher entropy reduction. When p𝑜𝑏𝑠 is flat due to high similarity, but p𝑐𝑎𝑢 is sharp indicating a clear structural anchor, the gate in-creases the weight of the Causal Stream, effectively switching on the causal reasoning to resolve the tie. 
+
+3.5.2 Loss Functions. The model is trained end-to-end using a composite loss function: 
+
+L𝑡𝑜𝑡𝑎𝑙 = L𝑡𝑎𝑠𝑘 + 𝜆 L𝐿𝑆𝐸 (10) where 𝜆 is a hyperparameter balancing the discriminative and ro-bust objectives. 
+
+Task Loss L𝑡𝑎𝑠𝑘 . We minimize the cross-entropy between the refined prediction p𝑓 𝑖𝑛𝑎𝑙 and the true label. Let 𝑛 ∗ be the index of the true class 𝑦 𝑖 in the candidate set Y𝑖 :
+
+L𝑡𝑎𝑠𝑘 = − log (p𝑓 𝑖𝑛𝑎𝑙,𝑛 ∗ ) (11) 
+
+Hard Negative Mining L𝐿𝑆𝐸 . We introduce a Log-Sum-Exp loss to push the decision boundary away from high-scoring Semantic Distractors. Crucially, we first convert the probabilities to refined logits 𝑧 𝑛 = log (p𝑓 𝑖𝑛𝑎𝑙,𝑛 ). The loss is defined as: 
+
+L𝐿𝑆𝐸 = log 1 +∑︁ 
+
+> 𝑛 ≠𝑛 ∗
+
+exp (𝑧 𝑛 − 𝑧 𝑛 ∗ )
+
+!
+
+(12) where 𝑧 𝑛 and 𝑧 𝑛 ∗ correspond to the logits of the 𝑛 -th candidate and the true class, respectively. 
+
+3.5.3 Inference. During the inference phase, we utilize the trained model to predict the class of an unseen image. We perform the same dual-stream calculation to obtain the refined probability vector 
+
+p𝑓 𝑖𝑛𝑎𝑙 . The predicted label ˆ𝑦 is determined by selecting the candidate with the highest refined confidence: 
+
+ˆ𝑦 = arg max   
+
+> 𝑛 ∈ { 1,...,𝑁 }
+
+p𝑓 𝑖𝑛𝑎𝑙,𝑛 (13) This ensures that the final decision relies on the structure-aware scores, effectively filtering out spurious visual similarities. 
+
+4 Experiments 4.1 Experimental Setup 
+
+Datasets and Protocol. We evaluate CV-DCLR on CUB [32 ] (200 classes), SUN [23 ] (717 classes), and AWA2 [ 40 ] (50 classes) un-der the Proposed Split (PS) [ 40 ]. To assess robustness, we employ a Semantic Entanglement Injection protocol. Specifically, we construct Confounded Candidate Sets by injecting distractors with high visual co-occurrence, controlled by an Entanglement Ratio 𝑞 (or level 𝑟 for SUN). We report Top-1 Accuracy on unseen (𝑈 ), seen ( 𝑆 ) classes, and their Harmonic Mean ( 𝐻 ). 
+
+Implementation Details. We utilize a ViT-B/16 [ 9] backbone (ImageNet-21k pre-trained) with a frozen patch projection layer and a fine-tuned final Transformer block. Images are resized to 224 × 224 . The semantic MLP comprises two FC layers with ReLU. Training is con-ducted end-to-end using Adam [ 13 ] (batch size 64) for 30 epochs on a single NVIDIA A100 GPU. Learning rates are set to 1 × 10 −4 for the backbone and 1 × 10 −5 for causal components, managed by a Cosine Annealing scheduler. The causal temperature 𝜏 𝑐𝑎𝑢 is linearly annealed from 1.0 to 0.1, and the loss weight is set to 𝜆 = 0.5 via cross-validation. 
+
+4.2 Comparative Analysis 
+
+To validate the effectiveness of CV-DCLR, we benchmark it against leading ZSL methods, including attention-based approaches (Tran-sZero [ 6], GEM-ZSL [ 17 ]) and relation-based frameworks (MSDN [ 7], CoAR-ZSL [ 10 ]). Table 1 presents the comprehensive Generalized Zero-Shot Learning (GZSL) results across the CUB, AWA2, and SUN datasets. 
+
+Overall Performance on Benchmarks. As shown in Table 1, CV-DCLR achieves a new state-of-the-art Harmonic Mean (H-Score) across all datasets, demonstrating superior generalization capabili-ties. 
+
+• Fine-Grained Discrimination (CUB). On the challeng-ing CUB dataset, our method achieves a remarkable H-Score of 65.0% (at 𝑞 = 0.01 ), significantly outperforming the runner-up TransZero (53.4%). Since CUB requires dis-tinguishing subtle traits (e.g., beak shape) from complex backgrounds, this substantial gain (+11.6%) confirms that our Causal Stream successfully localizes intrinsic attributes while filtering out environmental noise [36]. 
+
+• Scene Understanding (SUN). On the SUN dataset, which is characterized by high visual ambiguity and scene com-plexity, CV-DCLR improves the H-Score to 49.1% (at 𝑟 = 1), Wang et al. 
+
+Table 1: Performance comparison under the proposed Semantic Entanglement Injection protocol. We evaluate robustness by varying the entanglement ratio 𝑞 (for CUB/AWA2) and level 𝑟 (for SUN). Note that competitors (e.g., TransZero) suffer significant degradation under entanglement, while CV-DCLR maintains robust performance. 
+
+Datasets Methods 𝑞 = 0.01 𝑞 = 0.03 𝑞 = 0.05 𝑞 = 0.07 
+
+CZSL 𝑈 𝑆 𝐻 CZSL 𝑈 𝑆 𝐻 CZSL 𝑈 𝑆 𝐻 CZSL 𝑈 𝑆 𝐻 
+
+CUB TransZero [6] 62.9 51.0 56.0 53.4 39.4 25.9 38.0 30.8 31.1 21.5 33.0 26.0 28.7 14.8 29.7 19.8 MSDN [7] 56.5 47.1 59.1 52.4 39.1 27.9 49.8 35.7 27.6 21.4 45.0 29.0 24.1 19.1 29.0 23.0 GEM-ZSL [17] 56.9 49.2 49.7 49.4 39.9 34.9 36.9 35.9 34.8 27.3 28.1 27.7 23.0 19.0 20.2 19.6 CoAR-ZSL [10] 60.0 50.6 51.1 50.8 42.4 36.9 40.8 38.8 37.5 27.1 30.2 28.6 30.9 20.6 22.3 21.4 
+
+CV-DCLR (Ours) 72.1 63.2 67.0 65.0 69.5 63.1 63.6 63.4 66.9 55.3 66.9 60.5 65.1 50.6 71.0 59.1 
+
+AWA2 TransZero [6] 65.4 61.2 76.5 68.0 65.5 62.6 68.8 65.6 63.4 61.4 55.2 58.1 61.2 55.8 41.9 47.9 MSDN [7] 66.4 59.3 75.1 66.3 62.2 54.6 82.1 65.6 57.9 52.8 74.4 61.8 57.0 45.0 84.4 58.7 GEM-ZSL [17] 33.8 33.2 43.0 37.5 28.6 25.8 32.0 28.6 21.8 21.5 34.0 26.3 18.5 18.2 27.8 22.0 CoAR-ZSL [10] 62.2 61.4 70.6 65.7 63.2 62.1 68.2 65.0 60.6 59.6 65.6 62.5 53.1 52.1 66.8 58.5 
+
+CV-DCLR (Ours) 73.5 62.2 77.9 69.2 72.8 61.4 77.4 68.5 71.4 60.1 77.2 67.6 70.8 59.4 76.0 66.7 
+
+Datasets Methods 𝑟 = 1 𝑟 = 2 𝑟 = 3 𝑟 = 4
+
+CZSL 𝑈 𝑆 𝐻 CZSL 𝑈 𝑆 𝐻 CZSL 𝑈 𝑆 𝐻 CZSL 𝑈 𝑆 𝐻 
+
+SUN TransZero [6] 58.5 47.4 22.6 30.6 55.7 48.7 15.7 23.7 53.6 48.5 11.0 17.9 53.9 46.9 7.1 12.4 MSDN [7] 61.1 50.1 21.0 29.6 59.5 48.9 16.4 24.6 57.3 45.8 11.9 18.8 54.9 35.5 10.3 16.0 GEM-ZSL [17] 61.4 38.4 35.3 36.8 58.0 37.4 29.3 31.9 57.0 31.8 29.3 30.5 56.2 30.2 28.3 29.2 CoAR-ZSL [10] 60.9 43.5 34.3 38.4 61.7 42.6 30.1 35.3 57.6 37.7 29.8 33.3 54.9 35.4 27.3 30.8 
+
+CV-DCLR (Ours) 68.0 53.3 45.6 49.1 66.9 58.3 39.8 47.3 66.3 61.9 34.2 44.1 65.6 62.0 29.0 39.5 
+
+surpassing MSDN by +19.5%. This indicates that our adap-tive gating mechanism effectively handles complex scene compositions where objects and context are heavily entan-gled. 
+
+• Bias Mitigation. A common challenge in GZSL is the se-vere bias towards seen classes (typically high 𝑆 but low 
+
+𝑈 ). SOTA methods often sacrifice Unseen accuracy ( 𝑈 ) to boost Seen accuracy ( 𝑆 ). In contrast, CV-DCLR maintains a balanced performance. For instance, on CUB, we achieve a high Unseen accuracy of 63.2% , proving that our model transfers substantive knowledge rather than overfitting to seen-class contexts [16, 46]. 
+
+Robustness Analysis under Semantic Entanglement. Beyond stan-dard benchmarks, we further analyze robustness under the Seman-tic Entanglement Injection protocol to evaluate disentanglement capability. 
+
+Performance under Mild Entanglement. At a low entanglement ra-tio ( 𝑞 = 0.01 ), TransZero achieves a competitive H-Score on AWA2 (70.5%), marginally higher than CV-DCLR (69.2%). The slight gap (−1.3% ) stems from an inherent design trade-off : existing attention-based methods maximize all correlations, including subtle back-ground contexts (e.g., green grass for horse ) that aid performance in clean, static benchmarks. Conversely, CV-DCLR functions as a logical filter, enforcing causal intervention to discard such spurious shortcuts. This slight sacrifice in fitting static benchmarks reflects a necessary Semantic Purification process. 
+
+Stability against Severe Entanglement. The advantage of CV-DCLR becomes decisive as entanglement intensifies. As 𝑞 rises from 0.01 to 0.07, the candidate set becomes saturated with high-likelihood distractors. Consequently, SOTA methods suffer cat-astrophic degradation ; for instance, on AWA2, TransZero and MSDN drop to 45.0% and 46.8%, respectively. This collapse high-lights their fragility: by relying on spurious co-occurrences, they fail when background contexts become ambiguous. In contrast, CV-DCLR demonstrates exceptional stability, maintaining a robust H-Score of 66.7% even at 𝑞 = 0.07 —outperforming TransZero by 
+
++21.7% . These results confirm that CV-DCLR effectively disentan-gles substantive features from environmental noise, ensuring robust generalization in highly confounded scenarios [29]. 
+
+4.3 Ablation Study 
+
+To evaluate the contribution of individual components within the CV-DCLR framework, we conducted extensive ablation studies on the CUB, AWA2, and SUN datasets using the Semantic Entangle-ment Injection protocol. We compare the full model against four variants: Baseline (visual stream only), w/o Causal (removing counterfactual intervention), Static Fusion (replacing adaptive gating with fixed averaging, i.e. , 𝛼 = 0.5), w/o Gating (remov-ing gating mechanism), and w/o LSE (excluding robustness loss). Results are detailed in Table 2. 
+
+Effectiveness of Causal Intervention. As shown in Table 2, the 
+
+Baseline (visual stream only) performs adequately under mild noise but deteriorates rapidly as entanglement intensifies. For instance, on AWA2 with 𝑞 = 0.07 , the Baseline’s H-Score collapses to 42.5%. This degradation highlights a fundamental limitation: without causal constraints, visual backbones are prone to overfitting spurious correlations (e.g., associating snow with polar bear ). Conversely, CV-DCLR: Causal-Visual Dynamic Label Refinement for Robust Zero-Shot Learning 
+
+Table 2: Ablation Study on CUB, AWA2, and SUN. We compare the full CV-DCLR model against variants to validate the contribution of each module. H: Harmonic Mean, CZ: CZSL. Dataset Noise ( 𝑞 /𝑟 ) Base w/o LSE w/o Causal w/o Gating CV-DCLR (Ours) 
+
+H CZ H CZ H CZ H CZ H CZ CUB 
+
+𝑞 = 0.01 56.1 66.4 59.3 66.1 62.7 69.8 64.1 71.5 65.0 72.1 
+
+𝑞 = 0.03 53.3 55.7 57.4 60.2 60.7 64.8 62.2 67.1 63.4 68.5 
+
+𝑞 = 0.05 48.1 52.7 53.1 57.9 57.5 63.4 59.4 65.2 60.5 66.9 
+
+𝑞 = 0.07 36.4 52.3 41.3 54.8 46.9 61.4 49.1 63.5 50.6 65.1 AWA2 
+
+𝑞 = 0.01 65.8 70.2 68.5 72.6 67.5 71.8 69.8 74.2 69.2 73.5 
+
+𝑞 = 0.03 58.4 63.1 67.8 71.2 63.2 67.0 67.9 71.5 68.5 72.8 
+
+𝑞 = 0.05 49.6 54.5 66.2 69.5 57.8 61.5 64.5 67.8 67.6 71.4 
+
+𝑞 = 0.07 42.5 48.1 64.1 67.8 51.5 56.2 60.2 63.5 66.7 70.8 SUN 
+
+𝑟 = 1 41.1 62.4 43.7 62.9 46.6 65.6 48.0 66.8 49.1 68.0 
+
+𝑟 = 2 37.7 62.6 41.2 60.9 44.8 64.2 46.1 65.5 47.3 66.9 
+
+𝑟 = 3 33.4 63.1 37.8 60.3 41.5 63.6 42.9 65.0 44.1 66.3 
+
+𝑟 = 4 27.7 64.5 32.7 59.3 36.4 62.7 38.1 64.4 39.5 65.6 baseline CV-DCLR                
+
+> input image attribute attention map
+> Bill length Shorter
+> Than Head YellowBreast YellowThroat SolidBreast BlackEye
+> BlackEye
+> Bill length Shorter
+> Than Head YellowBreast YellowThroat SolidBreast baseline CV-DCLR
+> input image attribute attention map
+> MediumSize DuckShape BlackEye Bill Length
+> Same AS Head
+> BoardBill
+> BoardBill MediumSize DuckShape BlackEye Bill Length
+> Same AS Head
+
+Figure 4: Grad-CAM Visualization. (Top) CV-DCLR ignores water reflections for the Duck . (Bottom) It mitigates tree branch bias for the Warbler , demonstrating superior intrinsic focus compared to the Baseline. 
+
+integrating the causal mechanism significantly enhances robustness. Even without the LSE loss, the w/o LSE variant achieves 64.1% on AWA2 at 𝑞 = 0.07 , surpassing the baseline by +21.6%. These results demonstrate that Counterfactual Intervention serves as a vital structural regularizer, enabling the extraction of invariant attributes amidst contextual noise [35]. 
+
+Necessity of Adaptive Gating Mechanism. Comparing Static Fu-sion with CV-DCLR (Full) reveals the shortcomings of rigid infer-ence strategies. While Static Fusion is competitive at low noise on AWA2 ( 𝑞 = 0.01 , H-Score 69.8%), it struggles in complex environ-ments. At 𝑞 = 0.07 , it trails the Full model by 6.5% (60.2% vs. 66.7%). This gap indicates that fixed fusion weights fail to accommodate the varying degrees of ambiguity across samples. In contrast, our Adaptive Gating acts as a dynamic logical filter, selectively sup-pressing visual signals when they conflict with causal evidence. This sample-specific modulation ensures reliance on the most ro-bust information source, which is crucial for high-entanglement scenarios [39]. 
+
+Impact of LSE Robustness Loss. Finally, we assess the LSE op-timization objective. The w/o LSE variant exhibits a consistent performance decline across all noise levels (e.g., -2.6% on AWA2 at 
+
+𝑞 = 0.07 ). Standard Cross-Entropy loss often insufficiently penal-izes hard negatives—confounders that are visually similar to the target but semantically distinct. The LSE Loss enforces a stricter margin, effectively suppressing these distractors to maximize target discriminability [ 38 ]. Including this loss boosts CV-DCLR to peak performance (69.2% on AWA2 at 𝑞 = 0.01 ), confirming its efficacy in refining the decision boundary. 
+
+4.4 Qualitative Analysis 
+
+To elucidate the disentanglement capabilities of CV-DCLR, we present a dual-perspective analysis: Visual Grounding (attention localization) and Semantic Reliability (prediction accuracy). 
+
+4.4.1 Visualizing Causal Disentanglement. Using Grad-CAM, we contrast attention maps in high-entanglement scenarios (Figure 4). The Baseline suffers from Contextual Overfitting and Attention Leakage , incorrectly spreading attention to water ripples (in Duck )or tree branches (in Warbler ), treating background textures as spuri-ous identity proxies. In contrast, CV-DCLR demonstrates Intrinsic Focus : attention is tightly constrained to somatic traits (e.g., beak )while background regions remain unactivated. This confirms that Wang et al. 
+
+Figure 5: Semantic Error Matrix on CUB. (a) The Baseline suffers from systematic hallucination (dense red noise) due to background bias. (b) CV-DCLR effectively filters spurious correlations (blue sparsity), ensuring predictions rely on in-trinsic object traits. 
+
+our Causal Stream successfully filters environmental confounders by verifying structural necessity [28]. 
+
+4.4.2 Semantic Error Matrix Analysis. We further quantify predic-tion reliability using the Semantic Error Matrix on CUB unseen classes (Figure 5). Figure 5(a) exhibits dense, chaotic errors ( Red Noise ), indicating Systematic Hallucination where attributes are predicted based on contextual priors (e.g., blue background 
+
+→ water attributes) rather than visual evidence. Conversely, Fig-ure 5(b) shows a sparse, low-error matrix ( Blue Sparsity ). This drastic reduction confirms that CV-DCLR functions as a logical gate , pruning non-causal predictions to achieve high-fidelity Se-mantic Purification .
+
+4.5 Further Analysis 
+
+To provide a comprehensive evaluation of CV-DCLR, we conduct additional analyses regarding feature separability, computational efficiency, and hyperparameter sensitivity. 
+
+Feature Space Visualization (t-SNE). To intuitively verify the dis-entanglement capability of our model, we utilize t-SNE to visualize the feature distributions of unseen classes on the AWA2 dataset. As shown in Figure 7, the Baseline model (Left) exhibits signifi-cant semantic ambiguity , where samples from different classes frequently overlap due to shared contextual biases. In contrast, CV-DCLR (Right) produces compact and well-separated clusters .This confirms that our causal intervention effectively filters out con-founders, preserving only intrinsic semantic representations [11]. 
+
+Computational Efficiency Analysis. We assess the trade-off be-tween model complexity and performance. Table 3 compares the parameter size, GFLOPs, and inference latency of CV-DCLR against the Baseline and state-of-the-art TransZero. 
+
+• Lightweight Overhead. Compared to the Baseline (ViT-B), our method introduces only a marginal increase in param-eters (+2.4M) due to the lightweight design of the dual-stream gating module. 
+
+• Superior Trade-off. While TransZero requires complex attention layers that increase latency to 18.4ms, CV-DCLR achieves a much higher H-Score (65.0% vs. 53.4%) with a faster inference speed (16.2ms). This confirms that our gains stem from structural causality rather than capacity scaling. 
+
+Hyperparameter Sensitivity. We investigate the sensitivity of CV-DCLR to the robustness loss weight 𝜆 (Eq. 8). As illustrated in 
+
+Table 3: Efficiency Comparison on CUB. GFLOPs and Latency are measured on a single NVIDIA A100 GPU. Method Params (M) GFLOPs Latency (ms) H-Score (%) 
+
+Baseline (ViT) 86.6 16.8 14.5 56.1 TransZero [6] 89.2 18.5 18.4 53.4 
+
+CV-DCLR (Ours) 89.0 17.6 16.2 65.0 
+
+Figure 6, we vary 𝜆 from 0.1 to 1.0 on the CUB dataset. Performance peaks at 𝜆 = 0.5.
+
+• Impact Analysis. When 𝜆 < 0.3, the model fails to penalize hard negatives; when 𝜆 > 0.7, over-regularization may suppress fine-grained features. 
+
+• Stability. Crucially, the performance drop is gradual within 
+
+[0.3, 0.7], demonstrating that CV-DCLR is robust to hyper-parameter variations. 
+
+5 Conclusion 
+
+In this paper, we proposed the Causal-Visual Dynamic Label Refinement (CV-DCLR) framework, which synergizes an Obser-vational Likelihood Stream with a Causal Importance Stream via adaptive gating to effectively disentangle intrinsic semantic at-tributes from spurious correlations. Extensive experiments on CUB, SUN, and AWA2 benchmarks under the Semantic Entanglement Injection protocol demonstrate that CV-DCLR significantly out-performs state-of-the-art methods in high-ambiguity scenarios, validating the potential of counterfactual intervention in building robust vision-language models. 
+
+References                                     
+
+> [1] Zeynep Akata, Florent Perronnin, Zaid Harchaoui, and Cordelia Schmid. 2013. Label-embedding for image classification. In CVPR . 819–826. [2] Zeynep Akata, Scott Reed, Daniel Walter, Honglak Lee, and Bernt Schiele. 2015. Evaluation of output embeddings for fine-grained image classification. In CVPR .2927–2936. [3] Faisal Alamri and Anjan Dutta. 2021. Multi-Head Self-Attention via Vision Transformer for Zero-Shot Learning. In IMVIP .[4] John Arevalo, Thamar Solorio, et al .2017. Gated Multimodal Units for Informa-tion Fusion. In ICLR Workshops .[5] Mohamed Ishmael Belghazi, Aristide Baratin, Sai Rajeswar, Sherjil Ozair, Yoshua Bengio, et al .2018. MINE: Mutual Information Neural Estimation. In ICML .531–540. [6] Shiming Chen, Ziming Hong, Yang Liu, Guo-Sen Xie, Bagui Sun, Hao Li, Qun Peng, and Ke Lu. 2022. TransZero: Attribute-guided Transformer for Zero-Shot Learning. In AAAI .[7] Shiming Chen, Ziming Hong, Guo-Sen Xie, Wenhan Yang, Qun Peng, Kai Wang, Jian Zhao, and Xinge You. 2022. MSDN: Mutually Semantic Distillation Network for Zero-Shot Learning. In CVPR . 7612–7621. [8] Zhuo Chen, Yufeng Huang, Jiaoyan Chen, Yuxia Geng, Wen Zhang, Yin Fang, et al .2023. DUET: Cross-modal Semantic Grounding for Contrastive Zero-shot Learning. In AAAI .[9] Alexey Dosovitskiy et al. 2021. An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale. In ICLR .[10] Junyu Gao, Tianzhu Zhang, and Changsheng Xu. 2023. Zero-Shot Learning with Attribute-Aware Semantic Alignment. In ACM Multimedia .[11] Zongyan Han, Zhenyong Fu, Shuo Chen, and Jian Yang. 2021. Contrastive embedding for generalized zero-shot learning. In CVPR . 2371–2381. [12] Dat Huynh and Ehsan Elhamifar. 2020. Fine-Grained Generalized Zero-Shot Learning via Dense Attribute-Based Attention. In CVPR . 4483–4493. [13] Diederik P Kingma and Jimmy Ba. 2015. Adam: A method for stochastic opti-mization. In ICLR .[14] Xiang Kong, Zhisheng Gao, Xinxin Li, Richang Hong, and Meng Wang. 2022. Compact transformer for zero-shot learning. In CVPR .
+
+CV-DCLR: Causal-Visual Dynamic Label Refinement for Robust Zero-Shot Learning 
+
+Figure 6: Parameter sensitivity analysis of loss weight 𝜆 on the CUB dataset. The trend shows that performance is stable across a wide range ( 0.3 ≤ 𝜆 ≤ 0.7), indicating that CV-DCLR does not require meticulous hyperparameter tuning. 
+
+Figure 7: t-SNE visualization on AWA2 unseen classes. Com-pared to the confusing overlaps in the Baseline (Left), CV-DCLR (Right) produces distinct clusters, demonstrating su-perior feature discriminability. 
+
+[15] Jingjing Li, Mengmeng Jing, Ke Lu, Zhengming Ding, Lei Zhu, and Zi Huang. 2019. Generalized Zero-Shot Learning via VAE-Conditioned Generative Flow. In 
+
+CVPR . 7402–7411. [16] Yun Li, Zhe Liu, Xiaojun Chang, Julian McAuley, and Lina Yao. 2023. Diversity-boosted Generalization-Specialization Balancing for Zero-shot Learning. IEEE Transactions on Multimedia (2023). [17] Feng Liu and Qijun Wu. 2021. Geometry-Contrastive Generative Adversarial Network for Generalized Zero-Shot Learning. In CVPR .[18] Fangrui Lv, Jian Liang, Shuang Li, Bin Zang, Chi Harold Liu, Ziteng Wang, and Di Liu. 2022. Causality Inspired Representation Learning for Domain Generalization. In CVPR . 8046–8056. [19] Jiaqi Lv, Miao Xu, Lei Feng, Gang An, Gang Niu, and Xin Geng. 2020. Progressive identification of true labels for partial-label learning. In ICML . 6500–6510. [20] Peirong Ma, Xiao Bai, Yifei Huang, and Jun Zhou. 2023. Region-aware Relation Network for Zero-shot Learning. In IEEE Transactions on Multimedia .[21] Sanath Narayan, Akshita Gupta, et al . 2020. Latent embedding feedback and discriminative features for zero-shot classification. In CVPR .[22] Yulei Niu, Kaihua Tang, Hanwang Zhang, Zhiwu Lu, Xiansheng Hua, and Ji-Rong Wen. 2021. Counterfactual vqa: A cause-effect look at language bias. In CVPR .12700–12710. [23] Genevieve Patterson and James Hays. 2012. SUN Attribute Database: Discovering, Annotating, and Recognizing Scene Attributes. In CVPR .[24] Judea Pearl. 1995. Causal diagrams for empirical research. Biometrika 82, 4 (1995), 669–688. [25] Judea Pearl. 2009. Causality . Cambridge university press. [26] Ben Poole, Sherjil Ozair, Aaron Van Den Oord, Alex Alemi, and George Tucker. 2019. On Variational Bounds of Mutual Information. In ICML . 5171–5180. [27] Jiaxin Qi, Yulei Niu, Jianqiang Huang, and Hanwang Zhang. 2023. Two Causal Principles for Improving Visual Dialog. In CVPR .[28] Yongming Rao, Guangyi Chen, Jiwen Lu, and Jie Zhou. 2021. Counterfactual Attention Learning for Fine-Grained Visual Categorization and Re-identification. In ICCV .[29] Shiding Sun, Xiaotong Yu, and Yingjie Tian. 2023. Multi-view prototype-based disambiguation for partial label learning. In Pattern Recognition , Vol. 141. 109625. [30] Kaihua Tang, Jianqiang Huang, and Hanwang Zhang. 2020. Long-tailed classifi-cation by keeping the good and removing the bad momentum causal effect. In 
+
+NeurIPS , Vol. 33. 1513–1524. [31] Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, et al .2017. Attention is all you need. In NeurIPS . 5998–6008. [32] C. Wah, S. Branson, P. Welinder, P. Perona, and S. Belongie. 2011. The Caltech-UCSD Birds-200-2011 Dataset . Technical Report. California Institute of Technol-ogy. [33] Haobo Wang, Ruixuan Xiao, Yixuan Li, Lei Feng, Gang Niu, Gang Chen, and Junbo Zhao. 2022. PiCO: Contrastive Label Disambiguation for Partial Label Learning. In ICLR .[34] Tan Wang, Chang Zhou, Qianru Sun, and Hanwang Zhang. 2021. Causal Atten-tion for Unbiased Visual Recognition. In ICCV .[35] Yijie Wang, Mingjian Hong, Luwen Huangfu, and Sheng Huang. 2024. Data Distribution Distilled Generative Model for Generalized Zero-Shot Recognition. In AAAI .[36] Yaming Wang, Vlad I Morariu, and Larry S Davis. 2018. Learning a Discriminative Filter Bank within a CNN for Fine-grained Recognition. In CVPR . 4148–4157. [37] Zhicai Wang, Yanbin Wu, Limin Li, and Shuhui Wang. 2021. Dual progressive prototype network for generalized zero-shot learning. In NeurIPS .[38] Hongwei Wen, Jingyi Cui, Hanyuan Hang, Jiabin Liu, Yisen Wang, and Zhouchen Lin. 2021. Leveraged Weighted Loss for Partial Label Learning. In ICML . 11091– 11100. [39] Yifan Wu, Ezra Wang, and Michael Alvarez. 2022. Revisiting Consistency Regu-larization for Semi-Supervised Learning. In ICLR .[40] Yongqin Xian, Christoph H Lampert, Bernt Schiele, and Zeynep Akata. 2018. Zero-shot learning—the good, the bad and the ugly. IEEE Transactions on Pattern Analysis and Machine Intelligence 41, 9 (2018), 2251–2265. [41] Yongqin Xian, Saurabh Sharma, Bernt Schiele, and Zeynep Akata. 2019. F-vaegan-d2: A feature generating framework for any-shot learning. In CVPR .10275–10284. [42] Guo-Sen Xie, Li Liu, Xiaobo Jin, Fan Zhu, Zheng Zhang, and Ling Shao. 2019. Attentive Region Embedding Network for Zero-shot Learning. In CVPR . 9384– 9393. [43] Guo-Sen Xie, Xu-Yao Zhang, Tian-Zhu Xiang, Fang Zhao, Zheng Zhang, Ling Shao, and Xuelong Li. 2022. Leveraging Balanced Semantic Embedding for Generative Zero-Shot Learning. IEEE Transactions on Neural Networks and Learning Systems 34, 11 (2022), 9575–9582. [44] Shiqi Yang, Kai Wang, Luis Herranz, and Joost van de Weijer. 2021. On Implicit Attribute Localization for Generalized Zero-Shot Learning. IEEE Signal Processing Letters 28 (2021), 872–876. [45] Xu Yang, Hanwang Zhang, and Jianfei Cai. 2021. Causal attention for vision-language tasks. In CVPR .[46] Zihan Ye, Guanyu Yang, Xiaobo Jin, Youfa Liu, and Kaizhu Huang. 2023. Rebal-anced Zero-Shot Learning. IEEE Transactions on Image Processing (2023). [47] Zhongqi Yue, Hanwang Zhang, Qianru Sun, and Xian-Sheng Hua. 2020. Inter-ventional few-shot learning. In NeurIPS , Vol. 33. 2734–2746. [48] Yizhe Zhu, Jianxiong Xie, Zhiqiang Tang, Xi Peng, and Ahmed Elgammal. 2019. Semantic-guided multi-attention localization for zero-shot learning. In NeurIPS .

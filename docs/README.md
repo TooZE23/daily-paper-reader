@@ -6,83 +6,101 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-16
-- 运行时间：2026-07-16 21:18:00 UTC
+- 最新运行日期：2026-06-18 ~ 2026-07-17
+- 运行时间：2026-07-17 07:21:23 UTC
 - 运行状态：成功
-- 本次总论文数：21
-- 精读区：8
-- 速读区：13
+- 本次总论文数：26
+- 精读区：0
+- 速读区：26
 
 ### 今日简报（AI）
-今日精选21篇论文，聚焦世界模型与多模态推理，其中自动驾驶零样本跨底盘适应研究获满分。推荐精读Ego-Dynamics世界模型和BUS大脑启发自反思推理，分别以10分和9分领跑。建议优先关注世界模型在动态物体操作与持续适应中的应用。
-- 详情：[/202607/16/README](/202607/16/README)
+今日速读26篇，聚焦因果世界模型与具身智能推理。  
+强烈推荐《Self-Evolving Cognitive Framework》（10分）探索因果世界模型驱动自我进化认知，以及《CFPO》（9分）用反事实策略优化多模态推理。  
+可优先精读这两篇高分论文，关注因果推理在机器人学习中的落地思路。
+- 详情：[/20260618-20260717/README](/20260618-20260717/README)
 
 ### 精读区论文标签
-1. [Ego-Dynamics-Augmented World Model for Autonomous Driving with Zero-Shot Cross-Chassis Adaptation](/202607/16/2607.13410v1-ego-dynamics-augmented-world-model-for-autonomous-driving-with-zero-shot-cross-chassis-adaptation)  
-   标签：评分：10.0/10、query:tta-vlm
-   evidence：通过增强世界模型实现自动驾驶的零样本跨底盘适应
-2. [BUS: Brain-Inspired Unsupervised Self-Reflection via Backward Prediction for Multimodal Reasoning](/202607/16/2607.07361v2-bus-brain-inspired-unsupervised-self-reflection-via-backward-prediction-for-multimodal-reasoning)  
-   标签：评分：9.0/10、query:tta-vlm
-   evidence：无需微调的测试时无监督自我反思
-3. [Continual Test-Time Adaptation in Computer Vision: Methods, Benchmarks, and Future Directions](/202607/16/2607.08164v2-continual-test-time-adaptation-in-computer-vision-methods-benchmarks-and-future-directions)  
-   标签：评分：9.0/10、query:tta-vlm
-   evidence：计算机视觉中持续测试时适应的综述
-4. [Write-Protected Discrete Bottlenecks for Language-Grounded World Models: A Structural Limitation and Sufficient Fix](/202607/16/2607.08312v1-write-protected-discrete-bottlenecks-for-language-grounded-world-models-a-structural-limitation-and-sufficient-fix)  
-   标签：评分：9.0/10、query:emb-wm-gen
-   evidence：揭示了语言接地世界模型的结构局限并提出了修复方法
-5. [Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents](/202607/16/2607.08448v1-harness-vla-steering-frozen-vlas-into-reliable-manipulation-primitives-via-memory-guided-agents)  
-   标签：评分：9.0/10、query:tta-vlm
-   evidence：通过记忆引导的智能体对冻结VLA模型进行测试时自适应
-6. [Causally Debiased Latent Action Model for Embodied Action Conditioned World Models](/202607/16/2607.09185v1-causally-debiased-latent-action-model-for-embodied-action-conditioned-world-models)  
-   标签：评分：9.0/10、query:causal-vlm
-   evidence：用于具身世界模型的因果去偏潜在动作模型
-7. [Test-Time Scaling for Small VLMs on Multilingual Visual MCQ](/202607/16/2607.09438v1-test-time-scaling-for-small-vlms-on-multilingual-visual-mcq)  
-   标签：评分：9.0/10、query:tta-vlm
-   evidence：针对小型视觉语言模型在多语言视觉多选题上的测试时缩放
-8. [Grounded world models in biological organisms and future embodied AI](/202607/16/2607.13560v1-grounded-world-models-in-biological-organisms-and-future-embodied-ai)  
-   标签：评分：9.0/10、query:emb-wm-gen
-   evidence：直接讨论接地世界模型与具身人工智能
+- 本次无精读推荐。
 
 ### 速读区论文标签
-1. [PhysMani: Physics-principled 3D World Model for Dynamic Object Manipulation](/202607/16/2607.01938v1-physmani-physics-principled-3d-world-model-for-dynamic-object-manipulation)  
+1. [Self-Evolving Cognitive Framework via Causal World Modeling for Embodied Scientific Intelligence](/20260618-20260717/2606.22449v1-self-evolving-cognitive-framework-via-causal-world-modeling-for-embodied-scientific-intelligence)  
+   标签：评分：10.0/10、query:emb-wm-gen
+   evidence：具身智能中因果世界建模的自我进化认知框架
+2. [CFPO: Counterfactual Policy Optimization for Multimodal Reasoning](/20260618-20260717/2606.23206v1-cfpo-counterfactual-policy-optimization-for-multimodal-reasoning)  
+   标签：评分：9.0/10、query:causal-vlm
+   evidence：反事实策略优化实现因果一致性
+3. [Causal Reward World Models: Zero-shot Reward Design for Automated Skill Generation](/20260618-20260717/2606.23280v1-causal-reward-world-models-zero-shot-reward-design-for-automated-skill-generation)  
+   标签：评分：9.0/10、query:causal-vlm
+   evidence：因果奖励世界模型用于零样本奖励设计
+4. [Causal-rCM: A Unified Teacher-Forcing and Self-Forcing Open Recipe for Autoregressive Diffusion Distillation in Streaming Video Generation and Interactive World Models](/20260618-20260717/2606.25473v1-causal-rcm-a-unified-teacher-forcing-and-self-forcing-open-recipe-for-autoregressive-diffusion-distillation-in-streaming-video-generation-and-interactive-world-models)  
+   标签：评分：9.0/10、query:causal-vlm
+   evidence：提出了用于交互式世界模型的因果扩散蒸馏方法
+5. [TAVR-VLM: Risk-Conditioned Causal Grounding for Hallucination-Resistant Report Generation](/20260618-20260717/2606.26874v1-tavr-vlm-risk-conditioned-causal-grounding-for-hallucination-resistant-report-generation)  
+   标签：评分：9.0/10、query:causal-vlm
+   evidence：风险条件因果接地用于抗幻觉MLLM报告生成
+6. [Dismantling Pathological Shortcuts: A Causal Framework for Faithful LVLM Decoding](/20260618-20260717/2606.27596v1-dismantling-pathological-shortcuts-a-causal-framework-for-faithful-lvlm-decoding)  
+   标签：评分：9.0/10、query:causal-vlm
+   evidence：提出因果框架用于大视觉语言模型的忠实解码，消除幻觉
+7. [Disentangling Continuous-Time Latent Dynamics: Identifiability of Latent SDEs via Diffusion Shifts](/20260618-20260717/2606.28228v1-disentangling-continuous-time-latent-dynamics-identifiability-of-latent-sdes-via-diffusion-shifts)  
+   标签：评分：9.0/10、query:causal-vlm
+   evidence：通过扩散偏移进行因果表示学习
+8. [Vision-Default, Prior-Override: Causal Mechanisms of Perception-Knowledge Conflict in Vision-Language Models](/20260618-20260717/2606.28273v1-vision-default-prior-override-causal-mechanisms-of-perception-knowledge-conflict-in-vision-language-models)  
+   标签：评分：9.0/10、query:causal-vlm
+   evidence：VLM中感知-知识冲突的因果机制
+9. [Dynamo: Dynamic Skill-Tool Evolution for Vision-Language Agents](/20260618-20260717/2606.30185v1-dynamo-dynamic-skill-tool-evolution-for-vision-language-agents)  
+   标签：评分：9.0/10、query:tta-vlm
+   evidence：无训练适应的冻结VLM测试时推理
+10. [ScratchWorld: Evaluating If World Models Compute Executable Consequences](/20260618-20260717/2606.31689v1-scratchworld-evaluating-if-world-models-compute-executable-consequences)  
+   标签：评分：9.0/10、query:causal-vlm
+   evidence：包含因果轨迹和反事实结果的世界模型基准
+11. [DSGE as a Structured World Model:Benchmarking Counterfactual Generalization in Economic Worlds](/20260618-20260717/2607.03144v1-dsge-as-a-structured-world-modelbenchmarking-counterfactual-generalization-in-economic-worlds)  
+   标签：评分：9.0/10、query:causal-vlm
+   evidence：DSGE作为具有因果约束和反事实泛化的结构化世界模型
+12. [Causally Debiased Latent Action Model for Embodied Action Conditioned World Models](/20260618-20260717/2607.09185v1-causally-debiased-latent-action-model-for-embodied-action-conditioned-world-models)  
+   标签：评分：9.0/10、query:causal-vlm
+   evidence：面向具身世界模型的因果去偏潜动作模型
+13. [DCD-PFN: A Decoupling-Aware Foundation Model for Causal Discovery](/20260618-20260717/2606.21212v1-dcd-pfn-a-decoupling-aware-foundation-model-for-causal-discovery)  
+   标签：评分：8.0/10、query:causal-vlm
+   evidence：通过局部学习进行因果发现的解耦感知基础模型
+14. [Causal Variational Deep Embedding: A Family of Interventional Generators for Confounded Images](/20260618-20260717/2606.21806v1-causal-variational-deep-embedding-a-family-of-interventional-generators-for-confounded-images)  
+   标签：评分：8.0/10、query:causal-vlm
+   evidence：提出因果变分深度嵌入方法，用于处理混淆图像中的因果表示学习
+15. [Are Text-to-Image Models Inductivist Turkeys? A Counterfactual Benchmark for Causal Reasoning](/20260618-20260717/2606.24548v3-are-text-to-image-models-inductivist-turkeys-a-counterfactual-benchmark-for-causal-reasoning)  
+   标签：评分：8.0/10、query:causal-vlm
+   evidence：针对文本到图像模型的因果推理反事实基准
+16. [Staying VIGILant: Mitigating Visual Laziness via Counterfactual Visual Alignment in MLLMs](/20260618-20260717/2606.26387v1-staying-vigilant-mitigating-visual-laziness-via-counterfactual-visual-alignment-in-mllms)  
+   标签：评分：8.0/10、query:causal-vlm
+   evidence：通过反事实视觉对齐缓解多模态大语言模型的视觉惰性
+17. [A Causal Foundation Model for Structure and Outcome Prediction](/20260618-20260717/2606.26467v1-a-causal-foundation-model-for-structure-and-outcome-prediction)  
+   标签：评分：8.0/10、query:causal-vlm
+   evidence：支持珍珠因果层级结构和结果预测的因果基础模型
+18. [Dynamic Parsing and Updating Natural Language Specification using VLMs for Robust Vision-Language Tracking](/20260618-20260717/2606.29357v1-dynamic-parsing-and-updating-natural-language-specification-using-vlms-for-robust-vision-language-tracking)  
    标签：评分：8.0/10、query:tta-vlm
-   evidence：世界模型测试时在线优化用于动态操控
-2. [InduceKV: Fixed-Footprint Continual Adaptation of Multimodal LLMs via Inducing KV Memories](/202607/16/2607.02010v1-inducekv-fixed-footprint-continual-adaptation-of-multimodal-llms-via-inducing-kv-memories)  
+   evidence：在跟踪过程中使用VLM动态解析和更新自然语言规格，测试时适应
+19. [OWMDrive: Causality-Aware End-to-End Autonomous Driving via 4D Occupancy World Model](/20260618-20260717/2606.30421v1-owmdrive-causality-aware-end-to-end-autonomous-driving-via-4d-occupancy-world-model)  
+   标签：评分：8.0/10、query:causal-vlm
+   evidence：通过占用世界模型实现因果感知的端到端驾驶
+20. [Criterion-Conditional In-Context Learning: Evaluating Criterion-Shift Adaptation in Vision-Language Models](/20260618-20260717/2607.02575v1-criterion-conditional-in-context-learning-evaluating-criterion-shift-adaptation-in-vision-language-models)  
    标签：评分：8.0/10、query:tta-vlm
-   evidence：固定存储下的多模态大语言模型测试时持续适配
-3. [WorldBagel: Uncovering the Power of Unified Multimodal Models for Vision-Language-Action-World Modeling](/202607/16/2607.03461v1-worldbagel-uncovering-the-power-of-unified-multimodal-models-for-vision-language-action-world-modeling)  
-   标签：评分：8.0/10、query:emb-wm-gen
-   evidence：世界模型用于视觉语言动作世界建模
-4. [Worldscape-MoE: A Unified Mixture-of-Experts World Model for Scalable Heterogeneous Action Control](/202607/16/2607.03964v1-worldscape-moe-a-unified-mixture-of-experts-world-model-for-scalable-heterogeneous-action-control)  
-   标签：评分：8.0/10、query:emb-wm-gen
-   evidence：统一混合专家世界模型实现可扩展异构动作控制
-5. [SPECTRA: Context-Conditioned Spectral Movement Primitives for Robot Skill Generalization](/202607/16/2607.06978v2-spectra-context-conditioned-spectral-movement-primitives-for-robot-skill-generalization)  
-   标签：评分：8.0/10、query:emb-wm-gen
-   evidence：上下文条件的频谱运动原语用于机器人技能泛化
-6. [Distributed Sparse Interventions in Language Models](/202607/16/2607.07128v1-distributed-sparse-interventions-in-language-models)  
-   标签：评分：7.0/10、query:causal-vlm
-   evidence：语言模型神经元级别的因果干预
-7. [GIRAF: Towards Generalizable Human Interactions with Articulated Objects](/202607/16/2607.07880v1-giraf-towards-generalizable-human-interactions-with-articulated-objects)  
-   标签：评分：7.0/10、query:emb-wm-gen
-   evidence：生成人与铰接物体的全身交互，面向具身智能泛化
-8. [Deep Gaussian Processes on Directed Acyclic Graphs](/202607/16/2607.09645v1-deep-gaussian-processes-on-directed-acyclic-graphs)  
-   标签：评分：7.0/10、query:causal-vlm
-   evidence：有向无环图上的深度高斯过程用于因果建模
-9. [Artificial Foveated Perception for Mitigating Shortcut Learning in Robotic Foundation Models](/202607/16/2607.10655v1-artificial-foveated-perception-for-mitigating-shortcut-learning-in-robotic-foundation-models)  
-   标签：评分：7.0/10、query:emb-wm-gen
-   evidence：机器人基础模型捷径学习缓解
-10. [Lifelong Representations: A Survey on Continual Self-Supervised Learning for Vision Models](/202607/16/2607.09785v1-lifelong-representations-a-survey-on-continual-self-supervised-learning-for-vision-models)  
-   标签：评分：6.0/10、query:emb-wm-gen
-   evidence：关于视觉持续自监督学习的综述，涉及终身机器人和视觉语言场景
-11. [Measure the Sim-to-Real Gap: Designing an Affordable Real-World Benchmark Platform for Reinforcement Learning in AIoT Systems](/202607/16/2607.10309v1-measure-the-sim-to-real-gap-designing-an-affordable-real-world-benchmark-platform-for-reinforcement-learning-in-aiot-systems)  
-   标签：评分：6.0/10、query:emb-wm-gen
-   evidence：设计衡量强化学习仿真到现实差距的基准平台
-12. [The Ebb and Flow of Multimodal Focus: Scheduling Visual Relay Windows for Grounded VLM Reasoning](/202607/16/2607.11436v1-the-ebb-and-flow-of-multimodal-focus-scheduling-visual-relay-windows-for-grounded-vlm-reasoning)  
-   标签：评分：6.0/10、query:causal-vlm
-   evidence：对VLM注意力动态的因果干预分析
-13. [DAG-FM: A Foundation Model for Causal Discovery under Heterogeneous Causal Mechanisms](/202607/16/2607.11510v1-dag-fm-a-foundation-model-for-causal-discovery-under-heterogeneous-causal-mechanisms)  
-   标签：评分：6.0/10、query:causal-vlm
-   evidence：因果发现基础模型，可应用于因果表示学习
+   evidence：通过上下文学习评估VLM中的标准偏移适应，无需微调的测试时适应
+21. [CV-DCLR: Causal-Visual Dynamic Label Refinement for Robust Zero-Shot Learning](/20260618-20260717/2607.02601v1-cv-dclr-causal-visual-dynamic-label-refinement-for-robust-zero-shot-learning)  
+   标签：评分：8.0/10、query:causal-vlm
+   evidence：提出了因果视觉动态标签精炼方法，属于因果表示学习方法
+22. [ThermoForce: A Physics-Structured Interventional World Model for Building HVAC Control](/20260618-20260717/2607.03942v1-thermoforce-a-physics-structured-interventional-world-model-for-building-hvac-control)  
+   标签：评分：8.0/10、query:causal-vlm
+   evidence：用于HVAC控制的因果结构干预世界模型
+23. [CDFM: Towards a General-Purpose Causal Discovery Foundation Model](/20260618-20260717/2607.11508v1-cdfm-towards-a-general-purpose-causal-discovery-foundation-model)  
+   标签：评分：8.0/10、query:causal-vlm
+   evidence：通用因果发现基础模型，零样本结构学习
+24. [DAG-FM: A Foundation Model for Causal Discovery under Heterogeneous Causal Mechanisms](/20260618-20260717/2607.11510v1-dag-fm-a-foundation-model-for-causal-discovery-under-heterogeneous-causal-mechanisms)  
+   标签：评分：8.0/10、query:causal-vlm
+   evidence：基于表格数据的因果发现基础模型
+25. [Differentiable Clone-Structured Causal Graphs for End-to-End Cognitive Map Learning from Image Sequences](/20260618-20260717/2607.12382v1-differentiable-clone-structured-causal-graphs-for-end-to-end-cognitive-map-learning-from-image-sequences)  
+   标签：评分：8.0/10、query:causal-vlm
+   evidence：可微分的克隆结构因果图用于认知地图学习
+26. [From Observation to Insight: Mechanistic World Models and the Quest for Autonomous Discovery](/20260618-20260717/2607.12474v2-from-observation-to-insight-mechanistic-world-models-and-the-quest-for-autonomous-discovery)  
+   标签：评分：8.0/10、query:causal-vlm
+   evidence：机制世界模型以可复用解释机制为中心
 
 
 <div class="dpr-home-promo-card">

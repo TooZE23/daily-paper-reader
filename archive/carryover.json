@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-16T21:01:37.799870+00:00",
-  "updated_date": "20260716",
+  "generated_at": "2026-07-17T07:09:13.644076+00:00",
+  "updated_date": "20260618-20260717",
   "carryover_days": 9,
   "tag_states": {
     "tta-vlm": {
@@ -700,115 +700,9 @@
       ]
     },
     "causal-vlm": {
-      "updated_date": "20260716",
+      "updated_date": "20260618-20260717",
       "carryover_days": 9,
-      "items": [
-        {
-          "id": "2607.11044v1",
-          "source": "arxiv",
-          "title": "RetroHolmes: When Semantic Plausibility Fails Retrospective Physical Process Reasoning",
-          "abstract": "Humans can infer hidden physical processes from sparse observations, yet current evaluation protocols for Vision Language Models fail to assess whether such physical reasoning is genuinely captured. To address this gap, we introduce Retrospective Physical Process Reasoning, a new evaluation paradigm to reason backward from outcomes under explicit physical constraints. Building on the paradigm, we present RetroHolmes, the first real-world benchmark for Retrospective Physical Process Reasoning, comprising object-centric image pairs annotated with reachability labels and causal step sequences across diverse physical transitions. Using RetroHolmes, we analyze state of the art Vision Language Models and uncover systematic failure modes, including judgment bias in reachability assessment and belief dominance over physical evidence, mirroring sycophancy behavior observed in large language models. We further demonstrate a simple analysis-by-synthesis instantiation with visual simulation as an intermediate step, validating the diagnostic value of RetroHolmes and highlighting the importance of physically grounded intermediate representations for physical reasoning.",
-          "authors": [
-            "Ruoxuan Zhang",
-            "Qiyun Zheng",
-            "Siyu Wu",
-            "Ling Zou",
-            "Hongxia Xie",
-            "Zhiyu Zhou",
-            "Jian-Yu Jiang-Lin",
-            "Zihan Li",
-            "Zhengguang Wang",
-            "Bin Wen",
-            "Ling Lo",
-            "Jianlong Fu",
-            "Meibao Yao",
-            "Juncheng Hu",
-            "Wen-Huang Cheng"
-          ],
-          "primary_category": "cs.MM",
-          "categories": [
-            "cs.MM"
-          ],
-          "published": "2026-07-13T03:13:39+00:00",
-          "link": "https://arxiv.org/pdf/2607.11044v1",
-          "tags": [
-            "keyword:causal-vlm",
-            "keyword:emb-wm-gen",
-            "keyword:tta-vlm",
-            "query:causal-vlm",
-            "query:emb-wm-gen",
-            "query:tta-vlm"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "evaluates causal reasoning in VLMs with physical process reasoning",
-          "llm_evidence_cn": "通过物理过程推理评估VLM中的因果推理",
-          "llm_evidence": "通过物理过程推理评估VLM中的因果推理",
-          "canonical_evidence": "通过物理过程推理评估VLM中的因果推理",
-          "llm_tldr_en": "RetroHolmes introduces retrospective physical process reasoning benchmark for VLMs, revealing systematic failures in causal reasoning under physical constraints.",
-          "llm_tldr_cn": "RetroHolmes提出了首个回顾式物理过程推理基准，用于评估视觉语言模型（VLM）在物理约束下的因果推理能力。通过真实世界图像对和因果步骤标注，揭示了当前VLM在因果推理中的系统性失败模式。",
-          "llm_tldr": "RetroHolmes提出了首个回顾式物理过程推理基准，用于评估视觉语言模型（VLM）在物理约束下的因果推理能力。通过真实世界图像对和因果步骤标注，揭示了当前VLM在因果推理中的系统性失败模式。",
-          "llm_tags": [
-            "query:causal-vlm"
-          ],
-          "matched_query_tag": "query:causal-vlm",
-          "matched_query_text": "causal reasoning in multimodal large language models",
-          "matched_requirement_id": "req-20",
-          "selection_source": "carryover_cache",
-          "paper_id": "2607.11044v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2607.12382v1",
-          "source": "arxiv",
-          "title": "Differentiable Clone-Structured Causal Graphs for End-to-End Cognitive Map Learning from Image Sequences",
-          "abstract": "How can an agent build a structured map of its world from nothing but an ongoing sequence of raw sensory input and its own movements, especially when natural variation means exact sensory patterns rarely repeat? The Clone-Structured Causal Graph algorithm (CSCG), a normative hippocampus model, shows how an interpretable map can be learned from aliased observations. However, CSCG requires a predefined discrete alphabet, and its expectation-maximization formulation is not easily combined with existing neural network modules, preventing the end-to-end processing of raw image sequences. We remove this barrier by reformulating CSCG as a single, fully differentiable module, gradCSCG, and coupling it to a learned vector-quantized variational autoencoder (VQ-VAE) perceptual front-end. A soft emission forward pass allows the map-learning objective to flow back into perception, while a set of loss-balancing mechanisms mitigates module collapse during joint training. We demonstrate, first, that gradient training reproduces CSCG's results on original symbolic grid worlds by recovering room topology from heavily aliased observations. Second, we show that map recovery remains robust on MNIST image sequences, where each visit to a location yields a newly sampled image of its assigned digit. Across four heavily aliased environments, the end-to-end pipeline successfully uncovers the underlying adjacency graph with high edge precision and recall, directly from visual input. This work provides a proof of principle that CSCG can serve as a composable building block in a deep learning architecture.",
-          "authors": [
-            "Arash Nikzad",
-            "Sasan Sarbishegi",
-            "Ali Dasmeh",
-            "Muhammad Asif",
-            "Parsa Gharavi",
-            "Erik Husom",
-            "Sagar Sen",
-            "Andrew B. Lehr",
-            "Olivier Penacchio",
-            "Ana Clemente",
-            "Tristan M. Stöber"
-          ],
-          "primary_category": "cs.LG",
-          "categories": [
-            "cs.LG",
-            "q-bio.NC"
-          ],
-          "published": "2026-07-14T05:54:39+00:00",
-          "link": "https://arxiv.org/pdf/2607.12382v1",
-          "tags": [
-            "keyword:causal-vlm",
-            "keyword:emb-wm-gen",
-            "keyword:tta-vlm",
-            "query:causal-vlm",
-            "query:emb-wm-gen",
-            "query:tta-vlm"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "differentiable causal graph learning for cognitive maps from images",
-          "llm_evidence_cn": "可微因果图学习用于从图像序列构建认知地图",
-          "llm_evidence": "可微因果图学习用于从图像序列构建认知地图",
-          "canonical_evidence": "可微因果图学习用于从图像序列构建认知地图",
-          "llm_tldr_en": "Differentiable Clone-Structured Causal Graphs reformulates CSCG as a fully differentiable module (gradCSCG) that can be coupled with neural networks for end-to-end causal cognitive map learning from raw image sequences.",
-          "llm_tldr_cn": "克隆结构因果图（CSCG）是一种规范的海马体模型，但需要预定义离散字母表且难以与神经网络端到端结合。本文将其重写为全可微模块gradCSCG，并与向量量化自编码器耦合，实现从原始图像序列端到端学习可解释的因果认知地图。该方法为因果表征学习在具身智能中的应用提供了新工具。",
-          "llm_tldr": "克隆结构因果图（CSCG）是一种规范的海马体模型，但需要预定义离散字母表且难以与神经网络端到端结合。本文将其重写为全可微模块gradCSCG，并与向量量化自编码器耦合，实现从原始图像序列端到端学习可解释的因果认知地图。该方法为因果表征学习在具身智能中的应用提供了新工具。",
-          "llm_tags": [
-            "query:causal-vlm"
-          ],
-          "matched_query_tag": "query:causal-vlm",
-          "matched_query_text": "causal representation learning methods",
-          "matched_requirement_id": "req-18",
-          "selection_source": "carryover_cache",
-          "paper_id": "2607.12382v1",
-          "carry_days": 1
-        }
-      ]
+      "items": []
     }
   }
 }
