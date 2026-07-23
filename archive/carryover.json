@@ -1,117 +1,20 @@
 {
-  "generated_at": "2026-07-20T21:52:59.646632+00:00",
-  "updated_date": "20260720",
+  "generated_at": "2026-07-23T21:47:28.535376+00:00",
+  "updated_date": "20260723",
   "carryover_days": 9,
   "tag_states": {
     "tta-vlm": {
-      "updated_date": "20260720",
+      "updated_date": "20260723",
       "carryover_days": 9,
       "items": []
     },
     "emb-wm-gen": {
-      "updated_date": "20260720",
+      "updated_date": "20260723",
       "carryover_days": 9,
-      "items": [
-        {
-          "id": "2607.15898v1",
-          "source": "arxiv",
-          "title": "Orbis 2: A Hierarchical World Model for Driving",
-          "abstract": "Current world models operate at a single level of abstraction, with most prioritizing perceptual fidelity while lacking the spatial reasoning and semantic understanding required for real-world downstream tasks. We present a hierarchical driving world model that factorizes future prediction across two levels operating at distinct temporal and abstraction scales: a high-level predictor that forecasts coarse scene structure over extended temporal horizons, and a low-level generator that produces detailed predictions conditioned on the high-level output. This decomposition yields high perceptual fidelity while also capturing strong spatial and semantic representations. We further show that pretraining with a diffusion forcing objective yields substantially richer internal representations than the standard teacher forcing objective, while teacher forcing -- predicting only the next frame from clean context -- produces more stable autoregressive rollouts. We therefore introduce a generic two-stage training paradigm that pretrains the model with diffusion forcing and fine-tunes with teacher forcing, combining the representational benefits of the former with the rollout stability of the latter. Our approach achieves state-of-the-art results across the standard suite of driving world model evaluations on established benchmarks, including long-horizon generation fidelity, steering responsiveness evaluated on counterfactual scenarios, and internal representation quality. Project page with code, demo, checkpoints and qualitative results: https://lmb-freiburg.github.io/orbis2.github.io/",
-          "authors": [
-            "Sudhanshu Mittal",
-            "Arian Mousakhan",
-            "Silvio Galesso",
-            "Karim Farid",
-            "Jonannes Dienert",
-            "Rajat Sahay",
-            "Thomas Brox"
-          ],
-          "primary_category": "cs.CV",
-          "categories": [
-            "cs.CV",
-            "cs.AI",
-            "cs.LG",
-            "cs.RO"
-          ],
-          "published": "2026-07-17T12:12:33+00:00",
-          "link": "https://arxiv.org/pdf/2607.15898v1",
-          "tags": [
-            "keyword:causal-vlm",
-            "keyword:emb-wm-gen",
-            "keyword:tta-vlm",
-            "query:causal-vlm",
-            "query:emb-wm-gen",
-            "query:tta-vlm"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "hierarchical world model for driving generalization",
-          "llm_evidence_cn": "层次化驾驶世界模型用于泛化",
-          "llm_evidence": "层次化驾驶世界模型用于泛化",
-          "canonical_evidence": "层次化驾驶世界模型用于泛化",
-          "llm_tldr_en": "Orbis 2 proposes a hierarchical world model for driving, factorizing future prediction into high-level coarse structure and low-level detailed generation, improving spatial reasoning and semantic representation for better generalization.",
-          "llm_tldr_cn": "现有驾驶世界模型通常用单层抽象，缺乏空间推理和语义理解。Orbis 2提出层次化预测框架：高层预测器负责长时间尺度上的场景结构，低层生成器根据高层输出产生细节。该模型在保证感知保真度的同时，捕获了强空间和语义表征。实验表明，扩散预训练目标能提供更丰富的内部表示，在驾驶下游任务中表现出更好的泛化能力。",
-          "llm_tldr": "现有驾驶世界模型通常用单层抽象，缺乏空间推理和语义理解。Orbis 2提出层次化预测框架：高层预测器负责长时间尺度上的场景结构，低层生成器根据高层输出产生细节。该模型在保证感知保真度的同时，捕获了强空间和语义表征。实验表明，扩散预训练目标能提供更丰富的内部表示，在驾驶下游任务中表现出更好的泛化能力。",
-          "llm_tags": [
-            "query:emb-wm-gen"
-          ],
-          "matched_query_tag": "query:emb-wm-gen",
-          "matched_query_text": "world model generalization",
-          "matched_requirement_id": "req-11",
-          "selection_source": "carryover_cache",
-          "paper_id": "2607.15898v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2607.15880v1",
-          "source": "arxiv",
-          "title": "Dynamics-Aware Meta-Imitation for Generalization to Unseen Robotic Manipulation",
-          "abstract": "Imitation Learning aims to learn skills from extensive observations and demonstrations for robots, so it suffers from data scarcity and environment generalization. The existing methods predominantly focus on imitation from in-domain tasks and consequently struggle with generalization to unseen tasks. To bridge this generalization gap, we propose the \\textbf{D}ynamics-\\textbf{A}ware \\textbf{M}eta-\\textbf{I}mitation (DAMI) framework. By integrating meta-learning to construct a shared skill space, DAMI equips agents for rapid adaptation to novel tasks. We introduce the Visual-Motor Trajectory (VMT) module to capture complex spatio-temporal dynamics within the task latent space. Furthermore, we propose the Unpaired Unified Task (U2T) block to fuse unstructured multimodal observations. To coordinate these representations, we integrate a Task-Conditioned Feature Modulation (TCFM) mechanism customized for modulating low-level 3D features. By capturing intrinsic dynamics from a random complete reference demonstration, our framework learns the underlying task logic rather than memorizing static cues, ensuring effective generalization. Extensive experiments in both simulation and real-world settings demonstrate that our approach outperforms state-of-the-art baselines regarding direct inference on seen tasks and adaptation to unseen tasks via few-shot fine-tuning.",
-          "authors": [
-            "Zhenduo Shang",
-            "Xiyao Liu",
-            "Bohan Li",
-            "Xudong Wang",
-            "Teng Ren",
-            "Lianqing Liu",
-            "Zhi Han"
-          ],
-          "primary_category": "cs.RO",
-          "categories": [
-            "cs.RO",
-            "cs.LG"
-          ],
-          "published": "2026-07-17T11:50:03+00:00",
-          "link": "https://arxiv.org/pdf/2607.15880v1",
-          "tags": [
-            "keyword:causal-vlm",
-            "keyword:emb-wm-gen",
-            "keyword:tta-vlm",
-            "query:causal-vlm",
-            "query:emb-wm-gen",
-            "query:tta-vlm"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "meta-learning for generalization in robotic manipulation",
-          "llm_evidence_cn": "元学习用于机器人操控泛化",
-          "llm_evidence": "元学习用于机器人操控泛化",
-          "canonical_evidence": "元学习用于机器人操控泛化",
-          "llm_tldr_en": "DAMI uses meta-learning and dynamics-aware modules to enable rapid generalization to unseen robotic manipulation tasks.",
-          "llm_tldr_cn": "DAMI针对模仿学习在未见任务上的泛化挑战，融合元学习与视觉-运动轨迹模块，构建共享技能空间，使机器人能快速适应新任务。在标准仿真基准上，DAMI在未见任务上显著优于现有方法，展示了动力学感知表示对泛化的重要性。",
-          "llm_tldr": "DAMI针对模仿学习在未见任务上的泛化挑战，融合元学习与视觉-运动轨迹模块，构建共享技能空间，使机器人能快速适应新任务。在标准仿真基准上，DAMI在未见任务上显著优于现有方法，展示了动力学感知表示对泛化的重要性。",
-          "llm_tags": [
-            "query:emb-wm-gen"
-          ],
-          "matched_query_tag": "query:emb-wm-gen",
-          "matched_query_text": "generalization in embodied AI",
-          "matched_requirement_id": "req-12",
-          "selection_source": "carryover_cache",
-          "paper_id": "2607.15880v1",
-          "carry_days": 1
-        }
-      ]
+      "items": []
     },
     "causal-vlm": {
-      "updated_date": "20260720",
+      "updated_date": "20260723",
       "carryover_days": 9,
       "items": []
     }
